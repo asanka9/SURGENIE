@@ -21,6 +21,7 @@ import { SideNavComponent } from './shared/side-nav/side-nav.component';
 import {MatListModule} from '@angular/material/list';
 import { SurgeonComponent } from './layouts/surgeon/surgeon.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     MatMenuModule,
     MatSidenavModule,
     MatListModule,
-    DragDropModule
+    DragDropModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
