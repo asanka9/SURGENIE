@@ -1,0 +1,127 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="mt-1" >
+                <div class="month">
+                    <ul>
+                        <li class="prev">&#10094;</li>
+                        <li class="next">&#10095;</li>
+                        <li>
+                            August<br>
+                            <span style="font-size:18px">2021</span>
+                        </li>
+                    </ul>
+                </div>
+    
+                <ul class="weekdays">
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                    <li>Su</li>
+                </ul>
+    
+                <ul class="days">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li><span class="active">10<br>---</span></li>
+                    <li>11
+                        <br>
+                        2,3,4
+                    </li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li>30</li>
+                    <li>31</li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="row" >
+
+                </div>
+                <div class="row mt-5" >
+                    <div class="col-12" >
+                        <div class="row mt-5" >
+                            <div class="col-1" >
+                                A
+                            </div>
+                            <div class="col-11" >
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Cupiditate culpa dolore beatae amet quisquam aspernatur quaerat laudantium. Qui eaque,
+                                 voluptatibus inventore quidem eius laudantium necessitatibus non, ab itaque veritatis optio!
+                            </div>
+                        </div>
+                        <div class="row mt-5" >
+                            <div class="col-1" >
+                                A
+                            </div>
+                            <div class="col-11" >
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Cupiditate culpa dolore beatae amet quisquam aspernatur quaerat laudantium. Qui eaque,
+                                 voluptatibus inventore quidem eius laudantium necessitatibus non, ab itaque veritatis optio!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-6">
+            <div class="example-box1 mt-2" cdkDrag>
+                <!-- <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+                    <div class="example-box" *ngFor="let movie of movies" cdkDrag>
+                        <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+                        {{movie}}
+                    </div>
+                </div> -->
+                <br>
+                <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+                    <h1 style="background-color: #1abc9c;color: white;" >2022 Feb</h1>
+
+                    <div class="example-box" *ngFor="let movie of movies" cdkDrag>
+                        <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+                        {{movie}}
+                    </div>
+                    <button>save</button>
+                </div>
+
+
+                <div class="example-handle" cdkDragHandle>
+                    <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z">
+                        </path>
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
