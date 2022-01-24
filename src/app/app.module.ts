@@ -27,6 +27,10 @@ import {MatCardModule} from '@angular/material/card';
 import {MatNativeDateModule} from '@angular/material/core';
 import { FormsModule } from '@angular/forms'; 
 import { MatFormFieldModule } from '@angular/material/form-field'; 
+import {MatInputModule} from '@angular/material/input';
+import { LoginComponent } from './layouts/login/login.component';
+import { TeamComponent } from './layouts/team/team.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +43,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     NotFoundComponent,
     FooterComponent,
     SideNavComponent,
-    SurgeonComponent
+    SurgeonComponent,
+    LoginComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +63,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatCardModule,
     MatNativeDateModule,
     FormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

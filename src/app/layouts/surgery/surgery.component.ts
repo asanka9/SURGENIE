@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./surgery.component.scss']
 })
 export class SurgeryComponent implements OnInit {
+  value = 'Clear me';
 
   constructor() { }
 
