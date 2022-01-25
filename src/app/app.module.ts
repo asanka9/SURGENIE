@@ -30,6 +30,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { LoginComponent } from './layouts/login/login.component';
 import { TeamComponent } from './layouts/team/team.component';
+import {MatChipsModule} from '@angular/material/chips';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -64,7 +66,9 @@ import { TeamComponent } from './layouts/team/team.component';
     MatNativeDateModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatChipsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

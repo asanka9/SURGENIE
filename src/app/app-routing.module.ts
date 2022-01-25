@@ -7,6 +7,7 @@ import { ResourceComponent } from './layouts/resource/resource.component';
 import { SurgentComponent } from './layouts/surgent/surgent.component';
 import { SurgeonComponent } from './layouts/surgeon/surgeon.component';
 import { SurgeryComponent } from './layouts/surgery/surgery.component';
+import { TeamComponent } from './layouts/team/team.component';
 import { UsersComponent } from './layouts/users/users.component';
 
 const routes: Routes = [
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path:'account',
     component:AccountComponent
+  },
+  {
+    path:'team',
+    component:TeamComponent
   },
   {
     path:'users',

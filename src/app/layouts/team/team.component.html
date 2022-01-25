@@ -1,1 +1,172 @@
-<p>team works!</p>
+<div class="container" >
+    <!-- Trainee Surgent -->
+    <div class="row mt-5" >
+        <div class="col-md-4 fav-box"   >
+            <div class="col-12">
+                <div>
+                    <h1 style="float: left;">Surgent</h1>
+                    <span class="example-spacer"></span>
+                    <button style="float: right;" (click)="customizeTraineeSurgent()" mat-mini-fab color="primary"
+                        aria-label="Example icon button with a menu icon">
+                        <mat-icon *ngIf="isCustomizedSurgent">list</mat-icon>
+                        <mat-icon *ngIf="!isCustomizedSurgent">edit</mat-icon>
+
+                    </button>
+                </div>
+            </div>
+            <div *ngIf="!isCustomizedSurgent" style="clear: both;" class="col-12">
+                <div class="row">
+                    <div class="col-12" *ngFor="let fruit of traineeSurgent">
+                        <mat-card class="example-card mt-2">
+                            <mat-card-header>
+                                <div mat-card-avatar style="background-image: url('https://www.odoc.life/wp-content/uploads/2020/10/doctor__circle_2.png');background-size: cover;"></div>
+                                <mat-card-title>{{ fruit }}</mat-card-title>
+                                <mat-card-subtitle>77 488 999 0 | perera@gmail.com</mat-card-subtitle>
+                            </mat-card-header>
+
+                        </mat-card>
+
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="isCustomizedSurgent" class="col-12">
+                <mat-form-field class="example-chip-list">
+                    <mat-label>Favorite Fruits</mat-label>
+                    <mat-chip-list #chipList aria-label="Fruit selection">
+                        <mat-chip *ngFor="let fruit of nurse" (removed)="removeTraineeSurgent(fruit)">
+                            {{fruit}}
+                            <button matChipRemove>
+                                <mat-icon>cancel</mat-icon>
+                            </button>
+                        </mat-chip>
+                        <input placeholder="New fruit..." #fruitInput [formControl]="chipsCtrlTraineeSurgent"
+                            [matAutocomplete]="auto" [matChipInputFor]="chipList"
+                            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                            (matChipInputTokenEnd)="addNurse($event)">
+                    </mat-chip-list>
+                    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectedTraineeSurgent($event)">
+                        <mat-option *ngFor="let fruit of filteredTraineeSurgent | async" [value]="fruit">
+                            {{fruit}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+            </div>
+            <div *ngIf="isCustomizedSurgent" class="col-12">
+                <button mat-raised-button color="primary">Save</button>
+            </div>
+        </div>
+
+        <!--Nurse-->
+        <div class="col-md-4 fav-box"   >
+            <div class="col-12">
+                <div>
+                    <h1 style="float: left;">Nurse</h1>
+                    <span class="example-spacer"></span>
+                    <button style="float: right;" (click)="customizeNurse()" mat-mini-fab color="primary"
+                        aria-label="Example icon button with a menu icon">
+                        <mat-icon *ngIf="isCustomizedNurse">list</mat-icon>
+                        <mat-icon *ngIf="!isCustomizedNurse">edit</mat-icon>
+
+                    </button>
+                </div>
+            </div>
+            <div *ngIf="!isCustomizedNurse" style="clear: both;" class="col-12">
+                <div class="row">
+                    <div class="col-12" *ngFor="let fruit of nurse">
+                        <mat-card class="example-card mt-2">
+                            <mat-card-header>
+                                <div mat-card-avatar style="background-image: url('https://www.odoc.life/wp-content/uploads/2020/10/doctor__circle_2.png');background-size: cover;"></div>
+                                <mat-card-title>{{ fruit }}</mat-card-title>
+                                <mat-card-subtitle>77 488 999 0 | perera@gmail.com</mat-card-subtitle>
+                            </mat-card-header>
+
+                        </mat-card>
+
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="isCustomizedNurse" class="col-12">
+                <mat-form-field class="example-chip-list">
+                    <mat-label>Favorite Fruits</mat-label>
+                    <mat-chip-list #chipList aria-label="Fruit selection">
+                        <mat-chip *ngFor="let fruit of nurse" (removed)="removeNurse(fruit)">
+                            {{fruit}}
+                            <button matChipRemove>
+                                <mat-icon>cancel</mat-icon>
+                            </button>
+                        </mat-chip>
+                        <input placeholder="New fruit..." #fruitInput [formControl]="chipsCtrlNurse"
+                            [matAutocomplete]="auto" [matChipInputFor]="chipList"
+                            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                            (matChipInputTokenEnd)="addNurse($event)">
+                    </mat-chip-list>
+                    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectedNurse($event)">
+                        <mat-option *ngFor="let fruit of filteredNurse | async" [value]="fruit">
+                            {{fruit}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+            </div>
+            <div *ngIf="isCustomizedNurse" class="col-12">
+                <button mat-raised-button color="primary">Save</button>
+
+            </div>
+        </div>
+
+        <!--Anesthetistic-->
+        <div class="col-md-4 fav-box"   >
+            <div class="col-12">
+                <div>
+                    <h1 style="float: left;">Anesthetistic</h1>
+                    <span class="example-spacer"></span>
+                    <button style="float: right;" (click)="customizeAnesthatistic()" mat-mini-fab color="primary"
+                        aria-label="Example icon button with a menu icon">
+                        <mat-icon *ngIf="isCustomizedAnesthtistic">list</mat-icon>
+                        <mat-icon *ngIf="!isCustomizedAnesthtistic">edit</mat-icon>
+
+                    </button>
+                </div>
+            </div>
+            <div *ngIf="!isCustomizedAnesthtistic" style="clear: both;" class="col-12">
+                <div class="row">
+                    <div class="col-12" *ngFor="let fruit of anesthetic">
+                        <mat-card class="example-card mt-2">
+                            <mat-card-header>
+                                <div mat-card-avatar style="background-image: url('https://www.odoc.life/wp-content/uploads/2020/10/doctor__circle_2.png');background-size: cover;"></div>
+                                <mat-card-title>{{ fruit }}</mat-card-title>
+                                <mat-card-subtitle>77 488 999 0 | perera@gmail.com</mat-card-subtitle>
+                            </mat-card-header>
+
+                        </mat-card>
+
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="isCustomizedAnesthtistic" class="col-12">
+                <mat-form-field class="example-chip-list">
+                    <mat-label>Favorite Fruits</mat-label>
+                    <mat-chip-list #chipList aria-label="Fruit selection">
+                        <mat-chip *ngFor="let fruit of anesthetic" (removed)="removeAnesthatistic(fruit)">
+                            {{fruit}}
+                            <button matChipRemove>
+                                <mat-icon>cancel</mat-icon>
+                            </button>
+                        </mat-chip>
+                        <input placeholder="New fruit..." #fruitInput [formControl]="chipsCtrlNurse"
+                            [matAutocomplete]="auto" [matChipInputFor]="chipList"
+                            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                            (matChipInputTokenEnd)="addNurse($event)">
+                    </mat-chip-list>
+                    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectedAnesthetistic($event)">
+                        <mat-option *ngFor="let fruit of filteredNurse | async" [value]="fruit">
+                            {{fruit}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+            </div>
+            <div *ngIf="isCustomizedAnesthtistic" class="col-12">
+                <button mat-raised-button color="primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
