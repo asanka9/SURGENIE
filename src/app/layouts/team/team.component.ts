@@ -77,33 +77,27 @@ export class TeamComponent implements OnInit {
 
   addNurse(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
-    // Add our fruit
     if (value) {
       this.nurse.push(value);
     }
-    // Clear the input value
     event.chipInput!.clear();
     this.chipsCtrlNurse.setValue(null);
   }
 
   addTraineeSurgent(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
-    // Add our fruit
     if (value) {
       this.traineeSurgent.push(value);
     }
-    // Clear the input value
     event.chipInput!.clear();
     this.chipsCtrlTraineeSurgent.setValue(null);
   }
 
   addAnesthetistic(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
-    // Add our fruit
     if (value) {
       this.anesthetic.push(value);
     }
-    // Clear the input value
     event.chipInput!.clear();
     this.chipsCtrlAnesthetic.setValue(null);
   }

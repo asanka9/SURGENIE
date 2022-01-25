@@ -1,4 +1,9 @@
 <div class="container" >
+    <div class="row" >
+        <div class="col-12" >
+            <h1>My Team</h1>
+        </div>
+    </div>
     <!-- Trainee Surgent -->
     <div class="row mt-5" >
         <div class="col-md-4 fav-box"   >
@@ -33,7 +38,7 @@
                 <mat-form-field class="example-chip-list">
                     <mat-label>Favorite Fruits</mat-label>
                     <mat-chip-list #chipList aria-label="Fruit selection">
-                        <mat-chip *ngFor="let fruit of nurse" (removed)="removeTraineeSurgent(fruit)">
+                        <mat-chip *ngFor="let fruit of traineeSurgent" (removed)="removeTraineeSurgent(fruit)">
                             {{fruit}}
                             <button matChipRemove>
                                 <mat-icon>cancel</mat-icon>
@@ -42,7 +47,7 @@
                         <input placeholder="New fruit..." #fruitInput [formControl]="chipsCtrlTraineeSurgent"
                             [matAutocomplete]="auto" [matChipInputFor]="chipList"
                             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                            (matChipInputTokenEnd)="addNurse($event)">
+                            (matChipInputTokenEnd)="addTraineeSurgent($event)">
                     </mat-chip-list>
                     <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectedTraineeSurgent($event)">
                         <mat-option *ngFor="let fruit of filteredTraineeSurgent | async" [value]="fruit">
@@ -75,7 +80,7 @@
                     <div class="col-12" *ngFor="let fruit of nurse">
                         <mat-card class="example-card mt-2">
                             <mat-card-header>
-                                <div mat-card-avatar style="background-image: url('https://www.odoc.life/wp-content/uploads/2020/10/doctor__circle_2.png');background-size: cover;"></div>
+                                <div mat-card-avatar style="background-image: url('https://www.jobsrilanka.lk/wp-content/uploads/2021/05/Unitex-Nursing-Shortage-1.jpg');background-size: cover;"></div>
                                 <mat-card-title>{{ fruit }}</mat-card-title>
                                 <mat-card-subtitle>77 488 999 0 | perera@gmail.com</mat-card-subtitle>
                             </mat-card-header>
@@ -132,7 +137,7 @@
                     <div class="col-12" *ngFor="let fruit of anesthetic">
                         <mat-card class="example-card mt-2">
                             <mat-card-header>
-                                <div mat-card-avatar style="background-image: url('https://www.odoc.life/wp-content/uploads/2020/10/doctor__circle_2.png');background-size: cover;"></div>
+                                <div mat-card-avatar style="background-image: url('https://difference.guru/wp-content/uploads/2017/11/cws_5a09fdc444006.png');background-size: cover;"></div>
                                 <mat-card-title>{{ fruit }}</mat-card-title>
                                 <mat-card-subtitle>77 488 999 0 | perera@gmail.com</mat-card-subtitle>
                             </mat-card-header>
