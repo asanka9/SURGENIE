@@ -32,6 +32,12 @@ import { LoginComponent } from './layouts/login/login.component';
 import { TeamComponent } from './layouts/team/team.component';
 import {MatChipsModule} from '@angular/material/chips';
 import {ReactiveFormsModule} from '@angular/forms';
+import { AddUserComponent } from './layouts/add-user/add-user.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
+import { SessionCardComponent } from './widget/session-card/session-card.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -47,7 +53,9 @@ import {ReactiveFormsModule} from '@angular/forms';
     SideNavComponent,
     SurgeonComponent,
     LoginComponent,
-    TeamComponent
+    TeamComponent,
+    AddUserComponent,
+    SessionCardComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +76,11 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     MatChipsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatTableModule,
+    MatTabsModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
