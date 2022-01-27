@@ -1,0 +1,57 @@
+<div class="container pb-5">
+    <div class="row mt-3">
+        <div class="col-6">
+            <div class="row">
+                <div class="col-12">
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Resource Name</mat-label>
+                            <input type="text" placeholder="Pick one" aria-label="Number" matInput
+                                [formControl]="myControl" [matAutocomplete]="auto">
+                            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                    {{option}}
+                                </mat-option>
+                            </mat-autocomplete>
+                        </mat-form-field>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Unit</mat-label>
+                        <mat-select  name="food">
+                            <mat-option *ngFor="let food of unitsResource" [value]="food.value">
+                                {{food.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-6">
+                    <mat-form-field class="example-form-field" appearance="fill">
+                        <mat-label>Amount</mat-label>
+                        <input matInput type="number" [(ngModel)]="value">
+                        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </mat-form-field>
+
+                </div>
+                <div class="col-6">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Theartor</mat-label>
+                        <mat-select  name="food">
+                            <mat-option *ngFor="let food of icus" [value]="food.value">
+                                {{food.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-12">
+                    <button mat-flat-button color="primary">Add Resource</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

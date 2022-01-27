@@ -40,6 +40,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatCheckboxDefaultOptions, MatCheckboxModule, MAT_CHECKBOX_DEFAULT_OPTIONS} from '@angular/material/checkbox';
 import { MatSortModule } from '@angular/material/sort';
+import { AddResourceComponent } from './layouts/add-resource/add-resource.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { MatSortModule } from '@angular/material/sort';
     LoginComponent,
     TeamComponent,
     AddUserComponent,
-    SessionCardComponent
+    SessionCardComponent,
+    AddResourceComponent
   ],
   imports: [
     BrowserModule,

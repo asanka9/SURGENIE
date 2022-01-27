@@ -122,6 +122,17 @@ export class AddUserComponent implements OnInit {
     {value: 'speciallity-01', viewValue: 'Speciallity'}
   ];
 
+  adminlevels: Food[] = [
+    {value: 'speciallity-01', viewValue: 'Level 01'},
+    {value: 'speciallity-01', viewValue: 'Speciallity'},
+    {value: 'speciallity-01', viewValue: 'Speciallity'},
+    {value: 'speciallity-01', viewValue: 'Speciallity'},
+    {value: 'speciallity-01', viewValue: 'Speciallity'},
+    {value: 'speciallity-01', viewValue: 'Speciallity'},
+    {value: 'speciallity-01', viewValue: 'Speciallity'},
+    {value: 'speciallity-01', viewValue: 'Speciallity'}
+  ];
+
   matcher = new MyErrorStateMatcher();
   constructor() { }
   ngOnInit(): void {

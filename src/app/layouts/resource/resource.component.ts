@@ -16,8 +16,8 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 export interface UserData {
   id: string;
   name: string;
-  progress: string;
-  fruit: string;
+  availability: boolean;
+  amount: number;
 }
 
 /** Constants used to fill up our data base. */
@@ -59,7 +59,7 @@ const NAMES: string[] = [
 })
 export class ResourceComponent implements AfterViewInit  {
 
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
+  displayedColumns: string[] = ['id', 'name', 'amount', 'availability'];
   dataSource: MatTableDataSource<UserData>;
 
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
@@ -75,7 +75,6 @@ export class ResourceComponent implements AfterViewInit  {
   constructor() {
     // Create 100 users
     const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
-
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
   }
@@ -93,6 +92,7 @@ export class ResourceComponent implements AfterViewInit  {
       this.dataSource.paginator.firstPage();
     }
   }
+  
 }
 
 /** Builds and returns a new User. */
@@ -106,7 +106,7 @@ function createNewUser(id: number): UserData {
   return {
     id: id.toString(),
     name: name,
-    progress: Math.round(Math.random() * 100).toString(),
-    fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
+    amount: 12,
+    availability: true,
   };
 }

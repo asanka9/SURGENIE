@@ -1,15 +1,15 @@
 <div class="container mt-3">
     <div class="row">
-        <div class="row" >
-            <div class="col-12" >
+        <div class="row">
+            <div class="col-12">
                 <mat-form-field appearance="fill">
                     <mat-label>User Type</mat-label>
                     <mat-select (selectionChange)="onChangeUserType($event)" [(ngModel)]="selectedValue" name="food">
-                      <mat-option *ngFor="let food of foods"  [value]="food.value">
-                        {{food.viewValue}}
-                      </mat-option>
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                        </mat-option>
                     </mat-select>
-                  </mat-form-field>
+                </mat-form-field>
             </div>
         </div>
         <div class="col-6">
@@ -41,6 +41,34 @@
                             <mat-error *ngIf="lastNameFormControl.hasError('required')">
                                 Last Name is required
                             </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div  *ngIf="userType == 'surgent' || userType == 'nurse'" class="col-12">
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Registration Number</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div  *ngIf="userType == 'admin'" class="col-12">
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Admin Levels</mat-label>
+                            <mat-select (selectionChange)="onChangeUserType($event)" [(ngModel)]="selectedValue"
+                                name="food">
+                                <mat-option *ngFor="let food of adminlevels" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div  *ngIf="userType == 'surgent'" class="col-12">
+                        <mat-form-field class="example-full-width"  appearance="fill">
+                            <mat-label>Specialization Area</mat-label>
+                            <mat-select (selectionChange)="onChangeUserType($event)" [(ngModel)]="selectedValue"
+                                name="food">
+                                <mat-option *ngFor="let food of speciallity" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
                         </mat-form-field>
                     </div>
                     <div class="col-12">
@@ -76,36 +104,25 @@
                             </mat-error>
                         </mat-form-field>
                     </div>
-                    <div class="col-12" >
-                        <mat-form-field class="example-full-width" appearance="fill">
-                            <mat-label>Registration Number</mat-label>
-                            <input matInput >
-                          </mat-form-field>
-                    </div>
-                    <div class="col-12" >
-                        <mat-form-field appearance="fill">
-                            <mat-label>User Type</mat-label>
-                            <mat-select (selectionChange)="onChangeUserType($event)" [(ngModel)]="selectedValue" name="food">
-                              <mat-option *ngFor="let food of foods"  [value]="food.value">
-                                {{food.viewValue}}
-                              </mat-option>
-                            </mat-select>
-                          </mat-form-field>
+
+                    <div *ngIf="userType == 'nurse'" class="col-12">
+                        <mat-checkbox color="primary" class="example-margin">Sister</mat-checkbox>
+
                     </div>
                     <div *ngIf="userType == 'surgent'" class="col-12">
-                        <button mat-flat-button color="primary" >Add Surgent</button>
+                        <button mat-flat-button color="primary">Add Surgent</button>
                     </div>
                     <div *ngIf="userType == 'nurse'" class="col-12">
-                        <button mat-flat-button color="primary" >Add Nurse</button>
+                        <button mat-flat-button color="primary">Add Nurse</button>
                     </div>
                     <div *ngIf="userType == 'trainee-surgent'" class="col-12">
-                        <button mat-flat-button color="primary" >Add Trainee Surgent</button>
+                        <button mat-flat-button color="primary">Add Trainee Surgent</button>
                     </div>
-                    <div  *ngIf="userType == 'anesthesiologist'" class="col-12">
-                        <button mat-flat-button color="primary" >Add Anesthesiologist</button>
+                    <div *ngIf="userType == 'anesthesiologist'" class="col-12">
+                        <button mat-flat-button color="primary">Add Anesthesiologist</button>
                     </div>
-                    <div  *ngIf="userType == 'admin'" class="col-12">
-                        <button mat-flat-button color="primary" >Add Admin</button>
+                    <div *ngIf="userType == 'admin'" class="col-12">
+                        <button mat-flat-button color="primary">Add Admin</button>
                     </div>
                 </div>
             </form>
@@ -117,7 +134,7 @@
                         <div class="col-4">
                             <mat-form-field class="example-full-width">
                                 <mat-label>Day</mat-label>
-                                <mat-select [formControl]="dayFormControl"  name="food">
+                                <mat-select [formControl]="dayFormControl" name="food">
                                     <mat-option *ngFor="let food of days" [value]="food.value">
                                         {{food.viewValue}}
                                     </mat-option>
@@ -127,7 +144,7 @@
                         <div class="col-4">
                             <mat-form-field class="example-full-width">
                                 <mat-label>Session</mat-label>
-                                <mat-select [formControl]="sessionFormControl"  name="food">
+                                <mat-select [formControl]="sessionFormControl" name="food">
                                     <mat-option *ngFor="let food of sessions" [value]="food.value">
                                         {{food.viewValue}}
                                     </mat-option>
@@ -137,32 +154,29 @@
                         <div class="col-4">
                             <a mat-raised-button (click)="addSession()" color="primary">Add Session</a>
                         </div>
-                        <div class="col-12" >
+                        <div class="col-12">
                             <div class="demo-button-container">
-                                <button
-                                    mat-raised-button
-                                    [disabled]="!dataSourceSession.length"
-                                    (click)="removeData()"
+                                <button mat-raised-button [disabled]="!dataSourceSession.length" (click)="removeData()"
                                     class="demo-button">
-                                  Remove data
+                                    Remove data
                                 </button>
-                              </div>
-                              
-                              <table class="demo-table" mat-table [dataSource]="dataSourceSession" >
+                            </div>
+
+                            <table class="demo-table" mat-table [dataSource]="dataSourceSession">
                                 <ng-container matColumnDef="day">
-                                  <th mat-header-cell *matHeaderCellDef>Day</th>
-                                  <td mat-cell *matCellDef="let element">{{element.day}}</td>
+                                    <th mat-header-cell *matHeaderCellDef>Day</th>
+                                    <td mat-cell *matCellDef="let element">{{element.day}}</td>
                                 </ng-container>
-                              
+
                                 <ng-container matColumnDef="session">
-                                  <th mat-header-cell *matHeaderCellDef>Session</th>
-                                  <td mat-cell *matCellDef="let element">{{element.session}}</td>
+                                    <th mat-header-cell *matHeaderCellDef>Session</th>
+                                    <td mat-cell *matCellDef="let element">{{element.session}}</td>
                                 </ng-container>
-                              
-                              
+
+
                                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                              </table>
+                            </table>
                         </div>
                     </div>
 
