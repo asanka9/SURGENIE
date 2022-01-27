@@ -88,7 +88,16 @@
                         </mat-form-field>
 
                     </div>
-
+                    <div style="background-color: brown;" class="col-6" style="text-align: center;" >
+                        <span style="font-size: 20px;" >25 min</span>
+                        <p>Predicted Result</p>
+                    </div>
+                    <div class="col-6" >
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Estimated Result</mat-label>
+                            <input matInput type="number"  >
+                          </mat-form-field>
+                    </div>
                     <div class="col-12">
                         <button mat-flat-button color="primary">Add Surgery</button>
                     </div>
@@ -100,26 +109,24 @@
                         <div class="row">
                             <div class="col-4">
                                 <mat-form-field class="example-full-width">
-                                    <mat-label>Favorite food</mat-label>
-                                    <mat-select name="food">
-                                        <mat-option *ngFor="let food of foods" [value]="food.value">
-                                            {{food.viewValue}}
+                                    <mat-label>Surgery Type</mat-label>
+                                    <input type="text" aria-label="Number" matInput [formControl]="myControl"
+                                        [matAutocomplete]="auto">
+                                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                                        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                            {{option}}
                                         </mat-option>
-                                    </mat-select>
+                                    </mat-autocomplete>
                                 </mat-form-field>
                             </div>
                             <div class="col-4">
-                                <mat-form-field class="example-full-width">
-                                    <mat-label>Favorite food</mat-label>
-                                    <mat-select name="food">
-                                        <mat-option *ngFor="let food of foods" [value]="food.value">
-                                            {{food.viewValue}}
-                                        </mat-option>
-                                    </mat-select>
-                                </mat-form-field>
+                                <mat-form-field class="example-full-width" appearance="fill">
+                                    <mat-label>Resource Amount</mat-label>
+                                    <input matInput >
+                                  </mat-form-field>
                             </div>
                             <div class="col-4">
-                                <a mat-flat-button color="primary">Add Session</a>
+                                <a mat-flat-button color="primary">Add Resource</a>
                             </div>
                         </div>
 
@@ -128,24 +135,29 @@
                         <table mat-table [dataSource]="dataSource" cdkDropList cdkDropListOrientation="horizontal"
                             (cdkDropListDropped)="drop($event)">
 
-                            <ng-container matColumnDef="position">
-                                <th mat-header-cell cdkDrag *matHeaderCellDef> No. </th>
-                                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                            <ng-container matColumnDef="resource">
+                                <th mat-header-cell cdkDrag *matHeaderCellDef> Resource </th>
+                                <td mat-cell *matCellDef="let element"> {{element.resource}} </td>
                             </ng-container>
 
-                            <ng-container matColumnDef="name">
-                                <th mat-header-cell cdkDrag *matHeaderCellDef> Name </th>
-                                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                            <ng-container matColumnDef="amount">
+                                <th mat-header-cell cdkDrag *matHeaderCellDef> Amount </th>
+                                <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
                             </ng-container>
 
-                            <ng-container matColumnDef="weight">
-                                <th mat-header-cell cdkDrag *matHeaderCellDef> Weight </th>
-                                <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                            <ng-container matColumnDef="predicted">
+                                <th mat-header-cell cdkDrag *matHeaderCellDef> Predicted </th>
+                                <td mat-cell *matCellDef="let element"> {{element.predicted}} </td>
                             </ng-container>
 
-                            <ng-container matColumnDef="symbol">
-                                <th mat-header-cell cdkDrag *matHeaderCellDef> Symbol </th>
-                                <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                            <ng-container matColumnDef="estimated">
+                                <th mat-header-cell cdkDrag *matHeaderCellDef> Estimated </th>
+                                <td mat-cell *matCellDef="let element">
+                                    <mat-form-field class="example-full-width" appearance="fill">
+                                        <mat-label>Estimate Value</mat-label>
+                                        <input matInput type="number"  value="{{element.predicted}}">
+                                      </mat-form-field>
+                                </td>
                             </ng-container>
 
                             <tr mat-header-row *matHeaderRowDef="columns"></tr>

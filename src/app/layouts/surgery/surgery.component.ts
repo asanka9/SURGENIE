@@ -13,24 +13,21 @@ interface Food {
   viewValue: string;
 }
 
+
+//   columns: string[] = ['resource', 'amount', 'predicted', 'estimated'];
+
+
 export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  resource: string;
+  amount: number;
+  predicted: number;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {resource: "REsource 01", amount: 3232, predicted: 54},
+  {resource: "REsource 01", amount: 3232, predicted: 54},
+  {resource: "REsource 01", amount: 3232, predicted: 54},
+  {resource: "REsource 01", amount: 3232, predicted: 54}
 ];
 
 @Component({
@@ -42,6 +39,8 @@ export class SurgeryComponent implements OnInit {
 
   myControl = new FormControl();
   options: string[] = ['One', 'Two', 'Three'];
+  resources: string[] = ['Resource', 'Resource', 'Resource'];
+
   filteredOptions: Observable<string[]> | undefined;
 
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
@@ -73,7 +72,7 @@ export class SurgeryComponent implements OnInit {
   value = 'Clear me';
 
 
-  columns: string[] = ['position', 'name', 'weight', 'symbol'];
+  columns: string[] = ['resource', 'amount', 'predicted', 'estimated'];
   dataSource = ELEMENT_DATA;
 
   drop(event: CdkDragDrop<string[]>) {

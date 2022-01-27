@@ -41,6 +41,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatCheckboxDefaultOptions, MatCheckboxModule, MAT_CHECKBOX_DEFAULT_OPTIONS} from '@angular/material/checkbox';
 import { MatSortModule } from '@angular/material/sort';
 import { AddResourceComponent } from './layouts/add-resource/add-resource.component';
+import { LoadingComponent } from './widget/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { AddResourceComponent } from './layouts/add-resource/add-resource.compon
     TeamComponent,
     AddUserComponent,
     SessionCardComponent,
-    AddResourceComponent
+    AddResourceComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
