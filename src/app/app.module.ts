@@ -22,11 +22,11 @@ import {MatListModule} from '@angular/material/list';
 import { SurgeonComponent } from './layouts/surgeon/surgeon.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import {DefaultMatCalendarRangeStrategy, MatDatepickerModule, MAT_DATE_RANGE_SELECTION_STRATEGY} from '@angular/material/datepicker';
 import {MatCardModule} from '@angular/material/card';
 import {MatNativeDateModule} from '@angular/material/core';
 import { FormsModule } from '@angular/forms'; 
-import { MatFormFieldModule } from '@angular/material/form-field'; 
+import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field'; 
 import {MatInputModule} from '@angular/material/input';
 import { LoginComponent } from './layouts/login/login.component';
 import { TeamComponent } from './layouts/team/team.component';
@@ -38,6 +38,8 @@ import {MatTableModule} from '@angular/material/table';
 import { SessionCardComponent } from './widget/session-card/session-card.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatCheckboxDefaultOptions, MatCheckboxModule, MAT_CHECKBOX_DEFAULT_OPTIONS} from '@angular/material/checkbox';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -80,9 +82,19 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatSelectModule,
     MatTableModule,
     MatTabsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatCheckboxModule,
+    BrowserModule,
+    MatTableModule,
+    MatSortModule
   ],
-  providers: [],
+  providers: [
+    {
+       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } ,
+
+    }
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

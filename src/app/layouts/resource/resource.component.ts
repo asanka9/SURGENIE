@@ -1,7 +1,17 @@
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
+
 
 export interface UserData {
   id: string;
@@ -51,6 +61,13 @@ export class ResourceComponent implements AfterViewInit  {
 
   displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
   dataSource: MatTableDataSource<UserData>;
+
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  firstNameFormControl = new FormControl('', [Validators.required]);
+  lastNameFormControl = new FormControl('', [Validators.required]);
+  telephoneFormControl = new FormControl('', [Validators.required]);
+  addressFormControl = new FormControl('', [Validators.required]);
+  matcher = new MyErrorStateMatcher();
 
   @ViewChild(MatPaginator) paginator: MatPaginator | any;
   @ViewChild(MatSort) sort: MatSort| any;

@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -10,8 +10,8 @@ import { map } from 'rxjs/operators';
 export interface UserData {
   id: string;
   name: string;
-  progress: string;
-  fruit: string;
+  email: string;
+  telephone: string;
 }
 
 /** Constants used to fill up our data base. */
@@ -58,6 +58,9 @@ const users = [
   }
 ]
 
+
+
+
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -90,6 +93,9 @@ export class UsersComponent implements AfterViewInit {
     // Get anesthetistic
     const anesthetistic = Array.from({ length: 100 }, (_, k) => this.getAnesthetistic(k + 1));
     this.dataSourceAnesthetistic = new MatTableDataSource(anesthetistic);
+
+    const admin = Array.from({ length: 100 }, (_, k) => this.getAnesthetistic(k + 1));
+    this.dataSourceAdmin = new MatTableDataSource(admin);
   }
 
   ngAfterViewInit() {
@@ -104,6 +110,9 @@ export class UsersComponent implements AfterViewInit {
 
     this.dataSourceAnesthetistic.paginator = this.paginator;
     this.dataSourceAnesthetistic.sort = this.sort;
+
+    this.dataSourceAdmin.paginator = this.paginator;
+    this.dataSourceAdmin.sort = this.sort;
   }
 
   private _filter(value: string): string[] {
@@ -112,24 +121,29 @@ export class UsersComponent implements AfterViewInit {
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
 
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
+  displayedColumns: string[] = ['id', 'name', 'email', 'telephone'];
   dataSourceSurgent: MatTableDataSource<UserData>;
   dataSourceTraineeSurgent: MatTableDataSource<UserData>;
   dataSourceAnesthetistic: MatTableDataSource<UserData>;
   dataSourceNurse: MatTableDataSource<UserData>;
-
-
+  dataSourceAdmin: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator | any;
   @ViewChild(MatSort) sort: MatSort | any;
-
-
 
   applyFilterSurgent(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSourceSurgent.filter = filterValue.trim().toLowerCase();
     if (this.dataSourceSurgent.paginator) {
       this.dataSourceSurgent.paginator.firstPage();
+    }
+  }
+
+  applyFilterAdmin(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSourceAdmin.filter = filterValue.trim().toLowerCase();
+    if (this.dataSourceAdmin.paginator) {
+      this.dataSourceAdmin.paginator.firstPage();
     }
   }
 
@@ -164,12 +178,12 @@ export class UsersComponent implements AfterViewInit {
       NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
       NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
 
-    return {
-      id: id.toString(),
-      name: name,
-      progress: Math.round(Math.random() * 100).toString(),
-      fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
-    };
+      return {
+        id: id.toString(),
+        name: name,
+        email: 'asanka@gmail.com',
+        telephone: '07666666666',
+      };
   }
 
   // Get data Surgent
@@ -177,13 +191,12 @@ export class UsersComponent implements AfterViewInit {
     const name =
       NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
       NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
-
-    return {
-      id: id.toString(),
-      name: name,
-      progress: Math.round(Math.random() * 100).toString(),
-      fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
-    };
+      return {
+        id: id.toString(),
+        name: name,
+        email: 'asanka@gmail.com',
+        telephone: '07666666666',
+      };
   }
 
   // Get data Nurse
@@ -195,8 +208,8 @@ export class UsersComponent implements AfterViewInit {
     return {
       id: id.toString(),
       name: name,
-      progress: Math.round(Math.random() * 100).toString(),
-      fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
+      email: 'asanka@gmail.com',
+      telephone: '07666666666',
     };
   }
 
@@ -205,13 +218,12 @@ export class UsersComponent implements AfterViewInit {
     const name =
       NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
       NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
-
-    return {
-      id: id.toString(),
-      name: name,
-      progress: Math.round(Math.random() * 100).toString(),
-      fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
-    };
+      return {
+        id: id.toString(),
+        name: name,
+        email: 'asanka@gmail.com',
+        telephone: '07666666666',
+      };
   }
 
 
@@ -221,13 +233,14 @@ export class UsersComponent implements AfterViewInit {
       NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
       NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
 
-    return {
-      id: id.toString(),
-      name: name,
-      progress: Math.round(Math.random() * 100).toString(),
-      fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
-    };
+      return {
+        id: id.toString(),
+        name: name,
+        email: 'asanka@gmail.com',
+        telephone: '07666666666',
+      };
   }
+
 
 
 }

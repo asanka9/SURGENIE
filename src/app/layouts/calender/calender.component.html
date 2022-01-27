@@ -1,75 +1,95 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-5 col-12">
-            <div class="mt-3">
-                <mat-card class="demo-inline-calendar-card">
-                    <mat-calendar (click)="updateCalcs($event)" [(selected)]="selected"></mat-calendar>
-                </mat-card>
+<div class="all" >
 
-            </div>
-
-            <div>
-                <div class="row">
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-12">
+                <div class="row mt-3" >
+                    <section >
+                        <mat-checkbox color="primary" class="example-margin" [(ngModel)]="checked">
+                            Date Range
+                        </mat-checkbox>
+                      </section>
                 </div>
-
-
+                <div class="mt-3">
+                    <mat-card class="demo-inline-calendar-card">
+                        <mat-calendar *ngIf="!checked" (click)="updateCalcsDate($event)"  [(selected)]="selected">
+                        </mat-calendar>
+    
+                        <mat-calendar *ngIf="checked"  (click)="updateCalcs($event)" [(selected)]="selected" [(selected)]="this.sampleRange" [comparisonStart]="this.sampleRange.start"
+                            [comparisonStart]="this.sampleRange.end" (selectedChange)="this.onChange($event)">
+                        </mat-calendar>
+                    </mat-card>
+    
+                </div>
+    
+                <div>
+                    <div class="row">
+    
+                    </div>
+    
+    
+                </div>
+    
             </div>
-
-        </div>
-        <div class="col-md-7 col-12 mt-3">
-            <mat-tab-group mat-align-tabs="start">
-                <mat-tab label="Day Schedule">
-                    <mat-card class="example-card mt-3">
-                        <mat-card-title>{{ selectedDateFormat }}</mat-card-title>
-                        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                        <mat-card-content>
+            <div class="col-md-7 col-12 mt-3">
+                <mat-tab-group mat-align-tabs="start">
+                    <mat-tab label="Day Schedule">
+                        <mat-card class="example-card mt-3">
+                            <mat-card-title>{{ selectedDateFormat }}</mat-card-title>
+                            <mat-card-subtitle>6 Day Schedules</mat-card-subtitle>
+                            <mat-card-content>
     
-                            <div  *ngFor="let movie of movies">
-                                <hr>
+                                <div *ngFor="let movie of movies">
+                                    <hr>
     
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div style="font-weight: bold;">
-                                            {{movie.name}}
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div style="font-weight: bold;">
+                                                6 a.m - 8 a.m
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <span>
+                                                Surgery
+                                            </span>
                                         </div>
                                     </div>
-                                    <div class="col-12">
-                                        {{movie.description}}
-                                    </div>
                                 </div>
-                            </div>
-                        </mat-card-content>
-                    </mat-card>
-                </mat-tab>
-                <mat-tab label="Surgery Schedule">
-                    <mat-card class="example-card mt-3">
-                        <mat-card-title>{{ selectedDateFormat }}</mat-card-title>
-                        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                        <mat-card-content>
+                            </mat-card-content>
+                        </mat-card>
+                    </mat-tab>
+                    <mat-tab label="Surgery Schedule">
+                        <mat-card class="example-card mt-3">
+                            <mat-card-title>{{ selectedDateFormat }}</mat-card-title>
+                            <mat-card-subtitle>5 Day Shedules</mat-card-subtitle>
+                            <mat-card-content>
     
-                            <div  *ngFor="let movie of movies">
-                                <hr>
+                                <div *ngFor="let movie of movies">
+                                    <hr>
     
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div style="font-weight: bold;">
-                                            {{movie.name}}
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div style="font-weight: bold;">
+                                                {{movie.name}}
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            {{movie.description}}
                                         </div>
                                     </div>
-                                    <div class="col-12">
-                                        {{movie.description}}
-                                    </div>
                                 </div>
-                            </div>
-                        </mat-card-content>
-                    </mat-card>
-                </mat-tab>
-              </mat-tab-group>
-            <div>
-
+                            </mat-card-content>
+                        </mat-card>
+                    </mat-tab>
+                </mat-tab-group>
+                <div>
+    
+                </div>
+    
             </div>
-
         </div>
     </div>
 </div>

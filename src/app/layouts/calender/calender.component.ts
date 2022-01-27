@@ -1,5 +1,6 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
+import { DateRange } from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-calender',
@@ -8,10 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalenderComponent implements OnInit {
 
-  constructor() { }
+  sampleRange: DateRange<Date> | any;
+  checked = false;
+
+  constructor() {
+    this.refreshDR();
+  }
+
+  refreshDR() {
+    this.sampleRange = new DateRange(new Date(),new Date());
+  }
+
+  onChange(ev: any) {
+    console.log(`cal onChange:`, ev);
+  }
 
   ngOnInit(): void {
+    this.selectedDateFormat = "JAN 15"
   }
+
+
   selected: Date | null | undefined;
   selectedDateFormat: string | undefined;
 
@@ -39,10 +56,52 @@ export class CalenderComponent implements OnInit {
     moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
   }
 
-  updateCalcs(event: any) {
-    if (this.selected?.getDay()) {
+  updateCalcsDate(event: any) {
+    if (this.selected?.getDate()) {
       this.selectedDateFormat = this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString();
 
+    }
+  }
+
+
+  updateCalcs(event: any) {
+    var today = new Date();
+    if (this.selected?.getDate()) {
+      if ((Number(today.getMonth()) <= Number(this.selected?.getMonth()))) {
+        if ((today.getDate() < Number(this.selected?.getDate())) ) {
+          this.selectedDateFormat = this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString()+" - "+this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString();
+          this.sampleRange = new DateRange((() => {
+            let v = new Date();
+            v.setDate(v.getDate());
+            return v;
+          })(),this.selected);
+        } else {
+          this.selectedDateFormat = this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString() +" - "+this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString();
+  
+          this.sampleRange = new DateRange(this.selected,(() => {
+            let v = new Date();
+            v.setDate(v.getDate());
+            return v;
+          })());
+        }
+      } else {
+        alert("NEXT MONTH")
+        if ((today.getDate() < Number(this.selected?.getDate())) ) {
+          this.selectedDateFormat = this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString() +" - "+this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString();
+          this.sampleRange = new DateRange(this.selected,(() => {
+            let v = new Date();
+            v.setDate(v.getDate());
+            return v;
+          })());
+        } else {
+          this.selectedDateFormat = this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString() +" - "+this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString();
+          this.sampleRange = new DateRange(this.selected,(() => {
+            let v = new Date();
+            v.setDate(v.getDate());
+            return v;
+          })());
+        } 
+      }
 
     }
 
