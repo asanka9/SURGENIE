@@ -69,6 +69,7 @@ export class AddUserComponent implements OnInit {
   lastNameFormControl = new FormControl('', [Validators.required]);
   telephoneFormControl = new FormControl('', [Validators.required]);
   addressFormControl = new FormControl('', [Validators.required]);
+  professionalTypeFormControl = new FormControl('', [Validators.required]);
 
   // Doctor | Nurse
   registrationNumber= new FormControl('', [Validators.required]);
@@ -84,8 +85,18 @@ export class AddUserComponent implements OnInit {
 
   foods: Food[] = [
     {value: 'nurse', viewValue: 'Nurse'},
-    {value: 'surgent', viewValue: 'Surgent'},
-    {value: 'trainee-surgent', viewValue: 'Trainee Surgent'},
+    {value: 'surgeon', viewValue: 'Surgeon'},
+    {value: 'trainee-surgeon', viewValue: 'Trainee Surgeon'},
+    {value: 'anesthesiologist', viewValue: 'Anesthesiologist'},
+    {value: 'admin', viewValue: 'Admin'},
+
+  ];
+
+  
+  preofessionals: Food[] = [
+    {value: 'nurse', viewValue: 'Dr'},
+    {value: 'surgeon', viewValue: 'Mr'},
+    {value: 'trainee-surgeon', viewValue: 'Ms'},
     {value: 'anesthesiologist', viewValue: 'Anesthesiologist'},
     {value: 'admin', viewValue: 'Admin'},
 

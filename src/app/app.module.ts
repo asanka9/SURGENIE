@@ -42,6 +42,8 @@ import {MatCheckboxDefaultOptions, MatCheckboxModule, MAT_CHECKBOX_DEFAULT_OPTIO
 import { MatSortModule } from '@angular/material/sort';
 import { AddResourceComponent } from './layouts/add-resource/add-resource.component';
 import { LoadingComponent } from './widget/loading/loading.component';
+import { UpdateUserComponent } from './layouts/account/update-user/update-user.component';
+import { SurgeryHistoryComponent } from './layouts/account/surgery-history/surgery-history.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +63,9 @@ import { LoadingComponent } from './widget/loading/loading.component';
     AddUserComponent,
     SessionCardComponent,
     AddResourceComponent,
-    LoadingComponent
+    LoadingComponent,
+    UpdateUserComponent,
+    SurgeryHistoryComponent
   ],
   imports: [
     BrowserModule,

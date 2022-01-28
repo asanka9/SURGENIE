@@ -25,14 +25,14 @@ export class TeamComponent implements OnInit {
   filteredTraineeSurgent: Observable<string[]>;
   filteredAnesthetic: Observable<string[]>;
 
-  nurse: string[] = ['Lemon'];
-  allnurse: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
+  nurse: string[] = ['Helan Ross','Alison Reid','Jeniffer Jones','Sylvia MCMillan','Maria Duncan',];
+  allnurse: string[] = ['Helan Ross','Alison Reid','Jeniffer Jones','Sylvia MCMillan','Maria Duncan','Sarah Cameron','Ruth Gibson','Pamela Grant','Martha Gordon','Jessie Allan'];
 
-  traineeSurgent: string[] = ['Lemon'];
-  alltraineeSurgent: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
+  traineeSurgent: string[] = ['Dr. Chris Hunter','Dr. Helen Douglas','Dr. Janice Moore','Dr. Ellen Shaw',];
+  alltraineeSurgent: string[] = ['Dr. Chris Hunter','Dr. Helen Douglas','Dr. Janice Moore','Dr. Ellen Shaw','Dr. Evleyn Gordon','Dr. Brenda Russell','Dr. Marion Kelly','Dr. Katherine Mckay','Dr. Angela Christie','Dr. Keith  Aitken'];
 
-  anesthetic: string[] = ['Lemon'];
-  allAnesthetic: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
+  anesthetic: string[] = ['Dr. Carol Anderson','Dr. Catherine White','Dr. Joan Scott','Dr. Linda Taylor',];
+  allAnesthetic: string[] = ['Dr. Carol Anderson','Dr. Catherine White','Dr. Joan Scott','Dr. Linda Taylor','Dr. Shelia Walker','Dr. Andrew Miller','Dr. Daniel Duncun','Dr. Susan Mclean','Dr. Alison Christie','Dr. Gavin Bell'];
 
   @ViewChild('fruitInput') nurseInput: ElementRef<HTMLInputElement> | undefined;
   @ViewChild('fruitInput') traineeSurgentInput: ElementRef<HTMLInputElement> | undefined;
@@ -162,4 +162,17 @@ export class TeamComponent implements OnInit {
     const filterValue = value.toLowerCase();
     return this.allAnesthetic.filter(fruit => fruit.toLowerCase().includes(filterValue));
   }
+
+  getProfilePicSurgeon(index:any){
+    return "assets/surgeon/"+"surgeon_ "+index+".jpg"
+  }
+
+  getProfilePicNurse(index:any){
+    return "assets/surgeon/"+"surgeon_ "+index+".jpg"
+  }
+
+  getProfilePicAnesthesiologist(index:any){
+    return "assets/surgeon/"+"surgeon_ "+index+".jpg"
+  }
+
 }

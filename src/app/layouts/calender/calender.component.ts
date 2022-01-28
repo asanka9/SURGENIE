@@ -67,8 +67,9 @@ export class CalenderComponent implements OnInit {
   updateCalcs(event: any) {
     var today = new Date();
     if (this.selected?.getDate()) {
-      if ((Number(today.getMonth()) <= Number(this.selected?.getMonth()))) {
-        if ((today.getDate() < Number(this.selected?.getDate())) ) {
+
+
+        if (today < this.selected ) {
           this.selectedDateFormat = this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString()+" - "+this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString();
           this.sampleRange = new DateRange((() => {
             let v = new Date();
@@ -84,24 +85,7 @@ export class CalenderComponent implements OnInit {
             return v;
           })());
         }
-      } else {
-        alert("NEXT MONTH")
-        if ((today.getDate() < Number(this.selected?.getDate())) ) {
-          this.selectedDateFormat = this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString() +" - "+this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString();
-          this.sampleRange = new DateRange(this.selected,(() => {
-            let v = new Date();
-            v.setDate(v.getDate());
-            return v;
-          })());
-        } else {
-          this.selectedDateFormat = this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString() +" - "+this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString();
-          this.sampleRange = new DateRange(this.selected,(() => {
-            let v = new Date();
-            v.setDate(v.getDate());
-            return v;
-          })());
-        } 
-      }
+      
 
     }
 
