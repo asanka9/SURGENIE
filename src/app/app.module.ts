@@ -44,6 +44,8 @@ import { AddResourceComponent } from './layouts/add-resource/add-resource.compon
 import { LoadingComponent } from './widget/loading/loading.component';
 import { UpdateUserComponent } from './layouts/account/update-user/update-user.component';
 import { SurgeryHistoryComponent } from './layouts/account/surgery-history/surgery-history.component';
+import { MotivationComponent } from './calender/motivation/motivation.component';
+import { QuoteComponent } from './layouts/calender/quote/quote.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,9 @@ import { SurgeryHistoryComponent } from './layouts/account/surgery-history/surge
     AddResourceComponent,
     LoadingComponent,
     UpdateUserComponent,
-    SurgeryHistoryComponent
+    SurgeryHistoryComponent,
+    MotivationComponent,
+    QuoteComponent
   ],
   imports: [
     BrowserModule,

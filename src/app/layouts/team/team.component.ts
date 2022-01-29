@@ -164,15 +164,15 @@ export class TeamComponent implements OnInit {
   }
 
   getProfilePicSurgeon(index:any){
-    return "assets/surgeon/"+"surgeon_ "+index+".jpg"
+    return "assets/surgeons/"+"surgeon_"+index+".jpg"
   }
 
   getProfilePicNurse(index:any){
-    return "assets/surgeon/"+"surgeon_ "+index+".jpg"
+    return "assets/nurse/"+"nurse_"+index+".jpg"
   }
 
   getProfilePicAnesthesiologist(index:any){
-    return "assets/surgeon/"+"surgeon_ "+index+".jpg"
+    return "assets/anesthesiologist/"+"anaesthetist_"+index+".jpg"
   }
 
 }

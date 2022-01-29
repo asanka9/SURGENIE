@@ -1,11 +1,9 @@
 <mat-tab-group>
-    <mat-tab label="Add User">
-        <app-add-user class="mt-3"></app-add-user>
-    </mat-tab>
+
     <mat-tab label="Surgeon">
         <div class="container">
             <mat-form-field appearance="standard">
-                <mat-label>Filter</mat-label>
+                <mat-label>Add Surgeon</mat-label>
                 <input matInput (keyup)="applyFilterSurgent($event)" placeholder="Ex. Mia" #input>
             </mat-form-field>
 
@@ -56,7 +54,7 @@
     <mat-tab label="Trainee Surgeon">
         <div class="container">
             <mat-form-field appearance="standard">
-                <mat-label>Filter</mat-label>
+                <mat-label>Search Trainee Surgeon</mat-label>
                 <input matInput (keyup)="applyFilterTraineeSurgent($event)" placeholder="Ex. Mia" #input>
             </mat-form-field>
 
@@ -104,7 +102,7 @@
     <mat-tab label="Anesthesiologist">
         <div class="container">
             <mat-form-field appearance="standard">
-                <mat-label>Filter</mat-label>
+                <mat-label>Search Anesthesiologist</mat-label>
                 <input matInput (keyup)="applyFilterSurgent($event)" placeholder="Ex. Mia" #input>
             </mat-form-field>
 
@@ -152,7 +150,7 @@
     <mat-tab label="Nurse">
         <div class="container">
             <mat-form-field appearance="standard">
-                <mat-label>Filter</mat-label>
+                <mat-label>Search Nurse</mat-label>
                 <input matInput (keyup)="applyFilterNurse($event)" placeholder="Ex. Mia" #input>
             </mat-form-field>
 
@@ -199,7 +197,7 @@
     <mat-tab label="Admin">
         <div class="container">
             <mat-form-field appearance="standard">
-                <mat-label>Filter</mat-label>
+                <mat-label>Search Admin</mat-label>
                 <input matInput (keyup)="applyFilterAdmin($event)" placeholder="Ex. Mia" #input>
             </mat-form-field>
 
@@ -244,5 +242,7 @@
 
         </div>
     </mat-tab>
-
+    <mat-tab label="Add User">
+        <app-add-user class="mt-3"></app-add-user>
+    </mat-tab>
 </mat-tab-group>
