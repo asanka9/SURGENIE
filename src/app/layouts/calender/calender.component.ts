@@ -25,7 +25,9 @@ export class CalenderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.selectedDateFormat = "JAN 15"
+    var today = new Date();
+
+    this.selectedDateFormat = this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString()
   }
 
 
@@ -114,11 +116,9 @@ export class CalenderComponent implements OnInit {
       case 9:
         return "OCT";
       case 10:
-        return "JAN";
+        return "Nov";
       case 11:
-        return "JAN";
-      case 12:
-        return "JAN";
+        return "Dec";
       default:
         return "";
 

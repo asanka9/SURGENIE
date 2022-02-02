@@ -32,7 +32,7 @@ import { LoginComponent } from './layouts/login/login.component';
 import { TeamComponent } from './layouts/team/team.component';
 import {MatChipsModule} from '@angular/material/chips';
 import {ReactiveFormsModule} from '@angular/forms';
-import { AddUserComponent } from './layouts/add-user/add-user.component';
+import { AddUserComponent } from './layouts/users/add-user/add-user.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import { SessionCardComponent } from './widget/session-card/session-card.component';
@@ -46,6 +46,9 @@ import { UpdateUserComponent } from './layouts/account/update-user/update-user.c
 import { SurgeryHistoryComponent } from './layouts/account/surgery-history/surgery-history.component';
 import { MotivationComponent } from './calender/motivation/motivation.component';
 import { QuoteComponent } from './layouts/calender/quote/quote.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptorService } from './services/token-interceptor.service';
+
 
 @NgModule({
   declarations: [
@@ -98,12 +101,18 @@ import { QuoteComponent } from './layouts/calender/quote/quote.component';
     MatCheckboxModule,
     BrowserModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
+    HttpClientModule
   ],
   providers: [
     {
        provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } ,
 
+    },
+      {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
     }
 
   ],

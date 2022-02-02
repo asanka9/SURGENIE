@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountComponent } from './layouts/account/account.component';
-import { AddUserComponent } from './layouts/add-user/add-user.component';
+import { AddUserComponent } from './layouts/users/add-user/add-user.component';
 import { CalenderComponent } from './layouts/calender/calender.component';
 import { LoginComponent } from './layouts/login/login.component';
 import { NotFoundComponent } from './layouts/not-found/not-found.component';

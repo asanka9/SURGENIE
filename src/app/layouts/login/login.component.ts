@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -7,37 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  loginForm : FormGroup;
 
-  constructor() { }
+  constructor(private authService : AuthService) {
+    this.loginForm = new FormGroup(
+      {
+        username : new FormControl(''),
+        password : new FormControl('')
+      }
+    );
 
-  isSignedIn = false
-  // @Output() handleLoginState = new EventEmitter<any>();
+   }
 
   ngOnInit(): void {
-    // if(localStorage.getItem('user_1')!== null)
-    // {
-    //   this.isSignedIn= true
-    //   this.handleLoginState.emit(true)
-    // }
-    // else
-    // {
-    //   this.isSignedIn= false
-    //   this.handleLoginState.emit(false)
-    // }
-  }
-
-
-  async onSignin(email:string,password:string){
-    // await this.firebaseService.signin(email,password)
-    // if(this.firebaseService.isLoggedIn)
-    // {
-    //   this.isSignedIn = true
-    //   this.handleLoginState.emit(true)
-    // }
-  }
-
-  handleLogout(){
-    this.isSignedIn = false
 
   }
+
+  get f(){
+    return this.loginForm.controls;
+  }
+
+  onSubmit(): void {
+    alert(this.f.username.value)
+    alert(this.f.password.value)
+    this.authService.login(this.f.username.value, this.f.password.value).pipe((first())).subscribe(res=>{})
+  }
+
 }

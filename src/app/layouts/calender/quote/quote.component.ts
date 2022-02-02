@@ -48,7 +48,7 @@ export class QuoteComponent implements OnInit {
     }
 
 
-    this.showQuote = true;
+    // this.showQuote = true;
     
    }
 
