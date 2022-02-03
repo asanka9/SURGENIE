@@ -106,9 +106,7 @@ export class AppComponent {
     this.selectedSideBar = this.selectedSideBar + "-" + path.substring(0, path.indexOf('/'));
 
     this.auth.loggedIn().subscribe((res)=>{
-      console.log("*********************************");
-      console.log(res);
-      console.log("*********************************");
+
       
       this.loggedIn = true
       this.is_admin_staff = res['is_admin_staff']

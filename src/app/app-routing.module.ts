@@ -7,7 +7,6 @@ import { LoginComponent } from './layouts/login/login.component';
 import { NotFoundComponent } from './layouts/not-found/not-found.component';
 import { ResourceComponent } from './layouts/resource/resource.component';
 import { SurgentComponent } from './layouts/surgent/surgent.component';
-import { SurgeonComponent } from './layouts/surgeon/surgeon.component';
 import { SurgeryComponent } from './layouts/surgery/surgery.component';
 import { TeamComponent } from './layouts/team/team.component';
 import { UsersComponent } from './layouts/users/users.component';
@@ -25,10 +24,7 @@ const routes: Routes = [
     path:'resource',
     component:ResourceComponent
   },
-  {
-    path:'surgeon',
-    component:SurgeonComponent
-  },
+
   {
     path:'surgery',
     component:SurgeryComponent

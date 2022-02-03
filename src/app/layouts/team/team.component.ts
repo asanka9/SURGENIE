@@ -5,6 +5,7 @@ import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { map, startWith } from 'rxjs/operators';
 import { MatChipInputEvent } from '@angular/material/chips';
+import { TeamService } from 'src/app/services/team.service';
 
 @Component({
   selector: 'app-team',
@@ -21,37 +22,57 @@ export class TeamComponent implements OnInit {
   chipsCtrlAnesthetic = new FormControl();
 
 
-  filteredNurse: Observable<string[]> ;
-  filteredTraineeSurgent: Observable<string[]>;
-  filteredAnesthetic: Observable<string[]>;
+  filteredNurse: Observable<string[]> | undefined;
+  filteredTraineeSurgent: Observable<string[]> | undefined;
+  filteredAnesthetic: Observable<string[]> | undefined;
 
-  nurse: string[] = ['Helan Ross','Alison Reid','Jeniffer Jones','Sylvia MCMillan','Maria Duncan',];
-  allnurse: string[] = ['Helan Ross','Alison Reid','Jeniffer Jones','Sylvia MCMillan','Maria Duncan','Sarah Cameron','Ruth Gibson','Pamela Grant','Martha Gordon','Jessie Allan'];
+  nurse: string[] = [];
+  allnurse: string[] = [];
 
-  traineeSurgent: string[] = ['Dr. Chris Hunter','Dr. Helen Douglas','Dr. Janice Moore','Dr. Ellen Shaw',];
-  alltraineeSurgent: string[] = ['Dr. Chris Hunter','Dr. Helen Douglas','Dr. Janice Moore','Dr. Ellen Shaw','Dr. Evleyn Gordon','Dr. Brenda Russell','Dr. Marion Kelly','Dr. Katherine Mckay','Dr. Angela Christie','Dr. Keith  Aitken'];
+  traineeSurgent: string[] = [];
+  alltraineeSurgent: string[] = [];
 
-  anesthetic: string[] = ['Dr. Carol Anderson','Dr. Catherine White','Dr. Joan Scott','Dr. Linda Taylor',];
-  allAnesthetic: string[] = ['Dr. Carol Anderson','Dr. Catherine White','Dr. Joan Scott','Dr. Linda Taylor','Dr. Shelia Walker','Dr. Andrew Miller','Dr. Daniel Duncun','Dr. Susan Mclean','Dr. Alison Christie','Dr. Gavin Bell'];
+  anesthetic: string[] = [];
+  allAnesthetic: string[] = [];
 
   @ViewChild('fruitInput') nurseInput: ElementRef<HTMLInputElement> | undefined;
   @ViewChild('fruitInput') traineeSurgentInput: ElementRef<HTMLInputElement> | undefined;
   @ViewChild('fruitInput') anesthetisticInput: ElementRef<HTMLInputElement> | undefined;
 
-  constructor() {
-    this.filteredNurse = this.chipsCtrlNurse.valueChanges.pipe(
-      startWith(null),
-      map((fruit: string | null) => (fruit ? this._filterNurse(fruit) : this.allnurse.slice())),
-    );
-    this.filteredTraineeSurgent = this.chipsCtrlTraineeSurgent.valueChanges.pipe(
-      startWith(null),
-      map((fruit: string | null) => (fruit ? this._filterTaineeSurgent(fruit) : this.alltraineeSurgent.slice())),
-    );
-    this.filteredAnesthetic = this.chipsCtrlAnesthetic.valueChanges.pipe(
-      startWith(null),
-      map((fruit: string | null) => (fruit ? this._filterAnesthetistic(fruit) : this.allAnesthetic.slice())),
-    );
+  constructor(private team:TeamService) {
+
+
+    this.team.getTeamdetails().subscribe((res)=>{
+
+      this.nurse = res['fav_nurse']
+      this.traineeSurgent = res['fav_trainee_surgeon']
+      this.anesthetic = res['fav_anesthesiologist']
+
+      this.allnurse = res['nurse']
+      this.alltraineeSurgent = res['trainee_surgeon']
+      this.allAnesthetic = res['anesthesiologist']    
+
+      this.filteredNurse = this.chipsCtrlNurse.valueChanges.pipe(
+        startWith(null),
+        map((fruit: string | null) => (fruit ? this._filterNurse(fruit) : this.allnurse.slice())),
+      );
+      this.filteredTraineeSurgent = this.chipsCtrlTraineeSurgent.valueChanges.pipe(
+        startWith(null),
+        map((fruit: string | null) => (fruit ? this._filterTaineeSurgent(fruit) : this.alltraineeSurgent.slice())),
+      );
+      this.filteredAnesthetic = this.chipsCtrlAnesthetic.valueChanges.pipe(
+        startWith(null),
+        map((fruit: string | null) => (fruit ? this._filterAnesthetistic(fruit) : this.allAnesthetic.slice())),
+      );
+
+
+    },(err)=>{
+
+    })
+
   }
+
+
   ngOnInit(): void {
   }
 
@@ -61,18 +82,14 @@ export class TeamComponent implements OnInit {
 
   customizeAnesthatistic(){
     this.isCustomizedAnesthtistic = !this.isCustomizedAnesthtistic;
-
   }
 
   customizeNurse(){
     this.isCustomizedNurse = !this.isCustomizedNurse;
-
-
   }
 
   customizeTraineeSurgent(){
     this.isCustomizedSurgent = !this.isCustomizedSurgent;
-
   }
 
   addNurse(event: MatChipInputEvent): void {
@@ -173,6 +190,23 @@ export class TeamComponent implements OnInit {
 
   getProfilePicAnesthesiologist(index:any){
     return "assets/anesthesiologist/"+"anaesthetist_"+index+".jpg"
+  }
+
+
+  getEmailAddress(name:any){
+    let names = name.split(' ')
+    return names[1]+names[2]+'@gmail.com'
+  }
+
+  getTelephone(index:any){
+    let telephones = ['77 323 343 6','76 454 343 4']
+    return telephones[Number(index)%2]
+  }
+
+  saveMyTeam(){
+    this.team.createTeam({'trainee_surgeon':this.traineeSurgent,'nurse':this.nurse,'anesthesiologists':this.anesthetic}).subscribe((res)=>{
+      
+    })
   }
 
 }

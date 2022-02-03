@@ -24,7 +24,11 @@
     <mat-sidenav [ngSwitch]="selectedUni" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <app-admin *ngIf="is_admin_staff" ></app-admin>
+      <app-surgeon *ngIf="role == 'surgeon'" ></app-surgeon>
+      <app-medical-staff *ngIf="role == 'anesthesiologist' || role == 'nurse' " ></app-medical-staff>
+
     </mat-sidenav>
+    
 
     <mat-sidenav-content>
       <div>

@@ -75,7 +75,7 @@
                             </mat-select>
                         </mat-form-field>
                     </div>
-                    <div  *ngIf="userType == 'surgeon' ||  userType == 'trainee-surgeon'" class="col-12">
+                    <div  *ngIf="role == 'surgeon' ||  role == 'trainee-surgeon'" class="col-12">
                         <mat-form-field class="example-full-width"  appearance="fill">
                             <mat-label>Specialization Area</mat-label>
                             <mat-select [formControl]="specialityFormControl"
@@ -125,20 +125,20 @@
             <div class="row" >
                 <div class="col-12" >
 
-                    <div *ngIf="userType == 'nurse'" class="col-12">
+                    <div *ngIf="role == 'nurse'" class="col-12">
                         <mat-checkbox color="primary" class="example-margin">Sister</mat-checkbox>
 
                     </div>
-                    <div *ngIf="userType == 'surgeon'" class="col-12 mt-3">
+                    <div *ngIf="role == 'surgeon'" class="col-12 mt-3">
                         <button (click)="registerSurgeon()" mat-flat-button color="primary">Update Surgeon</button>
                     </div>
-                    <div *ngIf="userType == 'nurse'" class="col-12 mt-3">
+                    <div *ngIf="role == 'nurse'" class="col-12 mt-3">
                         <button (click)="registerNurse()" mat-flat-button color="primary">Update Nurse</button>
                     </div>
-                    <div *ngIf="userType == 'trainee-surgeon'" class="col-12 mt-3">
+                    <div *ngIf="role == 'trainee-surgeon'" class="col-12 mt-3">
                         <button (click)="registerTraineeSurgeon()" mat-flat-button color="primary">Update Trainee Surgeon</button>
                     </div>
-                    <div *ngIf="userType == 'anesthesiologist'" class="col-12 mt-3">
+                    <div *ngIf="role == 'anesthesiologist'" class="col-12 mt-3">
                         <button (click)="registerAnesthelogist()" mat-flat-button color="primary">Update Anesthesiologist</button>
                     </div>
                     <div *ngIf="role == 'admin-05' || role == 'admin-04' || role == 'admin-03' || role == 'admin-02' || role == 'admin-01'" class="col-12 mt-3">
@@ -147,7 +147,7 @@
                 </div>
             </div>
         </div>
-        <div *ngIf="userType == 'surgeon' || userType == 'trainee-surgeon'" class="col-6">
+        <div *ngIf="role == 'surgeon' || role == 'trainee-surgeon'" class="col-6">
             <div class="row">
                 <div class="col-12">
                     <div class="row">

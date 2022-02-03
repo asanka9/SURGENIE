@@ -19,7 +19,6 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { SideNavComponent } from './shared/side-nav/side-nav.component';
 import {MatListModule} from '@angular/material/list';
-import { SurgeonComponent } from './layouts/surgeon/surgeon.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {DefaultMatCalendarRangeStrategy, MatDatepickerModule, MAT_DATE_RANGE_SELECTION_STRATEGY} from '@angular/material/datepicker';
@@ -50,6 +49,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { AdminComponent } from './shared/side-nav/admin/admin.component';
 import { MedicalStaffComponent } from './shared/side-nav/medical-staff/medical-staff.component';
+import { SurgeonComponent } from './shared/side-nav/surgeon/surgeon.component';
 
 
 @NgModule({

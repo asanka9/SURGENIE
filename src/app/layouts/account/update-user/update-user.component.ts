@@ -81,11 +81,9 @@ export class UpdateUserComponent implements OnInit {
 
   
   preofessionals: Food[] = [
-    {value: 'nurse', viewValue: 'Dr'},
-    {value: 'surgeon', viewValue: 'Mr'},
-    {value: 'trainee-surgeon', viewValue: 'Ms'},
-    {value: 'anesthesiologist', viewValue: 'Anesthesiologist'},
-    {value: 'admin', viewValue: 'Admin'},
+    {value: 'Dr', viewValue: 'Dr'},
+    {value: 'Mr', viewValue: 'Mr'},
+    {value: 'Ms', viewValue: 'Ms'}
 
   ];
 
@@ -155,7 +153,28 @@ export class UpdateUserComponent implements OnInit {
         this.admin_value = profie['level']
         this.user_type = profie['title']
       }else if (this.is_medical_staff) {
+        let profie = res['profile']
+        console.log("#########3333333333333333333333333333");
+        console.log(profie);
+        console.log("####################################");
         
+        
+        
+        switch (this.role) {
+          case 'surgeon':
+            this.addressFormControl.setValue(profie['address'])
+            this.firstNameFormControl.setValue(profie['first_name'])
+            this.lastNameFormControl.setValue(profie['last_name'])
+            this.professionalTypeFormControl.setValue(profie['type'])
+            this.registrationNumberFromcontrol.setValue(profie['registration_number'])
+            this.emailFormControl.setValue(profie['email'])
+            this.admin_value = profie['level']
+            this.user_type = profie['title']
+            break;
+        
+          default:
+            break;
+        }
       }
     },(err)=>{
       this.loggedIn = false

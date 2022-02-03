@@ -1,1 +1,14 @@
-<p>surgeon works!</p>
+<div *ngIf="selectedUni" >
+</div>
+
+<div [ngSwitch]="selectedCategory" >
+
+  <mat-nav-list >
+    <a mat-list-item  (click)="navigate('')"  >  Calender</a>
+    <a mat-list-item  (click)="navigate('surgery')"  >Add Surgery</a>
+    <a mat-list-item  (click)="navigate('account')"  >Account</a>
+    <a mat-list-item  (click)="navigate('my-team')"  >My Team</a>
+  </mat-nav-list>
+
+
+</div>
