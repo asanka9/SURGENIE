@@ -65,12 +65,14 @@ export class CalenderComponent implements OnInit {
     }
   }
 
+  previouSelectedDate : Date | any
 
   updateCalcs(event: any) {
     var today = new Date();
     if (this.selected?.getDate()) {
-
-
+      if (this.previouSelectedDate?.getDate() == this.selected.getDate()) {
+        alert("WORKING")
+      } else {
         if (today < this.selected ) {
           this.selectedDateFormat = this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString()+" - "+this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString();
           this.sampleRange = new DateRange((() => {
@@ -87,10 +89,9 @@ export class CalenderComponent implements OnInit {
             return v;
           })());
         }
-      
+      }
 
     }
-
   }
 
   getMonth(num: Number) {

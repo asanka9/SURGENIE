@@ -1,21 +1,21 @@
 <div [ngClass]=' is_dark ?  "darkMode" :""' class="example-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar class="example-toolbar"  >
-    <button  mat-icon-button (click)="snav.toggle()">
+    <button *ngIf="loggedIn"  mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
     <img (click)="brandRoute()" class="brand-img-top" src="/assets/webNew.png" >
     <span class="example-spacer"></span>
-    <button mat-icon-button aria-label="Example icon button with a home icon">
+    <button *ngIf="loggedIn" mat-icon-button aria-label="Example icon button with a home icon">
       <mat-icon  >account_circle</mat-icon>
     </button>
-    <button mat-icon-button aria-label="Example icon button with a home icon">
+    <button *ngIf="loggedIn" mat-icon-button aria-label="Example icon button with a home icon">
       <mat-icon  >event</mat-icon>
     </button>
-    <button mat-icon-button aria-label="Example icon button with a home icon">
+    <button *ngIf="loggedIn" mat-icon-button aria-label="Example icon button with a home icon">
       <mat-icon *ngIf="!is_dark" (click)='change_theme()'>bedtime</mat-icon>
       <mat-icon *ngIf="is_dark" (click)='change_theme()'>brightness_5</mat-icon>
     </button>
-    <button mat-icon-button aria-label="Example icon button with a home icon">
+    <button *ngIf="loggedIn" mat-icon-button aria-label="Example icon button with a home icon">
       <mat-icon  >logout</mat-icon>
     </button>
   </mat-toolbar>
@@ -23,7 +23,7 @@
   <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav [ngSwitch]="selectedUni" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-      <app-side-nav></app-side-nav>
+      <app-admin *ngIf="is_admin_staff" ></app-admin>
     </mat-sidenav>
 
     <mat-sidenav-content>

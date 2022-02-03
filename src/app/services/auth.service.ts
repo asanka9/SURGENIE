@@ -22,8 +22,11 @@ export class AuthService {
     return this.http.post<any>(this.api_url + 'user/api-auth/',{username, password}, httpOptions).
     pipe(map(user =>{
       if (user && user.token) {
-        localStorage.setItem('token', user.token);
-        this._router.navigate(['']);
+        localStorage.setItem('token', user.token)
+        this._router.navigate(['']).then(() => {
+          window.location.reload();
+        });
+
       }
       return user;
     }));
@@ -46,7 +49,12 @@ export class AuthService {
 
   loggedIn()  {
     var data = {"key":localStorage.getItem('token')};
-    return this.http.post<any>(this.api_url + 'accounts/verify-token/',data);
+    return this.http.post<any>(this.api_url + 'user/verify-token/',data);
+  }
+
+  getUserInfo(){
+    var data = {"key":localStorage.getItem('token')};
+    return this.http.post<any>(this.api_url + 'user/user-info/',data);
   }
 
 }

@@ -1,8 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { MatTable } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 /** Error when invalid control is dirty, touched, or submitted. */
@@ -63,21 +65,7 @@ interface Car {
   styleUrls: ['./update-user.component.scss']
 })
 export class UpdateUserComponent implements OnInit {
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  firstNameFormControl = new FormControl('', [Validators.required]);
-  lastNameFormControl = new FormControl('', [Validators.required]);
-  telephoneFormControl = new FormControl('', [Validators.required]);
-  addressFormControl = new FormControl('', [Validators.required]);
-  professionalTypeFormControl = new FormControl('', [Validators.required]);
 
-  // Doctor | Nurse
-  registrationNumber= new FormControl('', [Validators.required]);
-  // Admin
-  adminRole  = new FormControl('', [Validators.required]);
-  // Doctor
-  speciality = new FormControl('', [Validators.required]);
-  // is Sister
-  isSister = new FormControl('', [Validators.required]);
 
   displayedColumns: string[] = ['day', 'session'];
   dataSource = ELEMENT_DATA;
@@ -108,16 +96,14 @@ export class UpdateUserComponent implements OnInit {
     {value: 'wed', viewValue: 'Wednesday'},
     {value: 'thur', viewValue: 'Thursday'},
     {value: 'fri', viewValue: 'Friday'},
-    {value: 'saturday', viewValue: 'Saturday'},
+    {value: 'sat', viewValue: 'Saturday'},
 
   ];
 
   sessions: Food[] = [
-    {value: 'nurse', viewValue: '8 a.m - 10 a.m'},
-    {value: 'surgent', viewValue: '8 a.m - 12 a.m'},
-    {value: 'trainee-surgent', viewValue: 'Trainee Surgent'},
-    {value: 'anesthesiologist', viewValue: 'Anesthesiologist'},
-    {value: 'admin', viewValue: 'Admin'},
+    {value: '8-10', viewValue: '8 a.m - 10 a.m'},
+    {value: '8-12', viewValue: '8 a.m - 12 a.m'},
+
 
   ];
 
@@ -133,18 +119,52 @@ export class UpdateUserComponent implements OnInit {
   ];
 
   adminlevels: Food[] = [
-    {value: 'speciallity-01', viewValue: 'Level 01'},
-    {value: 'speciallity-01', viewValue: 'Speciallity'},
-    {value: 'speciallity-01', viewValue: 'Speciallity'},
-    {value: 'speciallity-01', viewValue: 'Speciallity'},
-    {value: 'speciallity-01', viewValue: 'Speciallity'},
-    {value: 'speciallity-01', viewValue: 'Speciallity'},
-    {value: 'speciallity-01', viewValue: 'Speciallity'},
-    {value: 'speciallity-01', viewValue: 'Speciallity'}
+    {value: 'admin-01', viewValue: 'Level 01'},
+    {value: 'admin-02', viewValue: 'Level 02'},
+    {value: 'admin-03', viewValue: 'Level 03'},
+    {value: 'admin-04', viewValue: 'Level 04'},
+    {value: 'admin-05', viewValue: 'Level 05'},
   ];
 
   matcher = new MyErrorStateMatcher();
-  constructor() { }
+
+
+  loggedIn = false
+  is_admin_staff = false
+  is_medical_staff = false
+  role = ''
+  admin_value = ''
+  user_type = ''
+
+  constructor(private auth:AuthService, private router:Router){
+    this.adminFormControl.setValue('admin-01')
+
+    this.auth.getUserInfo().subscribe((res)=>{
+      this.loggedIn = true
+      this.is_admin_staff = res['is_admin_staff']
+      this.is_medical_staff = res['is_medical_staff']
+      this.role = res['role']
+      if (this.is_admin_staff) {
+        let profie = res['profile']
+        console.log(profie);
+        
+        this.addressFormControl.setValue(profie['address'])
+        this.firstNameFormControl.setValue(profie['first_name'])
+        this.lastNameFormControl.setValue(profie['last_name'])
+        this.professionalTypeFormControl.setValue(profie['type'])
+        this.admin_value = profie['level']
+        this.user_type = profie['title']
+      }else if (this.is_medical_staff) {
+        
+      }
+    },(err)=>{
+      this.loggedIn = false
+      this.router.navigate(['/login'])
+    })
+  }
+
+
+
   ngOnInit(): void {
   }
 
@@ -156,11 +176,8 @@ export class UpdateUserComponent implements OnInit {
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
-
-
 
   userType : any
 
@@ -186,24 +203,183 @@ export class UpdateUserComponent implements OnInit {
 
   @ViewChild(MatTable) tableSession: MatTable<SessionElement> | any;
 
-  addData() {
-    const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA.length);
-    this.dataSourceSession.push(ELEMENT_DATA[randomElementIndex]);
-    this.tableSession.renderRows();
-  }
-
-  removeData() {
-    this.dataSourceSession.pop();
-    this.tableSession.renderRows();
-  }
 
   dayFormControl = new FormControl('', [Validators.required]);
   sessionFormControl = new FormControl('', [Validators.required]);
 
-  addSession(){
-    const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA.length);
-    this.dataSourceSession.push({"day":this.dayFormControl.value,"session":this.sessionFormControl.value});
+  session_list : any=[];
+
+  removeData() {
+    this.dataSourceSession.pop();
+    this.session_list.pop()
     this.tableSession.renderRows();
   }
+
+  addSession(){
+    this.dataSourceSession.push({"day":this.dayFormControl.value.viewValue,"session":this.sessionFormControl.value.viewValue});
+    this.session_list.push({"day":this.dayFormControl.value.value,"session":this.sessionFormControl.value.value})
+    this.dayFormControl.reset()
+    this.sessionFormControl.reset()
+    this.tableSession.renderRows();
+  }
+
+  bioSection = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    age: new FormControl('')
+  });
+
+
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  firstNameFormControl = new FormControl('', [Validators.required]);
+  lastNameFormControl = new FormControl('', [Validators.required]);
+  telephoneFormControl = new FormControl('', [Validators.required]);
+  addressFormControl = new FormControl('', [Validators.required]);
+  specialityFormControl = new FormControl('', [Validators.required]);
+  adminFormControl = new FormControl('', [Validators.required]);
+  professionalTypeFormControl = new FormControl('', [Validators.required]);
+  registrationNumberFromcontrol= new FormControl('', [Validators.required]);
+  adminRole  = new FormControl('', [Validators.required]);
+  isSister = new FormControl('', [Validators.required]);
+
+
+  // User Registration Area
+  registerSurgeon(){
+    var data = {
+      "title":this.professionalTypeFormControl.value,
+      "first_name": this.firstNameFormControl.value,
+      "last_name":this.lastNameFormControl.value,
+      "email":this.emailFormControl.value,
+      "telephone":this.telephoneFormControl.value,
+      "address":this.addressFormControl.value,
+      "registration_number":this.registrationNumberFromcontrol.value,
+      "specialty":this.specialityFormControl.value,
+      'session':this.session_list,
+      "is_medical_staff":true,
+      "is_admin_staff":false,
+      "role":'surgeon'
+    }
+
+    this.professionalTypeFormControl.reset()
+    this.firstNameFormControl.reset()
+    this.lastNameFormControl.reset()
+    this.emailFormControl.reset()
+    this.telephoneFormControl.reset()
+    this.addressFormControl.reset()
+    this.registrationNumberFromcontrol.reset()
+    this.specialityFormControl.reset()
+    this.dayFormControl.reset()
+    this.sessionFormControl.reset()
+    this.dataSourceSession = []
+    this.session_list = []
+    this.auth.registerUser(data);
+
+  }
+
+  registerAnesthelogist(){
+    var data = {
+      "title":this.professionalTypeFormControl.value,
+      "first_name": this.firstNameFormControl.value,
+      "last_name":this.lastNameFormControl.value,
+      "email":this.emailFormControl.value,
+      "telephone":this.telephoneFormControl.value,
+      "address":this.addressFormControl.value,
+      "registration_number":this.registrationNumberFromcontrol.value,
+      "is_medical_staff":true,
+      "is_admin_staff":false,
+      "role":'anesthesiologist'
+    }
+    
+    this.professionalTypeFormControl.reset()
+    this.firstNameFormControl.reset()
+    this.lastNameFormControl.reset()
+    this.emailFormControl.reset()
+    this.telephoneFormControl.reset()
+    this.addressFormControl.reset()
+    this.registrationNumberFromcontrol.reset()
+    this.auth.registerUser(data);
+
+  }
+
+  registerNurse(){
+    var data = {
+      "title":this.professionalTypeFormControl.value,
+      "first_name": this.firstNameFormControl.value,
+      "last_name":this.lastNameFormControl.value,
+      "email":this.emailFormControl.value,
+      "telephone":this.telephoneFormControl.value,
+      "address":this.addressFormControl.value,
+      "registration_number":this.registrationNumberFromcontrol.value,
+      "is_medical_staff":true,
+      "is_admin_staff":false,
+      "role":'nurse'
+    }
+    
+    this.professionalTypeFormControl.reset()
+    this.firstNameFormControl.reset()
+    this.lastNameFormControl.reset()
+    this.emailFormControl.reset()
+    this.telephoneFormControl.reset()
+    this.addressFormControl.reset()
+    this.registrationNumberFromcontrol.reset()
+    this.auth.registerUser(data);
+  }
+
+
+  registerTraineeSurgeon(){
+    var data = {
+      "title":this.professionalTypeFormControl.value,
+      "first_name": this.firstNameFormControl.value,
+      "last_name":this.lastNameFormControl.value,
+      "email":this.emailFormControl.value,
+      "telephone":this.telephoneFormControl.value,
+      "address":this.addressFormControl.value,
+      "registration_number":this.registrationNumberFromcontrol.value,
+      "specialty":this.specialityFormControl.value,
+      'session':this.session_list,
+      "is_medical_staff":true,
+      "is_admin_staff":false,
+      "role":'trainee_surgeon'
+    }
+    
+    this.professionalTypeFormControl.reset()
+    this.firstNameFormControl.reset()
+    this.lastNameFormControl.reset()
+    this.emailFormControl.reset()
+    this.telephoneFormControl.reset()
+    this.addressFormControl.reset()
+    this.registrationNumberFromcontrol.reset()
+    this.specialityFormControl.reset()
+    this.dayFormControl.reset()
+    this.sessionFormControl.reset()
+    this.dataSourceSession = []
+    this.session_list = []
+    this.auth.registerUser(data);
+  }
+
+
+  registerAdmin(){
+    var data = {
+      "title":this.professionalTypeFormControl.value,
+      "first_name": this.firstNameFormControl.value,
+      "last_name":this.lastNameFormControl.value,
+      "email":this.emailFormControl.value,
+      "telephone":this.telephoneFormControl.value,
+      "address":this.addressFormControl.value,
+      "is_medical_staff":false,
+      "is_admin_staff":true,
+      "role":this.adminFormControl.value
+    }
+    
+    this.professionalTypeFormControl.reset()
+    this.firstNameFormControl.reset()
+    this.lastNameFormControl.reset()
+    this.emailFormControl.reset()
+    this.telephoneFormControl.reset()
+    this.addressFormControl.reset()
+    this.adminFormControl.reset()
+    this.auth.registerUser(data)
+  }
+
 
 }

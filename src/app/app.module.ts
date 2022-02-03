@@ -48,6 +48,8 @@ import { MotivationComponent } from './calender/motivation/motivation.component'
 import { QuoteComponent } from './layouts/calender/quote/quote.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from './services/token-interceptor.service';
+import { AdminComponent } from './shared/side-nav/admin/admin.component';
+import { MedicalStaffComponent } from './shared/side-nav/medical-staff/medical-staff.component';
 
 
 @NgModule({
@@ -72,7 +74,9 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     UpdateUserComponent,
     SurgeryHistoryComponent,
     MotivationComponent,
-    QuoteComponent
+    QuoteComponent,
+    AdminComponent,
+    MedicalStaffComponent
   ],
   imports: [
     BrowserModule,

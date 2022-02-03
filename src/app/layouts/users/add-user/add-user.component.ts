@@ -108,11 +108,11 @@ export class AddUserComponent implements OnInit {
   ];
 
   adminlevels: Food[] = [
-    {value: 'level-01', viewValue: 'Level 01'},
-    {value: 'level-02', viewValue: 'Level 02'},
-    {value: 'level-03', viewValue: 'Level 03'},
-    {value: 'level-04', viewValue: 'Level 04'},
-    {value: 'level-05', viewValue: 'Level 05'},
+    {value: 'admin-01', viewValue: 'Level 01'},
+    {value: 'admin-02', viewValue: 'Level 02'},
+    {value: 'admin-03', viewValue: 'Level 03'},
+    {value: 'admin-04', viewValue: 'Level 04'},
+    {value: 'admin-05', viewValue: 'Level 05'},
   ];
 
   matcher = new MyErrorStateMatcher();
@@ -229,6 +229,27 @@ export class AddUserComponent implements OnInit {
   }
 
   registerAnesthelogist(){
+    var data = {
+      "title":this.professionalTypeFormControl.value,
+      "first_name": this.firstNameFormControl.value,
+      "last_name":this.lastNameFormControl.value,
+      "email":this.emailFormControl.value,
+      "telephone":this.telephoneFormControl.value,
+      "address":this.addressFormControl.value,
+      "registration_number":this.registrationNumberFromcontrol.value,
+      "is_medical_staff":true,
+      "is_admin_staff":false,
+      "role":'anesthesiologist'
+    }
+    
+    this.professionalTypeFormControl.reset()
+    this.firstNameFormControl.reset()
+    this.lastNameFormControl.reset()
+    this.emailFormControl.reset()
+    this.telephoneFormControl.reset()
+    this.addressFormControl.reset()
+    this.registrationNumberFromcontrol.reset()
+    this.auth.registerUser(data);
 
   }
 
@@ -290,7 +311,26 @@ export class AddUserComponent implements OnInit {
 
 
   registerAdmin(){
-
+    var data = {
+      "title":this.professionalTypeFormControl.value,
+      "first_name": this.firstNameFormControl.value,
+      "last_name":this.lastNameFormControl.value,
+      "email":this.emailFormControl.value,
+      "telephone":this.telephoneFormControl.value,
+      "address":this.addressFormControl.value,
+      "is_medical_staff":false,
+      "is_admin_staff":true,
+      "role":this.adminFormControl.value
+    }
+    
+    this.professionalTypeFormControl.reset()
+    this.firstNameFormControl.reset()
+    this.lastNameFormControl.reset()
+    this.emailFormControl.reset()
+    this.telephoneFormControl.reset()
+    this.addressFormControl.reset()
+    this.adminFormControl.reset()
+    this.auth.registerUser(data)
   }
 
 

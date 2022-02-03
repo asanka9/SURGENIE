@@ -31,9 +31,9 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    alert(this.f.username.value)
-    alert(this.f.password.value)
-    this.authService.login(this.f.username.value, this.f.password.value).pipe((first())).subscribe(res=>{})
+    this.authService.login(this.f.username.value, this.f.password.value).pipe((first())).subscribe(res=>{
+      localStorage.setItem("token",res['token'])      
+    })
   }
 
 }
