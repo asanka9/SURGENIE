@@ -47,11 +47,7 @@ export class SurgeryComponent implements OnInit {
   filteredOptions: Observable<string[]> | undefined;
   filteredResourceOptions: Observable<string[]> | undefined;
 
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  firstNameFormControl = new FormControl('', [Validators.required]);
-  lastNameFormControl = new FormControl('', [Validators.required]);
-  telephoneFormControl = new FormControl('', [Validators.required]);
-  addressFormControl = new FormControl('', [Validators.required]);
+
 
   matcher = new MyErrorStateMatcher();
 
@@ -259,5 +255,28 @@ export class SurgeryComponent implements OnInit {
   getProfilePicAnesthesiologist(index:any){
     return "assets/anesthesiologist/"+"anaesthetist_"+index+".jpg"
   }
+
+
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  firstNameFormControl = new FormControl('', [Validators.required]);
+  lastNameFormControl = new FormControl('', [Validators.required]);
+  telephoneFormControl = new FormControl('', [Validators.required]);
+  addressFormControl = new FormControl('', [Validators.required]);
+  ageFormControl = new FormControl('', [Validators.required]);
+  genderFormControl = new FormControl('', [Validators.required]);
+  noteFormControl = new FormControl('',);
+  weightFormControl = new FormControl('', [Validators.required]);
+  heightFormControl = new FormControl('', [Validators.required]);
+  cancerFormControl = new FormControl('', [Validators.required]);
+  cvdFormControl = new FormControl('', [Validators.required]);
+  dementiaFormControl = new FormControl('', [Validators.required]);
+  diabetesFormControl = new FormControl('', [Validators.required]);
+  digestiveFormControl = new FormControl('', [Validators.required]);
+  osteoarthritisFormControl = new FormControl('', [Validators.required]);
+  pylogicalFormControl = new FormControl('', [Validators.required]);
+  pulmonaryFormControl = new FormControl('', [Validators.required]);
+
+
+
 
 }

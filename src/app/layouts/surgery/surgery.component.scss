@@ -25,3 +25,18 @@
 .fav-box{
     border-right: solid white 5px; padding: 20px;border-radius: 5px;
 }
+
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.mat-radio-button{
+  text-transform: uppercase;
+
+}
+
+.radiotype{
+  margin-right: 30px;
+  text-transform: uppercase;
+}

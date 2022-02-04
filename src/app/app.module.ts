@@ -50,6 +50,7 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
 import { AdminComponent } from './shared/side-nav/admin/admin.component';
 import { MedicalStaffComponent } from './shared/side-nav/medical-staff/medical-staff.component';
 import { SurgeonComponent } from './shared/side-nav/surgeon/surgeon.component';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -106,7 +107,8 @@ import { SurgeonComponent } from './shared/side-nav/surgeon/surgeon.component';
     BrowserModule,
     MatTableModule,
     MatSortModule,
-    HttpClientModule
+    HttpClientModule,
+    MatRadioModule
   ],
   providers: [
     {
