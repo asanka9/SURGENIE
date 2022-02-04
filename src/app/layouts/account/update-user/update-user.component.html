@@ -67,9 +67,9 @@
                     <div *ngIf="role == 'admin-05' || role == 'admin-04' || role == 'admin-03' || role == 'admin-02' || role == 'admin-01'" class="col-12 mt-3">
                         <mat-form-field class="example-full-width"  appearance="fill">
                             <mat-label>Admin Levels</mat-label>
-                            <mat-select [formControl]="adminFormControl" [(ngModel)]="admin_value"
+                            <mat-select  [formControl]="adminFormControl" [(ngModel)]="admin_value"
                                 name="food">
-                                <mat-option *ngFor="let food of adminlevels" [value]="food.value">
+                                <mat-option disabled *ngFor="let food of adminlevels" [value]="food.value">
                                     {{food.viewValue}}
                                 </mat-option>
                             </mat-select>

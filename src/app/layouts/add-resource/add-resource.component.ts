@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl} from '@angular/forms';
+import {FormControl, Validators} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import { DbService } from 'src/app/services/db.service';
 
 
 @Component({
@@ -47,9 +48,9 @@ export class AddResourceComponent implements OnInit {
   ];
 
   unitsResource: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'},
+    {value: 'ml', viewValue: 'Milliliters'},
+    {value: 'mg', viewValue: 'Milligrams'},
+    {value: 'pcs', viewValue: 'Pieces'},
   ];
 
 
@@ -60,6 +61,34 @@ export class AddResourceComponent implements OnInit {
   ];
 
 
+
+
+  // form controls
+  resourceNameFormControl = new FormControl('', [Validators.required]);
+  amountFormControl = new FormControl('', [Validators.required]);
+  unitFormControl = new FormControl('', [Validators.required]);
+  theartorFormControl = new FormControl('', [Validators.required]);
+
+
+  constructor(private db:DbService){}
+
+
+
+
+  addResource(){
+    var resource = {
+      'name':this.resourceNameFormControl.value,
+      'amount':this.amountFormControl.value,
+      'unit':this.unitFormControl.value
+    }
+    this.db.addResource(resource).subscribe((res)=>{
+      this.resourceNameFormControl.reset()
+      this.amountFormControl.reset()
+      this.unitFormControl.reset()
+      this.theartorFormControl.reset()
+    })
+
+  }
 }
 
 interface Food {

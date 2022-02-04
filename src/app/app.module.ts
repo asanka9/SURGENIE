@@ -51,6 +51,8 @@ import { AdminComponent } from './shared/side-nav/admin/admin.component';
 import { MedicalStaffComponent } from './shared/side-nav/medical-staff/medical-staff.component';
 import { SurgeonComponent } from './shared/side-nav/surgeon/surgeon.component';
 import {MatRadioModule} from '@angular/material/radio';
+import { ClockLoadingComponent } from './layouts/surgery/clock-loading/clock-loading.component';
+import {MatStepperModule} from '@angular/material/stepper';
 
 
 @NgModule({
@@ -77,7 +79,8 @@ import {MatRadioModule} from '@angular/material/radio';
     MotivationComponent,
     QuoteComponent,
     AdminComponent,
-    MedicalStaffComponent
+    MedicalStaffComponent,
+    ClockLoadingComponent
   ],
   imports: [
     BrowserModule,
@@ -108,7 +111,8 @@ import {MatRadioModule} from '@angular/material/radio';
     MatTableModule,
     MatSortModule,
     HttpClientModule,
-    MatRadioModule
+    MatRadioModule,
+    MatStepperModule
   ],
   providers: [
     {

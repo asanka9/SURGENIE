@@ -4,6 +4,7 @@ import { ErrorStateMatcher } from '@angular/material/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { DbService } from 'src/app/services/db.service';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -60,7 +61,7 @@ const NAMES: string[] = [
 export class ResourceComponent implements AfterViewInit  {
 
   displayedColumns: string[] = ['id', 'name', 'amount', 'availability'];
-  dataSource: MatTableDataSource<UserData>;
+  dataSource: MatTableDataSource<any> | any;
 
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   firstNameFormControl = new FormControl('', [Validators.required]);
@@ -72,11 +73,16 @@ export class ResourceComponent implements AfterViewInit  {
   @ViewChild(MatPaginator) paginator: MatPaginator | any;
   @ViewChild(MatSort) sort: MatSort| any;
 
-  constructor() {
+  constructor(private db:DbService) {
     // Create 100 users
-    const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
+    //const users = Array.from({length: 100}, (_, k) => createNewUser());
     // Assign the data to the data source for the table to render
-    this.dataSource = new MatTableDataSource(users);
+
+    this.db.viewResource().subscribe((res)=>{
+      this.dataSource = new MatTableDataSource(res);
+    })
+
+
   }
 
   ngAfterViewInit() {
@@ -96,17 +102,3 @@ export class ResourceComponent implements AfterViewInit  {
 }
 
 /** Builds and returns a new User. */
-function createNewUser(id: number): UserData {
-  const name =
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
-    ' ' +
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) +
-    '.';
-
-  return {
-    id: id.toString(),
-    name: name,
-    amount: 12,
-    availability: true,
-  };
-}

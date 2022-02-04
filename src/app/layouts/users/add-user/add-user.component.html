@@ -129,7 +129,7 @@
                 <div class="col-12" >
 
                     <div *ngIf="userType == 'nurse'" class="col-12">
-                        <mat-checkbox color="primary" class="example-margin">Sister</mat-checkbox>
+                        <mat-checkbox [formControl]="isSister" color="primary" class="example-margin">Sister</mat-checkbox>
 
                     </div>
                     <div *ngIf="userType == 'surgeon'" class="col-12 mt-3">

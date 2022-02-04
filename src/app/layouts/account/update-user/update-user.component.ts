@@ -47,8 +47,6 @@ const ELEMENT_DATA: SessionElement[] = [
 
 ];
 
-
-
 interface Food {
   value: string;
   viewValue: string;
@@ -79,7 +77,6 @@ export class UpdateUserComponent implements OnInit {
 
   ];
 
-  
   preofessionals: Food[] = [
     {value: 'Dr', viewValue: 'Dr'},
     {value: 'Mr', viewValue: 'Mr'},
@@ -149,17 +146,14 @@ export class UpdateUserComponent implements OnInit {
         this.addressFormControl.setValue(profie['address'])
         this.firstNameFormControl.setValue(profie['first_name'])
         this.lastNameFormControl.setValue(profie['last_name'])
+        this.emailFormControl.setValue(profie['email'])
+        this.telephoneFormControl.setValue(profie['telephone'])
         this.professionalTypeFormControl.setValue(profie['type'])
         this.admin_value = profie['level']
         this.user_type = profie['title']
       }else if (this.is_medical_staff) {
         let profie = res['profile']
-        console.log("#########3333333333333333333333333333");
-        console.log(profie);
-        console.log("####################################");
-        
-        
-        
+
         switch (this.role) {
           case 'surgeon':
             this.addressFormControl.setValue(profie['address'])
@@ -167,6 +161,7 @@ export class UpdateUserComponent implements OnInit {
             this.lastNameFormControl.setValue(profie['last_name'])
             this.professionalTypeFormControl.setValue(profie['type'])
             this.registrationNumberFromcontrol.setValue(profie['registration_number'])
+            this.telephoneFormControl.setValue(profie['telephone'])
             this.emailFormControl.setValue(profie['email'])
             this.admin_value = profie['level']
             this.user_type = profie['title']
@@ -279,19 +274,19 @@ export class UpdateUserComponent implements OnInit {
       "role":'surgeon'
     }
 
-    this.professionalTypeFormControl.reset()
-    this.firstNameFormControl.reset()
-    this.lastNameFormControl.reset()
-    this.emailFormControl.reset()
-    this.telephoneFormControl.reset()
-    this.addressFormControl.reset()
-    this.registrationNumberFromcontrol.reset()
-    this.specialityFormControl.reset()
-    this.dayFormControl.reset()
-    this.sessionFormControl.reset()
-    this.dataSourceSession = []
-    this.session_list = []
-    this.auth.registerUser(data);
+    // this.professionalTypeFormControl.reset()
+    // this.firstNameFormControl.reset()
+    // this.lastNameFormControl.reset()
+    // this.emailFormControl.reset()
+    // this.telephoneFormControl.reset()
+    // this.addressFormControl.reset()
+    // this.registrationNumberFromcontrol.reset()
+    // this.specialityFormControl.reset()
+    // this.dayFormControl.reset()
+    // this.sessionFormControl.reset()
+    // this.dataSourceSession = []
+    // this.session_list = []
+    this.auth.updateUser(data);
 
   }
 
@@ -316,7 +311,7 @@ export class UpdateUserComponent implements OnInit {
     this.telephoneFormControl.reset()
     this.addressFormControl.reset()
     this.registrationNumberFromcontrol.reset()
-    this.auth.registerUser(data);
+    this.auth.updateUser(data);
 
   }
 
@@ -341,7 +336,7 @@ export class UpdateUserComponent implements OnInit {
     this.telephoneFormControl.reset()
     this.addressFormControl.reset()
     this.registrationNumberFromcontrol.reset()
-    this.auth.registerUser(data);
+    this.auth.updateUser(data);
   }
 
 
@@ -373,7 +368,7 @@ export class UpdateUserComponent implements OnInit {
     this.sessionFormControl.reset()
     this.dataSourceSession = []
     this.session_list = []
-    this.auth.registerUser(data);
+    this.auth.updateUser(data);
   }
 
 
@@ -390,14 +385,14 @@ export class UpdateUserComponent implements OnInit {
       "role":this.adminFormControl.value
     }
     
-    this.professionalTypeFormControl.reset()
-    this.firstNameFormControl.reset()
-    this.lastNameFormControl.reset()
-    this.emailFormControl.reset()
-    this.telephoneFormControl.reset()
-    this.addressFormControl.reset()
-    this.adminFormControl.reset()
-    this.auth.registerUser(data)
+    // this.professionalTypeFormControl.reset()
+    // this.firstNameFormControl.reset()
+    // this.lastNameFormControl.reset()
+    // this.emailFormControl.reset()
+    // this.telephoneFormControl.reset()
+    // this.addressFormControl.reset()
+    // this.adminFormControl.reset()
+    this.auth.updateUser(data)
   }
 
 

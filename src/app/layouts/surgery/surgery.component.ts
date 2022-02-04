@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
@@ -25,10 +25,9 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {resource: "REsource 01", amount: 3232, predicted: 54},
-  {resource: "REsource 01", amount: 3232, predicted: 54},
-  {resource: "REsource 01", amount: 3232, predicted: 54},
-  {resource: "REsource 01", amount: 3232, predicted: 54}
+  {resource: "Trainee Surgeon", amount: 3232, predicted: 2},
+  {resource: "Nurse", amount: 3232, predicted: 5},
+  {resource: "Anesthelogist", amount: 3232, predicted: 2},
 ];
 
 @Component({
@@ -60,7 +59,7 @@ export class SurgeryComponent implements OnInit {
   value = 'Clear me';
 
 
-  columns: string[] = ['resource', 'amount', 'predicted', 'estimated'];
+  columns: string[] = ['resource',  'predicted', 'estimated'];
   dataSource = ELEMENT_DATA;
 
   ngOnInit() {
@@ -256,11 +255,13 @@ export class SurgeryComponent implements OnInit {
     return "assets/anesthesiologist/"+"anaesthetist_"+index+".jpg"
   }
 
+  selectedDateFormControl = new FormControl('');
+
 
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   firstNameFormControl = new FormControl('', [Validators.required]);
   lastNameFormControl = new FormControl('', [Validators.required]);
-  telephoneFormControl = new FormControl('', [Validators.required]);
+  telephoneFormControl = new FormControl('',);
   addressFormControl = new FormControl('', [Validators.required]);
   ageFormControl = new FormControl('', [Validators.required]);
   genderFormControl = new FormControl('', [Validators.required]);
@@ -277,6 +278,67 @@ export class SurgeryComponent implements OnInit {
   pulmonaryFormControl = new FormControl('', [Validators.required]);
 
 
+  traineeSurgeonFormControl = new FormControl('', [Validators.required]);
+  nurseFormControl = new FormControl('', [Validators.required]);
+  anesthelogistFormControl = new FormControl('', [Validators.required]);
+
+
+  startTimeFormControl  = new FormControl('',);
+  endTimeFormControl  = new FormControl('',);
+
+
+  createSurgery(){
+    let patient_details = {
+      'fisrt_name':this.firstNameFormControl.value,
+      'last_name':this.lastNameFormControl.value,
+      'email':this.emailFormControl.value,
+      'telephone':this.telephoneFormControl.value,
+      'address':this.addressFormControl.value,
+      'age':this.ageFormControl.value,
+      'gender':this.genderFormControl.value,
+      'note':this.noteFormControl.value,
+      'weight':this.weightFormControl.value,
+      'height':this.heightFormControl.value,
+      'cancer':this.cancerFormControl.value,
+      'cvd':this.cvdFormControl.value,
+      'dementia':this.dementiaFormControl.value,
+      'diabetes':this.diabetesFormControl.value,
+      'digestive':this.digestiveFormControl.value,
+      'osteoarthritis':this.osteoarthritisFormControl.value,
+      'pylogical':this.pylogicalFormControl.value,
+      'pulmonary':this.pulmonaryFormControl.value
+    }
+
+    let surgery_details = {
+      'start_hour':this.startTimeFormControl.value.split(':')[0],
+      'start_minute':this.startTimeFormControl.value.split(':')[1],
+      'end_hour':this.endTimeFormControl.value.split(':')[0],
+      'end_minute':this.endTimeFormControl.value.split(':')[1],
+      'date':this.selectedDateFormControl.value.getDate(),
+      'month':this.selectedDateFormControl.value.getMonth(),
+      'year':2022
+    }
+
+    let surgery_team_details = {
+      'trainee_surgeon':this.traineeSurgeonFormControl.value,
+      'anesthelogist':this.anesthelogistFormControl.value,
+      'nurse':this.nurseFormControl.value
+    }
+
+    let data = {
+      'surgery_team_details':surgery_team_details,
+      'surgery_details':surgery_details,
+      'patient_details':patient_details
+    }
+    
+    
+
+  }
+
+
+  getPredictedResult(type:any){
+    //alert(type)
+  }
 
 
 }

@@ -5,6 +5,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { DbService } from 'src/app/services/db.service';
 
 
 export interface UserData {
@@ -76,26 +77,34 @@ export class UsersComponent implements AfterViewInit {
   ngOnInit() {
   }
 
-  constructor() {
+  constructor(private db:DbService) {
     // Get Surgent
-    const surgents = Array.from({ length: 100 }, (_, k) => this.getSurgents(k + 1));
-    this.dataSourceSurgent = new MatTableDataSource(surgents);
+    this.db.viewSurgeon().subscribe((res)=>{
+      this.dataSourceSurgent = new MatTableDataSource(res);
+    })
+    
 
     // Get traineeSurgent
-    const traineeSurgent = Array.from({ length: 100 }, (_, k) => this.getTraineeSurgent(k + 1));
-    this.dataSourceTraineeSurgent = new MatTableDataSource(traineeSurgent);
+    this.db.viewTraineeSurgeon().subscribe((res)=>{
+      this.dataSourceTraineeSurgent = new MatTableDataSource(res);
+    })
 
 
     // Get Nurses
-    const nurses = Array.from({ length: 100 }, (_, k) => this.getNurse(k + 1));
-    this.dataSourceNurse = new MatTableDataSource(nurses);
+    this.db.viewNurse().subscribe((res)=>{
+      this.dataSourceNurse = new MatTableDataSource(res);
+    })
 
     // Get anesthetistic
-    const anesthetistic = Array.from({ length: 100 }, (_, k) => this.getAnesthetistic(k + 1));
-    this.dataSourceAnesthetistic = new MatTableDataSource(anesthetistic);
+    this.db.viewAnesthelogist().subscribe((res)=>{
+      this.dataSourceAnesthetistic = new MatTableDataSource(res);
+    })
 
-    const admin = Array.from({ length: 100 }, (_, k) => this.getAnesthetistic(k + 1));
-    this.dataSourceAdmin = new MatTableDataSource(admin);
+        // Get anesthetistic
+    this.db.viewadmin().subscribe((res)=>{
+      this.dataSourceAdmin = new MatTableDataSource(res);
+    })
+    
   }
 
   ngAfterViewInit() {
@@ -122,11 +131,11 @@ export class UsersComponent implements AfterViewInit {
   }
 
   displayedColumns: string[] = ['id', 'name', 'email', 'telephone'];
-  dataSourceSurgent: MatTableDataSource<UserData>;
-  dataSourceTraineeSurgent: MatTableDataSource<UserData>;
-  dataSourceAnesthetistic: MatTableDataSource<UserData>;
-  dataSourceNurse: MatTableDataSource<UserData>;
-  dataSourceAdmin: MatTableDataSource<UserData>;
+  dataSourceSurgent: MatTableDataSource<UserData>| any;
+  dataSourceTraineeSurgent: MatTableDataSource<UserData>| any;
+  dataSourceAnesthetistic: MatTableDataSource<UserData>| any;
+  dataSourceNurse: MatTableDataSource<UserData> | any;
+  dataSourceAdmin: MatTableDataSource<UserData>| any;
 
   @ViewChild(MatPaginator) paginator: MatPaginator | any;
   @ViewChild(MatSort) sort: MatSort | any;
@@ -200,18 +209,7 @@ export class UsersComponent implements AfterViewInit {
   }
 
   // Get data Nurse
-  getNurse(id: number): UserData {
-    const name =
-      NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-      NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
 
-    return {
-      id: id.toString(),
-      name: name,
-      email: 'asanka@gmail.com',
-      telephone: '07666666666',
-    };
-  }
 
   // Get data Anesthetistic
   getAnesthetistic(id: number): UserData {

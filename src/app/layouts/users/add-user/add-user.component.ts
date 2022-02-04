@@ -70,11 +70,10 @@ export class AddUserComponent implements OnInit {
 
   
   preofessionals: Food[] = [
-    {value: 'nurse', viewValue: 'Dr'},
-    {value: 'surgeon', viewValue: 'Mr'},
-    {value: 'trainee-surgeon', viewValue: 'Ms'},
-    {value: 'anesthesiologist', viewValue: 'Anesthesiologist'},
-    {value: 'admin', viewValue: 'Admin'},
+    {value: 'Dr', viewValue: 'Dr'},
+    {value: 'Mr', viewValue: 'Mr'},
+    {value: 'Ms', viewValue: 'Ms'},
+
 
   ];
 
@@ -263,6 +262,7 @@ export class AddUserComponent implements OnInit {
       "address":this.addressFormControl.value,
       "registration_number":this.registrationNumberFromcontrol.value,
       "is_medical_staff":true,
+      "is_sister":this.isSister.value,
       "is_admin_staff":false,
       "role":'nurse'
     }
@@ -273,6 +273,7 @@ export class AddUserComponent implements OnInit {
     this.emailFormControl.reset()
     this.telephoneFormControl.reset()
     this.addressFormControl.reset()
+    this.isSister.reset()
     this.registrationNumberFromcontrol.reset()
     this.auth.registerUser(data);
   }
