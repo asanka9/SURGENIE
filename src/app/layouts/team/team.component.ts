@@ -205,7 +205,7 @@ export class TeamComponent implements OnInit {
 
   saveMyTeam(){
     this.team.createTeam({'trainee_surgeon':this.traineeSurgent,'nurse':this.nurse,'anesthesiologists':this.anesthetic}).subscribe((res)=>{
-      
+      window.location.reload()
     })
   }
 

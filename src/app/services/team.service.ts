@@ -21,4 +21,9 @@ export class TeamService {
     return this.http.post<any>(this.api_url + 'team/create-team/',data);
   }
 
+  bookTeam(favTeam:any,surgery_details:any){
+    var data = {"key":localStorage.getItem('token'),"favTeam":favTeam,"surgery_details":surgery_details};
+    return this.http.post<any>(this.api_url + 'team/book-team/',data);
+  }
+
 }

@@ -53,6 +53,10 @@ import { SurgeonComponent } from './shared/side-nav/surgeon/surgeon.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { ClockLoadingComponent } from './layouts/surgery/clock-loading/clock-loading.component';
 import {MatStepperModule} from '@angular/material/stepper';
+import { DashboardComponent } from './layouts/dashboard/dashboard.component';
+import { LineChartComponent } from './layouts/dashboard/line-chart/line-chart.component';
+import { BarChartComponent } from './layouts/dashboard/bar-chart/bar-chart.component';
+import { PieChartComponent } from './layouts/dashboard/pie-chart/pie-chart.component';
 
 
 @NgModule({
@@ -80,7 +84,11 @@ import {MatStepperModule} from '@angular/material/stepper';
     QuoteComponent,
     AdminComponent,
     MedicalStaffComponent,
-    ClockLoadingComponent
+    ClockLoadingComponent,
+    DashboardComponent,
+    LineChartComponent,
+    BarChartComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,

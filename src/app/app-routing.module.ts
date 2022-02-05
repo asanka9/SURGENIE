@@ -10,10 +10,15 @@ import { SurgentComponent } from './layouts/surgent/surgent.component';
 import { SurgeryComponent } from './layouts/surgery/surgery.component';
 import { TeamComponent } from './layouts/team/team.component';
 import { UsersComponent } from './layouts/users/users.component';
+import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path:'',
+    component:DashboardComponent
+  },
+  {
+    path:'calender',
     component:CalenderComponent
   },
   {

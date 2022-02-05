@@ -1,6 +1,7 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 import { DateRange } from '@angular/material/datepicker';
+import { SurgeryService } from 'src/app/services/surgery.service';
 
 @Component({
   selector: 'app-calender',
@@ -12,7 +13,7 @@ export class CalenderComponent implements OnInit {
   sampleRange: DateRange<Date> | any;
   checked = false;
 
-  constructor() {
+  constructor(private surgery:SurgeryService) {
     this.refreshDR();
   }
 
@@ -28,6 +29,63 @@ export class CalenderComponent implements OnInit {
     var today = new Date();
 
     this.selectedDateFormat = this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString()
+
+
+      this.surgery_times = []
+      this.surgery.getBookDate({'date':today?.getDate(),'month':today?.getMonth(),'year':2022}).subscribe((res)=>{
+
+        if (res['user']=='surgeon') {
+          this.show_more_details = true
+          this.is_surgeon = true
+          res['data'].forEach((element: any) => {
+            this.surgery_times.push(
+              {
+                'time_text':element['time_text'],
+                'patien_detail':{
+                  'patient_name':element['patient_details']['patient_name'],
+                  'email':element['patient_details']['email'],
+                  'notes':element['patient_details']['notes'],
+                  'telephone':element['patient_details']['telephone']
+                }
+              }
+            )
+          });
+        }
+
+
+        var patient_detail = this.surgery_times[0]['patien_detail']
+        this.header_time = this.surgery_times[0]['time_text']
+        this.patient_name = patient_detail['patient_name']
+        this.patient_email = patient_detail['email']
+        this.patient_notes = patient_detail['notes']
+        this.patient_telephones = patient_detail['telephone']
+
+      })
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
 
 
@@ -58,11 +116,62 @@ export class CalenderComponent implements OnInit {
     moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
   }
 
+
+
+  show_more_details = false
+  is_surgeon = false
+
+  surgery_times :any = []
+  patient_detail : any
+
   updateCalcsDate(event: any) {
     if (this.selected?.getDate()) {
       this.selectedDateFormat = this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString();
+      this.surgery_times = []
+      this.surgery.getBookDate({'date':this.selected?.getDate(),'month':this.selected?.getMonth(),'year':2022}).subscribe((res)=>{
 
+        if (res['user']=='surgeon') {
+          this.show_more_details = true
+          this.is_surgeon = true
+          res['data'].forEach((element: any) => {
+            this.surgery_times.push(
+              {
+                'time_text':element['time_text'],
+                'patien_detail':{
+                  'patient_name':element['patient_details']['patient_name'],
+                  'email':element['patient_details']['email'],
+                  'notes':element['patient_details']['notes'],
+                  'telephone':element['patient_details']['telephone']
+                }
+              }
+            )
+          });
+        }
+
+
+        var patient_detail = this.surgery_times[0]['patien_detail']
+        this.header_time = this.surgery_times[0]['time_text']
+        this.patient_name = patient_detail['patient_name']
+        this.patient_email = patient_detail['email']
+        this.patient_notes = patient_detail['notes']
+        this.patient_telephones = patient_detail['telephone']
+
+      })
     }
+  }
+
+  header_time = ''
+  patient_name = ''
+  patient_email = ''
+  patient_notes = ''
+  patient_telephones = ''
+
+  patientDetail(index:any){
+    this.patient_detail =  this.surgery_times[index]['patien_detail']
+    this.patient_name = this.patient_detail['patient_name']
+    this.patient_email = this.patient_detail['email']
+    this.patient_notes = this.patient_detail['notes']
+    this.patient_telephones = this.patient_detail['telephone']
   }
 
   previouSelectedDate : Date | any
@@ -71,7 +180,6 @@ export class CalenderComponent implements OnInit {
     var today = new Date();
     if (this.selected?.getDate()) {
       if (this.previouSelectedDate?.getDate() == this.selected.getDate()) {
-        alert("WORKING")
       } else {
         if (today < this.selected ) {
           this.selectedDateFormat = this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString()+" - "+this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString();
@@ -124,6 +232,11 @@ export class CalenderComponent implements OnInit {
         return "";
 
     }
+  }
+
+
+  getDate(){
+
   }
 
 }

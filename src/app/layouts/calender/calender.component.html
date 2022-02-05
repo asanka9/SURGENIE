@@ -31,20 +31,20 @@
     
             </div>
             <div class="col-md-7 col-12 mt-3">
-                <mat-tab-group mat-align-tabs="start">
-                    <mat-tab label="Day Schedule">
+                <mat-tab-group mat-align-tabs="start" #matgroup>
+                    <mat-tab label="Day Schedule" >
                         <mat-card class="example-card mt-3">
                             <mat-card-title>{{ selectedDateFormat }}</mat-card-title>
                             <mat-card-subtitle>6 Day Schedules</mat-card-subtitle>
                             <mat-card-content>
     
-                                <div *ngFor="let movie of movies">
+                                <div *ngFor="let time of surgery_times; let i = index" (click)="patientDetail(i)" (click)="matgroup.selectedIndex = 2" >
                                     <hr>
     
                                     <div class="row">
                                         <div class="col-12">
                                             <div style="font-size: 20px;">
-                                                6 a.m - 8 a.m
+                                                {{ time.time_text }}
                                             </div>
                                         </div>
     
@@ -67,13 +67,15 @@
                             </mat-card-content>
                         </mat-card>
                     </mat-tab>
-                    <mat-tab label="Surgery Details">
+                    <mat-tab label="Surgery Details" >
                         <mat-card class="example-card mt-3">
-                            <mat-card-title>{{ selectedDateFormat }}</mat-card-title>
-                            <mat-card-subtitle>5 Day Shedules</mat-card-subtitle>
+                            <mat-card-title>{{ header_time }}</mat-card-title>
                             <mat-card-content>
-    
-                                <div *ngFor="let movie of movies">
+                                <h1>{{ patient_name }}</h1>
+                                {{ patient_email }}
+                                {{ patient_notes }}
+                                {{ patient_telephones }}
+                                <!-- <div *ngFor="let movie of movies">
                                     <hr>
     
                                     <div class="row">
@@ -86,7 +88,7 @@
                                             {{movie.description}}
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </mat-card-content>
                         </mat-card>
                     </mat-tab>

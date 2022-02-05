@@ -8,6 +8,8 @@ import { MatChipInputEvent } from '@angular/material/chips';
 import { MyErrorStateMatcher } from '../users/add-user/add-user.component';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { MatTable } from '@angular/material/table';
+import { SurgeryService } from 'src/app/services/surgery.service';
+import { TeamService } from 'src/app/services/team.service';
 
 interface Food {
   value: string;
@@ -37,65 +39,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class SurgeryComponent implements OnInit {
 
-  myControl = new FormControl();
-  resourceControl = new FormControl();
 
-  options: string[] = ['One1', 'Two1', 'Three1'];
-  resources: string[] = ['Resource', 'Resource', 'Resource'];
-
-  filteredOptions: Observable<string[]> | undefined;
-  filteredResourceOptions: Observable<string[]> | undefined;
-
-
-
-  matcher = new MyErrorStateMatcher();
-
-  foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'},
-  ];
-
-  value = 'Clear me';
-
-
-  columns: string[] = ['resource',  'predicted', 'estimated'];
-  dataSource = ELEMENT_DATA;
-
-  ngOnInit() {
-    this.filteredOptions = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value)),
-    );
-
-    this.filteredResourceOptions = this.resourceControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filterResources(value)),
-    );
-  }
-
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
-  }
-
-  private _filterResources(value: string): string[] {
-    const filterValue = value.toLowerCase();
-    return this.resources.filter(r => r.toLowerCase().includes(filterValue));
-  }
-
-  drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.columns, event.previousIndex, event.currentIndex);
-  }
-
-  @ViewChild(MatTable) table: MatTable<PeriodicElement> | any;
-
-  addData() {
-    const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA.length);
-    this.dataSource.push(ELEMENT_DATA[randomElementIndex]);
-    this.table.renderRows();
-  }
-  // Team
   separatorKeysCodes: number[] = [ENTER, COMMA];
 
   chipsCtrlNurse = new FormControl();
@@ -103,37 +47,23 @@ export class SurgeryComponent implements OnInit {
   chipsCtrlAnesthetic = new FormControl();
 
 
-  filteredNurse: Observable<string[]> ;
-  filteredTraineeSurgent: Observable<string[]>;
-  filteredAnesthetic: Observable<string[]>;
+  filteredNurse: Observable<string[]> | undefined;
+  filteredTraineeSurgent: Observable<string[]> | undefined;
+  filteredAnesthetic: Observable<string[]> | undefined;
 
-  nurse: string[] = ['Helan Ross','Alison Reid','Jeniffer Jones','Sylvia MCMillan','Maria Duncan',];
-  allnurse: string[] = ['Helan Ross','Alison Reid','Jeniffer Jones','Sylvia MCMillan','Maria Duncan','Sarah Cameron','Ruth Gibson','Pamela Grant','Martha Gordon','Jessie Allan'];
+  nurse: string[] = [];
+  allnurse: string[] = [];
 
-  traineeSurgent: string[] = ['Dr. Chris Hunter','Dr. Helen Douglas','Dr. Janice Moore','Dr. Ellen Shaw',];
-  alltraineeSurgent: string[] = ['Dr. Chris Hunter','Dr. Helen Douglas','Dr. Janice Moore','Dr. Ellen Shaw','Dr. Evleyn Gordon','Dr. Brenda Russell','Dr. Marion Kelly','Dr. Katherine Mckay','Dr. Angela Christie','Dr. Keith  Aitken'];
+  traineeSurgent: string[] = [];
+  alltraineeSurgent: string[] = [];
 
-  anesthetic: string[] = ['Dr. Carol Anderson','Dr. Catherine White','Dr. Joan Scott','Dr. Linda Taylor',];
-  allAnesthetic: string[] = ['Dr. Carol Anderson','Dr. Catherine White','Dr. Joan Scott','Dr. Linda Taylor','Dr. Shelia Walker','Dr. Andrew Miller','Dr. Daniel Duncun','Dr. Susan Mclean','Dr. Alison Christie','Dr. Gavin Bell'];
+  anesthetic: string[] = [];
+  allAnesthetic: string[] = [];
 
   @ViewChild('fruitInput') nurseInput: ElementRef<HTMLInputElement> | undefined;
   @ViewChild('fruitInput') traineeSurgentInput: ElementRef<HTMLInputElement> | undefined;
   @ViewChild('fruitInput') anesthetisticInput: ElementRef<HTMLInputElement> | undefined;
 
-  constructor() {
-    this.filteredNurse = this.chipsCtrlNurse.valueChanges.pipe(
-      startWith(null),
-      map((fruit: string | null) => (fruit ? this._filterNurse(fruit) : this.allnurse.slice())),
-    );
-    this.filteredTraineeSurgent = this.chipsCtrlTraineeSurgent.valueChanges.pipe(
-      startWith(null),
-      map((fruit: string | null) => (fruit ? this._filterTaineeSurgent(fruit) : this.alltraineeSurgent.slice())),
-    );
-    this.filteredAnesthetic = this.chipsCtrlAnesthetic.valueChanges.pipe(
-      startWith(null),
-      map((fruit: string | null) => (fruit ? this._filterAnesthetistic(fruit) : this.allAnesthetic.slice())),
-    );
-  }
 
   isCustomizedSurgent = false;
   isCustomizedNurse = false;
@@ -141,18 +71,14 @@ export class SurgeryComponent implements OnInit {
 
   customizeAnesthatistic(){
     this.isCustomizedAnesthtistic = !this.isCustomizedAnesthtistic;
-
   }
 
   customizeNurse(){
     this.isCustomizedNurse = !this.isCustomizedNurse;
-
-
   }
 
   customizeTraineeSurgent(){
     this.isCustomizedSurgent = !this.isCustomizedSurgent;
-
   }
 
   addNurse(event: MatChipInputEvent): void {
@@ -255,6 +181,93 @@ export class SurgeryComponent implements OnInit {
     return "assets/anesthesiologist/"+"anaesthetist_"+index+".jpg"
   }
 
+
+  getEmailAddress(name:any){
+    let names = name.split(' ')
+    return names[1]+names[2]+'@gmail.com'
+  }
+
+  getTelephone(index:any){
+    let telephones = ['77 323 343 6','76 454 343 4']
+    return telephones[Number(index)%2]
+  }
+
+
+  myControl = new FormControl();
+  resourceControl = new FormControl();
+
+  options: string[] = ['One1', 'Two1', 'Three1'];
+  resources: string[] = ['Resource', 'Resource', 'Resource'];
+
+  filteredOptions: Observable<string[]> | undefined;
+  filteredResourceOptions: Observable<string[]> | undefined;
+
+
+
+  matcher = new MyErrorStateMatcher();
+
+  foods: Food[] = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'},
+  ];
+
+  value = 'Clear me';
+
+
+  columns: string[] = ['resource',  'predicted', 'estimated'];
+  dataSource = ELEMENT_DATA;
+
+  ngOnInit() {
+    this.filteredOptions = this.myControl.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filter(value)),
+    );
+
+    this.filteredResourceOptions = this.resourceControl.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filterResources(value)),
+    );
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+    return this.options.filter(option => option.toLowerCase().includes(filterValue));
+  }
+
+  private _filterResources(value: string): string[] {
+    const filterValue = value.toLowerCase();
+    return this.resources.filter(r => r.toLowerCase().includes(filterValue));
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.columns, event.previousIndex, event.currentIndex);
+  }
+
+  @ViewChild(MatTable) table: MatTable<PeriodicElement> | any;
+
+  addData() {
+    const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA.length);
+    this.dataSource.push(ELEMENT_DATA[randomElementIndex]);
+    this.table.renderRows();
+  }
+
+  constructor(private surgery:SurgeryService, private team : TeamService) {
+    this.filteredNurse = this.chipsCtrlNurse.valueChanges.pipe(
+      startWith(null),
+      map((fruit: string | null) => (fruit ? this._filterNurse(fruit) : this.allnurse.slice())),
+    );
+    this.filteredTraineeSurgent = this.chipsCtrlTraineeSurgent.valueChanges.pipe(
+      startWith(null),
+      map((fruit: string | null) => (fruit ? this._filterTaineeSurgent(fruit) : this.alltraineeSurgent.slice())),
+    );
+    this.filteredAnesthetic = this.chipsCtrlAnesthetic.valueChanges.pipe(
+      startWith(null),
+      map((fruit: string | null) => (fruit ? this._filterAnesthetistic(fruit) : this.allAnesthetic.slice())),
+    );
+  }
+
+
   selectedDateFormControl = new FormControl('');
 
 
@@ -289,7 +302,7 @@ export class SurgeryComponent implements OnInit {
 
   createSurgery(){
     let patient_details = {
-      'fisrt_name':this.firstNameFormControl.value,
+      'first_name':this.firstNameFormControl.value,
       'last_name':this.lastNameFormControl.value,
       'email':this.emailFormControl.value,
       'telephone':this.telephoneFormControl.value,
@@ -316,6 +329,7 @@ export class SurgeryComponent implements OnInit {
       'end_minute':this.endTimeFormControl.value.split(':')[1],
       'date':this.selectedDateFormControl.value.getDate(),
       'month':this.selectedDateFormControl.value.getMonth(),
+      'predicted_time':Number(this.predictedtime),
       'year':2022
     }
 
@@ -325,12 +339,30 @@ export class SurgeryComponent implements OnInit {
       'nurse':this.nurseFormControl.value
     }
 
-    let data = {
-      'surgery_team_details':surgery_team_details,
-      'surgery_details':surgery_details,
-      'patient_details':patient_details
-    }
-    
+    this.surgery.createSurgeryWithShedule(patient_details,surgery_details,surgery_team_details).subscribe((res)=>{
+
+        this.nurse = res['fav_nurse']
+        this.traineeSurgent = res['fav_trainee_surgeon']
+        this.anesthetic = res['fav_anesthesiologist']
+  
+        this.allnurse = res['nurse']
+        this.alltraineeSurgent = res['trainee_surgeon']
+        this.allAnesthetic = res['anesthesiologist']  
+        
+        this.filteredNurse = this.chipsCtrlNurse.valueChanges.pipe(
+          startWith(null),
+          map((fruit: string | null) => (fruit ? this._filterNurse(fruit) : this.allnurse.slice())),
+        );
+        this.filteredTraineeSurgent = this.chipsCtrlTraineeSurgent.valueChanges.pipe(
+          startWith(null),
+          map((fruit: string | null) => (fruit ? this._filterTaineeSurgent(fruit) : this.alltraineeSurgent.slice())),
+        );
+        this.filteredAnesthetic = this.chipsCtrlAnesthetic.valueChanges.pipe(
+          startWith(null),
+          map((fruit: string | null) => (fruit ? this._filterAnesthetistic(fruit) : this.allAnesthetic.slice())),
+        );
+    })
+
     
 
   }
@@ -339,6 +371,54 @@ export class SurgeryComponent implements OnInit {
   getPredictedResult(type:any){
     //alert(type)
   }
+
+
+
+  predictedtime = ''
+
+  getPredictedTime(){
+    let patient_details = {
+      'first_name':this.firstNameFormControl.value,
+      'last_name':this.lastNameFormControl.value,
+      'email':this.emailFormControl.value,
+      'telephone':this.telephoneFormControl.value,
+      'address':this.addressFormControl.value,
+      'age':this.ageFormControl.value,
+      'gender':this.genderFormControl.value,
+      'note':this.noteFormControl.value,
+      'weight':this.weightFormControl.value,
+      'height':this.heightFormControl.value,
+      'cancer':this.cancerFormControl.value,
+      'cvd':this.cvdFormControl.value,
+      'dementia':this.dementiaFormControl.value,
+      'diabetes':this.diabetesFormControl.value,
+      'digestive':this.digestiveFormControl.value,
+      'osteoarthritis':this.osteoarthritisFormControl.value,
+      'pylogical':this.pylogicalFormControl.value,
+      'pulmonary':this.pulmonaryFormControl.value
+    }
+    this.surgery.getPredictedTime(patient_details).subscribe((res)=>{
+      this.predictedtime = res
+    })
+  }
+
+  saveMyTeam(){
+    let surgery_details = {
+      'start_hour':this.startTimeFormControl.value.split(':')[0],
+      'start_minute':this.startTimeFormControl.value.split(':')[1],
+      'end_hour':this.endTimeFormControl.value.split(':')[0],
+      'end_minute':this.endTimeFormControl.value.split(':')[1],
+      'date':this.selectedDateFormControl.value.getDate(),
+      'month':this.selectedDateFormControl.value.getMonth(),
+      'predicted_time':Number(this.predictedtime),
+      'year':2022
+    }
+
+    this.team.bookTeam({'trainee_surgeon':this.traineeSurgent,'nurse':this.nurse,'anesthesiologists':this.anesthetic},surgery_details).subscribe((res)=>{
+      
+    })
+  }
+
 
 
 }

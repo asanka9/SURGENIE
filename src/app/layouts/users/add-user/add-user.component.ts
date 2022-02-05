@@ -211,18 +211,18 @@ export class AddUserComponent implements OnInit {
       "role":'surgeon'
     }
 
-    this.professionalTypeFormControl.reset()
-    this.firstNameFormControl.reset()
-    this.lastNameFormControl.reset()
-    this.emailFormControl.reset()
-    this.telephoneFormControl.reset()
-    this.addressFormControl.reset()
-    this.registrationNumberFromcontrol.reset()
-    this.specialityFormControl.reset()
-    this.dayFormControl.reset()
-    this.sessionFormControl.reset()
-    this.dataSourceSession = []
-    this.session_list = []
+    // this.professionalTypeFormControl.reset()
+    // this.firstNameFormControl.reset()
+    // this.lastNameFormControl.reset()
+    // this.emailFormControl.reset()
+    // this.telephoneFormControl.reset()
+    // this.addressFormControl.reset()
+    // this.registrationNumberFromcontrol.reset()
+    // this.specialityFormControl.reset()
+    // this.dayFormControl.reset()
+    // this.sessionFormControl.reset()
+    // this.dataSourceSession = []
+    // this.session_list = []
     this.auth.registerUser(data);
 
   }
@@ -241,13 +241,13 @@ export class AddUserComponent implements OnInit {
       "role":'anesthesiologist'
     }
     
-    this.professionalTypeFormControl.reset()
-    this.firstNameFormControl.reset()
-    this.lastNameFormControl.reset()
-    this.emailFormControl.reset()
-    this.telephoneFormControl.reset()
-    this.addressFormControl.reset()
-    this.registrationNumberFromcontrol.reset()
+    // this.professionalTypeFormControl.reset()
+    // this.firstNameFormControl.reset()
+    // this.lastNameFormControl.reset()
+    // this.emailFormControl.reset()
+    // this.telephoneFormControl.reset()
+    // this.addressFormControl.reset()
+    // this.registrationNumberFromcontrol.reset()
     this.auth.registerUser(data);
 
   }
@@ -267,14 +267,14 @@ export class AddUserComponent implements OnInit {
       "role":'nurse'
     }
     
-    this.professionalTypeFormControl.reset()
-    this.firstNameFormControl.reset()
-    this.lastNameFormControl.reset()
-    this.emailFormControl.reset()
-    this.telephoneFormControl.reset()
-    this.addressFormControl.reset()
-    this.isSister.reset()
-    this.registrationNumberFromcontrol.reset()
+    // this.professionalTypeFormControl.reset()
+    // this.firstNameFormControl.reset()
+    // this.lastNameFormControl.reset()
+    // this.emailFormControl.reset()
+    // this.telephoneFormControl.reset()
+    // this.addressFormControl.reset()
+    // this.isSister.reset()
+    // this.registrationNumberFromcontrol.reset()
     this.auth.registerUser(data);
   }
 
@@ -295,18 +295,18 @@ export class AddUserComponent implements OnInit {
       "role":'trainee_surgeon'
     }
     
-    this.professionalTypeFormControl.reset()
-    this.firstNameFormControl.reset()
-    this.lastNameFormControl.reset()
-    this.emailFormControl.reset()
-    this.telephoneFormControl.reset()
-    this.addressFormControl.reset()
-    this.registrationNumberFromcontrol.reset()
-    this.specialityFormControl.reset()
-    this.dayFormControl.reset()
-    this.sessionFormControl.reset()
-    this.dataSourceSession = []
-    this.session_list = []
+    // this.professionalTypeFormControl.reset()
+    // this.firstNameFormControl.reset()
+    // this.lastNameFormControl.reset()
+    // this.emailFormControl.reset()
+    // this.telephoneFormControl.reset()
+    // this.addressFormControl.reset()
+    // this.registrationNumberFromcontrol.reset()
+    // this.specialityFormControl.reset()
+    // this.dayFormControl.reset()
+    // this.sessionFormControl.reset()
+    // this.dataSourceSession = []
+    // this.session_list = []
     this.auth.registerUser(data);
   }
 
@@ -324,13 +324,13 @@ export class AddUserComponent implements OnInit {
       "role":this.adminFormControl.value
     }
     
-    this.professionalTypeFormControl.reset()
-    this.firstNameFormControl.reset()
-    this.lastNameFormControl.reset()
-    this.emailFormControl.reset()
-    this.telephoneFormControl.reset()
-    this.addressFormControl.reset()
-    this.adminFormControl.reset()
+    // this.professionalTypeFormControl.reset()
+    // this.firstNameFormControl.reset()
+    // this.lastNameFormControl.reset()
+    // this.emailFormControl.reset()
+    // this.telephoneFormControl.reset()
+    // this.addressFormControl.reset()
+    // this.adminFormControl.reset()
     this.auth.registerUser(data)
   }
 
