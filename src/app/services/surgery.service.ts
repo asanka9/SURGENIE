@@ -27,7 +27,21 @@ export class SurgeryService {
     return this.http.post<any>(this.api_url + 'booked/booked-date/',data);
   }
 
+  getBookDateRange(start_day:any,end_day:any){
+    var data = {"key":localStorage.getItem('token'),"start_day":start_day,"end_day":end_day};
+    return this.http.post<any>(this.api_url + 'booked/booked-range/',data);
+  }
 
+  getSurgerList(){
+    var data = {"key":localStorage.getItem('token')};
+    return this.http.post<any>(this.api_url + 'surgery/surgeries-list/',data);
+  }
+
+
+  setSurgeryUpdate(id:any){
+    var data = {"key":localStorage.getItem('token'),"id":id};
+    return this.http.post<any>(this.api_url + 'surgery/update/',data);
+  }
 
 
 

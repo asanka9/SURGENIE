@@ -29,9 +29,8 @@ export class CalenderComponent implements OnInit {
     var today = new Date();
 
     this.selectedDateFormat = this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString()
-
-
       this.surgery_times = []
+
       this.surgery.getBookDate({'date':today?.getDate(),'month':today?.getMonth(),'year':2022}).subscribe((res)=>{
 
         if (res['user']=='surgeon') {
@@ -52,7 +51,6 @@ export class CalenderComponent implements OnInit {
           });
         }
 
-
         var patient_detail = this.surgery_times[0]['patien_detail']
         this.header_time = this.surgery_times[0]['time_text']
         this.patient_name = patient_detail['patient_name']
@@ -61,31 +59,7 @@ export class CalenderComponent implements OnInit {
         this.patient_telephones = patient_detail['telephone']
 
       })
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
   }
 
 
@@ -124,6 +98,7 @@ export class CalenderComponent implements OnInit {
   surgery_times :any = []
   patient_detail : any
 
+  // get book detail with date
   updateCalcsDate(event: any) {
     if (this.selected?.getDate()) {
       this.selectedDateFormat = this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString();
@@ -176,6 +151,7 @@ export class CalenderComponent implements OnInit {
 
   previouSelectedDate : Date | any
 
+  // get book detail with date range
   updateCalcs(event: any) {
     var today = new Date();
     if (this.selected?.getDate()) {
@@ -188,6 +164,50 @@ export class CalenderComponent implements OnInit {
             v.setDate(v.getDate());
             return v;
           })(),this.selected);
+
+          // get booked information
+      this.surgery_times = []
+      var star_day = {
+        'date': today.getDate(),
+        'month': today.getMonth(),
+        'year':2022
+      }
+
+      var end_day = {
+        'date': this.selected.getDate(),
+        'month': this.selected.getMonth(),
+        'year':2022
+      }
+
+      this.surgery.getBookDateRange(star_day,end_day).subscribe((res)=>{
+
+        if (res['user']=='surgeon') {
+          this.show_more_details = true
+          this.is_surgeon = true
+          res['data'].forEach((element: any) => {
+            this.surgery_times.push(
+              {
+                'time_text':element['time_text'],
+                'patien_detail':{
+                  'patient_name':element['patient_details']['patient_name'],
+                  'email':element['patient_details']['email'],
+                  'notes':element['patient_details']['notes'],
+                  'telephone':element['patient_details']['telephone']
+                }
+              }
+            )
+          });
+        }
+
+        var patient_detail = this.surgery_times[0]['patien_detail']
+        this.header_time = this.surgery_times[0]['time_text']
+        this.patient_name = patient_detail['patient_name']
+        this.patient_email = patient_detail['email']
+        this.patient_notes = patient_detail['notes']
+        this.patient_telephones = patient_detail['telephone']
+
+      })
+
         } else {
           this.selectedDateFormat = this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString() +" - "+this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString();
   
@@ -196,6 +216,59 @@ export class CalenderComponent implements OnInit {
             v.setDate(v.getDate());
             return v;
           })());
+
+          // get booked information
+          this.surgery_times = []
+
+          var end_day = {
+            'date': today.getDate(),
+            'month': today.getMonth(),
+            'year':2022
+          }
+    
+          var start_day = {
+            'date': this.selected.getDate(),
+            'month': this.selected.getMonth(),
+            'year':2022
+          }
+
+
+          this.surgery.getBookDateRange(start_day,end_day).subscribe((res)=>{
+            if (res['user']=='surgeon') {
+              this.show_more_details = true
+              this.is_surgeon = true
+              res['data'].forEach((element: any) => {
+                this.surgery_times.push(
+                  {
+                    'time_text':element['time_text'],
+                    'patien_detail':{
+                      'patient_name':element['patient_details']['patient_name'],
+                      'email':element['patient_details']['email'],
+                      'notes':element['patient_details']['notes'],
+                      'telephone':element['patient_details']['telephone']
+                    }
+                  }
+                )
+              });
+            }
+    
+            var patient_detail = this.surgery_times[0]['patien_detail']
+            this.header_time = this.surgery_times[0]['time_text']
+            this.patient_name = patient_detail['patient_name']
+            this.patient_email = patient_detail['email']
+            this.patient_notes = patient_detail['notes']
+            this.patient_telephones = patient_detail['telephone']
+    
+          })
+
+
+
+
+
+
+
+
+
         }
       }
 
