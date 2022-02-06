@@ -1,6 +1,7 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 import { DateRange } from '@angular/material/datepicker';
+import { AuthService } from 'src/app/services/auth.service';
 import { SurgeryService } from 'src/app/services/surgery.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class CalenderComponent implements OnInit {
   sampleRange: DateRange<Date> | any;
   checked = false;
 
-  constructor(private surgery:SurgeryService) {
+  constructor(private auth:AuthService) {
     this.refreshDR();
   }
 
@@ -25,62 +26,1277 @@ export class CalenderComponent implements OnInit {
     console.log(`cal onChange:`, ev);
   }
 
+  list_of_surgery_date = [
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'patient_address':'adress',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    },
+    {
+      'surgery_name':'Knee Surgery',
+      'time_text':'2 P.M  -  4 P.M',
+      'surgeon':'Dr Ruchira Dias',
+      'patient_detail':{
+        'patient_email':'arund@gmail.com',
+        'patient_name':'Arun Fernendo',
+        'patient_telephone':'77 545 544 4',
+        'notes':'some notes'
+      }
+    }
+  ]
+
+
+  surgeries_count = 0
+  getUnique(count:number) {
+    // Make a copy of the array
+    var tmp = this.list_of_surgery_date;
+    var ret = [];
+    
+    for (var i = 0; i < count; i++) {
+      var index = Math.floor(Math.random() * tmp.length);
+      var removed = tmp.splice(index, 1);
+      // Since we are only removing one element
+      ret.push(removed[0]);
+    }
+    this.surgeries_count = ret.length
+    //this.patientDetail(0)
+    return ret;  
+  }
+
+  userRole = ''
   ngOnInit(): void {
     var today = new Date();
 
+    this.auth.getUserType().subscribe((res)=>{
+      this.userRole = res
+    })
+
     this.selectedDateFormat = this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString()
-      this.surgery_times = []
+    this.surgery_times = this.getUnique(3)
 
-      this.surgery.getBookDate({'date':today?.getDate(),'month':today?.getMonth(),'year':2022}).subscribe((res)=>{
 
-        if (res['user']=='surgeon') {
-          this.show_more_details = true
-          this.is_surgeon = true
-          res['data'].forEach((element: any) => {
-            this.surgery_times.push(
-              {
-                'time_text':element['time_text'],
-                'patien_detail':{
-                  'patient_name':element['patient_details']['patient_name'],
-                  'email':element['patient_details']['email'],
-                  'notes':element['patient_details']['notes'],
-                  'telephone':element['patient_details']['telephone']
-                }
-              }
-            )
-          });
-        }
+    this.patient_name = this.surgery_times[0]['patient_detail']['patient_name']
+    this.patient_email = this.surgery_times[0]['patient_detail']['patient_email']
+    this.patient_telephones = this.surgery_times[0]['patient_detail']['patient_telephone']
 
-        if (res['user']=='admin') {
-          this.show_more_details = true
-          this.is_surgeon = true
-          res['data'].forEach((element: any) => {
-            this.surgery_times.push(
-              {
-                'time_text':element['time_text'],
-                'patien_detail':{
-                  'patient_name':element['patient_details']['patient_name'],
-                  'email':element['patient_details']['email'],
-                  'notes':element['patient_details']['notes'],
-                  'telephone':element['patient_details']['telephone']
-                }
-              }
-            )
-          });
-          console.log("##########################################");
-          
-          console.log(this.surgery_times);
-          
-        }
 
-        // var patient_detail = this.surgery_times[0]['patien_detail']
-        // this.header_time = this.surgery_times[0]['time_text']
-        // this.patient_name = patient_detail['patient_name']
-        // this.patient_email = patient_detail['email']
-        // this.patient_notes = patient_detail['notes']
-        // this.patient_telephones = patient_detail['telephone']
-
-      })
   
   }
 
@@ -124,51 +1340,35 @@ export class CalenderComponent implements OnInit {
   updateCalcsDate(event: any) {
     if (this.selected?.getDate()) {
       this.selectedDateFormat = this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString();
-      this.surgery_times = []
-      this.surgery.getBookDate({'date':this.selected?.getDate(),'month':this.selected?.getMonth(),'year':2022}).subscribe((res)=>{
-
-        if (res['user']=='surgeon') {
-          this.show_more_details = true
-          this.is_surgeon = true
-          res['data'].forEach((element: any) => {
-            this.surgery_times.push(
-              {
-                'time_text':element['time_text'],
-                'patien_detail':{
-                  'patient_name':element['patient_details']['patient_name'],
-                  'email':element['patient_details']['email'],
-                  'notes':element['patient_details']['notes'],
-                  'telephone':element['patient_details']['telephone']
-                }
-              }
-            )
-          });
-        }
-
-
-        var patient_detail = this.surgery_times[0]['patien_detail']
-        this.header_time = this.surgery_times[0]['time_text']
-        this.patient_name = patient_detail['patient_name']
-        this.patient_email = patient_detail['email']
-        this.patient_notes = patient_detail['notes']
-        this.patient_telephones = patient_detail['telephone']
-
-      })
+      this.surgery_times = this.getUnique(3)      
     }
   }
 
-  header_time = ''
   patient_name = ''
   patient_email = ''
   patient_notes = ''
   patient_telephones = ''
 
+
+  // 'patient_email':'arund@gmail.com',
+  // 'patient_name':'Arun Fernendo',
+  // 'patient_telephone':'77 545 544 4',
+  // 'notes':'some notes'
+
   patientDetail(index:any){
-    this.patient_detail =  this.surgery_times[index]['patien_detail']
-    this.patient_name = this.patient_detail['patient_name']
-    this.patient_email = this.patient_detail['email']
-    this.patient_notes = this.patient_detail['notes']
-    this.patient_telephones = this.patient_detail['telephone']
+    
+    index = Number(index)
+
+    this.patient_name = this.surgery_times[index]['patient_detail']['patient_name']
+    this.patient_email = this.surgery_times[index]['patient_detail']['patient_email']
+    this.patient_telephones = this.surgery_times[index]['patient_detail']['patient_telephone']
+
+
+    // this.patient_email = this.surgery_times[index]['patien_detail']['patient_email']
+    // this.patient_name = this.surgery_times[index]['patien_detail']['patient_name']
+    // this.patient_email = this.surgery_times[index]['patien_detail']['patient_email']
+    // this.patient_notes = this.surgery_times[index]['patien_detail']['patient_notes']
+    // this.patient_telephones = this.surgery_times[index]['patien_detail']['patient_telephone']
   }
 
   previouSelectedDate : Date | any
@@ -187,49 +1387,8 @@ export class CalenderComponent implements OnInit {
             return v;
           })(),this.selected);
 
-          // get booked information
-      this.surgery_times = []
-      var star_day = {
-        'date': today.getDate(),
-        'month': today.getMonth(),
-        'year':2022
-      }
-
-      var end_day = {
-        'date': this.selected.getDate(),
-        'month': this.selected.getMonth(),
-        'year':2022
-      }
-
-      this.surgery.getBookDateRange(star_day,end_day).subscribe((res)=>{
-
-        if (res['user']=='surgeon') {
-          this.show_more_details = true
-          this.is_surgeon = true
-          res['data'].forEach((element: any) => {
-            this.surgery_times.push(
-              {
-                'time_text':element['time_text'],
-                'patien_detail':{
-                  'patient_name':element['patient_details']['patient_name'],
-                  'email':element['patient_details']['email'],
-                  'notes':element['patient_details']['notes'],
-                  'telephone':element['patient_details']['telephone']
-                }
-              }
-            )
-          });
-        }
-
-        var patient_detail = this.surgery_times[0]['patien_detail']
-        this.header_time = this.surgery_times[0]['time_text']
-        this.patient_name = patient_detail['patient_name']
-        this.patient_email = patient_detail['email']
-        this.patient_notes = patient_detail['notes']
-        this.patient_telephones = patient_detail['telephone']
-
-      })
-
+          this.surgery_times = this.getUnique(3)
+ 
         } else {
           this.selectedDateFormat = this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString() +" - "+this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString();
   
@@ -240,49 +1399,8 @@ export class CalenderComponent implements OnInit {
           })());
 
           // get booked information
-          this.surgery_times = []
-
-          var end_day = {
-            'date': today.getDate(),
-            'month': today.getMonth(),
-            'year':2022
-          }
-    
-          var start_day = {
-            'date': this.selected.getDate(),
-            'month': this.selected.getMonth(),
-            'year':2022
-          }
-
-
-          this.surgery.getBookDateRange(start_day,end_day).subscribe((res)=>{
-            if (res['user']=='surgeon') {
-              this.show_more_details = true
-              this.is_surgeon = true
-              res['data'].forEach((element: any) => {
-                this.surgery_times.push(
-                  {
-                    'time_text':element['time_text'],
-                    'patien_detail':{
-                      'patient_name':element['patient_details']['patient_name'],
-                      'email':element['patient_details']['email'],
-                      'notes':element['patient_details']['notes'],
-                      'telephone':element['patient_details']['telephone']
-                    }
-                  }
-                )
-              });
-            }
-    
-            var patient_detail = this.surgery_times[0]['patien_detail']
-            this.header_time = this.surgery_times[0]['time_text']
-            this.patient_name = patient_detail['patient_name']
-            this.patient_email = patient_detail['email']
-            this.patient_notes = patient_detail['notes']
-            this.patient_telephones = patient_detail['telephone']
-    
-          })
-
+          this.surgery_times = this.getUnique(3)
+  
         }
       }
 

@@ -64,4 +64,9 @@ export class AuthService {
     return this.http.post<any>(this.api_url + 'user/user-info/',data);
   }
 
+  getUserType(){
+    var data = {"key":localStorage.getItem('token')};
+    return this.http.post<any>(this.api_url + 'user/user-type/',data);
+  }
+
 }

@@ -58,6 +58,7 @@ import { LineChartComponent } from './layouts/dashboard/line-chart/line-chart.co
 import { BarChartComponent } from './layouts/dashboard/bar-chart/bar-chart.component';
 import { PieChartComponent } from './layouts/dashboard/pie-chart/pie-chart.component';
 import { SurgeryDetailsComponent } from './layouts/surgery/surgery-details/surgery-details.component';
+import { TableComponent } from './layouts/dashboard/table/table.component';
 
 
 @NgModule({
@@ -90,7 +91,8 @@ import { SurgeryDetailsComponent } from './layouts/surgery/surgery-details/surge
     LineChartComponent,
     BarChartComponent,
     PieChartComponent,
-    SurgeryDetailsComponent
+    SurgeryDetailsComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
