@@ -20,3 +20,12 @@ table {
   .example-full-width {
     width: 100%;
   }
+
+
+  
+  ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+    color: white;
+    background-color: #009688;
+    opacity: 1;
+  }
+

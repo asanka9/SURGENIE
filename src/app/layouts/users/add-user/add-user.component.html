@@ -1,212 +1,210 @@
-<div class="container mt-3 pb-5">
-    <div class="row" >
-        <div class="col-12" >
-            <h1>Add User</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Velit eligendi cupiditate officia quia dolores quas corporis cum, ipsum rem, 
-                consectetur alias, necessitatibus dolore harum perspiciatis nulla explicabo cumque? Optio, aspernatur?</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="row">
-            <div class="col-12">
-                <mat-form-field appearance="fill">
-                    <mat-label>User Type</mat-label>
-                    <mat-select (selectionChange)="onChangeUserType($event)" [(ngModel)]="selectedValue" name="food">
-                        <mat-option *ngFor="let food of foods" [value]="food.value">
-                            {{food.viewValue}}
-                        </mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </div>
-        </div>
-        <div class="col-6">
-            <form novalidate >
-                <div class="row">
-                    <div class="col-3" >
-                        <mat-form-field class="example-full-width" appearance="fill">
-                            <mat-label>User Type</mat-label>
-                            <mat-select  name="food" [formControl]="professionalTypeFormControl"  >
-                                <mat-option *ngFor="let food of preofessionals" [value]="food.value">
-                                    {{food.viewValue}}
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </div>
-                    <div class="col-4">
-                        <mat-form-field class="example-full-width">
-                            <mat-label>First Name</mat-label>
-                            <input type="text" matInput [formControl]="firstNameFormControl"
-                                [errorStateMatcher]="matcher">
-                            <mat-error
-                                *ngIf="firstNameFormControl.hasError('email') && !firstNameFormControl.hasError('required')">
-                                Please enter a username
-                            </mat-error>
-                            <mat-error *ngIf="firstNameFormControl.hasError('required')">
-                                First Name is required
-                            </mat-error>
-                        </mat-form-field>
-                    </div>
-                    <div class="col-5">
-                        <mat-form-field class="example-full-width">
-                            <mat-label>Last Name</mat-label>
-                            <input type="text" matInput [formControl]="lastNameFormControl"
-                                [errorStateMatcher]="matcher">
-                            <mat-error
-                                *ngIf="lastNameFormControl.hasError('email') && !lastNameFormControl.hasError('required')">
-                                Please enter a username
-                            </mat-error>
-                            <mat-error *ngIf="lastNameFormControl.hasError('required')">
-                                Last Name is required
-                            </mat-error>
-                        </mat-form-field>
-                    </div>
-                    <div  *ngIf="userType != 'admin'" class="col-12">
-                        <mat-form-field class="example-full-width"  appearance="fill">
-                            <mat-label>Registration Number</mat-label>
-                            <input [formControl]="registrationNumberFromcontrol" matInput>
-                        </mat-form-field>
-                    </div>
-                    <div  *ngIf="userType == 'admin'" class="col-12">
-                        <mat-form-field class="example-full-width"  appearance="fill">
-                            <mat-label>Admin Levels</mat-label>
-                            <mat-select [formControl]="adminFormControl" [(ngModel)]="selectedValue"
-                                name="food">
-                                <mat-option *ngFor="let food of adminlevels" [value]="food.value">
-                                    {{food.viewValue}}
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </div>
-                    <div  *ngIf="userType == 'surgeon' ||  userType == 'trainee-surgeon'" class="col-12">
-                        <mat-form-field class="example-full-width"  appearance="fill">
-                            <mat-label>Specialization Area</mat-label>
-                            <mat-select [formControl]="specialityFormControl"
-                                name="food">
-                                <mat-option *ngFor="let food of speciallity" [value]="food.value">
-                                    {{food.viewValue}}
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </div>
-                    <div class="col-12">
-                        <mat-form-field class="example-full-width">
-                            <mat-label>Email</mat-label>
-                            <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
-                            <mat-error
-                                *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                                Please enter a valid email address
-                            </mat-error>
-                            <mat-error *ngIf="emailFormControl.hasError('required')">
-                                Email is required
-                            </mat-error>
-                        </mat-form-field>
-                    </div>
-                    <div class="col-12">
-                        <mat-form-field class="example-full-width">
-                            <mat-label>Address</mat-label>
-                            <textarea [formControl]="addressFormControl" matInput></textarea>
-                            <mat-error *ngIf="addressFormControl.hasError('required')">
-                                Address is required
-                            </mat-error>
-                        </mat-form-field>
+<mat-tab-group>
+    <mat-tab label="Add User">
 
-                    </div>
-                    <div class="col-12">
-                        <mat-form-field class="example-full-width">
-                            <mat-label>Telephone</mat-label>
-                            <span matPrefix>+1 &nbsp;</span>
-                            <input [formControl]="telephoneFormControl" type="tel" matInput placeholder="555-555-1234">
-                            <mat-error *ngIf="telephoneFormControl.hasError('required')">
-                                Telephone is required
-                            </mat-error>
-                        </mat-form-field>
-                    </div>
+        <div class="container mt-3 pb-5">
 
-                </div>
-            </form>
-            <div class="row" >
-                <div class="col-12" >
-
-                    <div *ngIf="userType == 'nurse'" class="col-12">
-                        <mat-checkbox [formControl]="isSister" color="primary" class="example-margin">Sister</mat-checkbox>
-
-                    </div>
-                    <div *ngIf="userType == 'surgeon'" class="col-12 mt-3">
-                        <button (click)="registerSurgeon()" mat-flat-button color="primary">Add Surgeon</button>
-                    </div>
-                    <div *ngIf="userType == 'nurse'" class="col-12 mt-3">
-                        <button (click)="registerNurse()" mat-flat-button color="primary">Add Nurse</button>
-                    </div>
-                    <div *ngIf="userType == 'trainee-surgeon'" class="col-12 mt-3">
-                        <button (click)="registerTraineeSurgeon()" mat-flat-button color="primary">Add Trainee Surgeon</button>
-                    </div>
-                    <div *ngIf="userType == 'anesthesiologist'" class="col-12 mt-3">
-                        <button (click)="registerAnesthelogist()" mat-flat-button color="primary">Add Anesthesiologist</button>
-                    </div>
-                    <div *ngIf="userType == 'admin'" class="col-12 mt-3">
-                        <button (click)="registerAdmin()" mat-flat-button color="primary">Add Admin</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div *ngIf="userType == 'surgeon' || userType == 'trainee-surgeon'" class="col-6">
             <div class="row">
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-4">
-                            <mat-form-field class="example-full-width">
-                                <mat-label>Day</mat-label>
-                                <mat-select [formControl]="dayFormControl" name="food">
-                                    <mat-option *ngFor="let food of days" [value]="food">
-                                        {{food.viewValue}}
-                                    </mat-option>
-                                </mat-select>
-                            </mat-form-field>
-                        </div>
-                        <div class="col-4">
-                            <mat-form-field class="example-full-width">
-                                <mat-label>Session</mat-label>
-                                <mat-select [formControl]="sessionFormControl" name="food">
-                                    <mat-option *ngFor="let food of sessions" [value]="food">
-                                        {{food.viewValue}}
-                                    </mat-option>
-                                </mat-select>
-                            </mat-form-field>
-                        </div>
-                        <div class="col-4">
-                            <a mat-flat-button (click)="addSession()" color="primary">Add Session</a>
-                        </div>
-                        <div class="col-12">
-                            <div class="demo-button-container">
-                                <button mat-flat-button [disabled]="!dataSourceSession.length" (click)="removeData()"
-                                    class="demo-button">
-                                    Remove Session
-                                </button>
+                <div class="row">
+                    <div class="col-12">
+                        <mat-form-field appearance="fill">
+                            <mat-label>User Type</mat-label>
+                            <mat-select (selectionChange)="onChangeUserType($event)" [(ngModel)]="selectedValue" name="food">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <form novalidate >
+                        <div class="row">
+                            <div class="col-3" >
+                                <mat-form-field class="example-full-width" appearance="fill">
+                                    <mat-label>User Type</mat-label>
+                                    <mat-select  name="food" [formControl]="professionalTypeFormControl"  >
+                                        <mat-option *ngFor="let food of preofessionals" [value]="food.value">
+                                            {{food.viewValue}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
                             </div>
-
-                            <table class="demo-table" mat-table [dataSource]="dataSourceSession">
-                                <ng-container matColumnDef="day">
-                                    <th mat-header-cell *matHeaderCellDef>Day</th>
-                                    <td mat-cell *matCellDef="let element">{{element.day}}</td>
-                                </ng-container>
-
-                                <ng-container matColumnDef="session">
-                                    <th mat-header-cell *matHeaderCellDef>Session</th>
-                                    <td mat-cell *matCellDef="let element">{{element.session}}</td>
-                                </ng-container>
-
-
-                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                            </table>
+                            <div class="col-4">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>First Name</mat-label>
+                                    <input type="text" matInput [formControl]="firstNameFormControl"
+                                        [errorStateMatcher]="matcher">
+                                    <mat-error
+                                        *ngIf="firstNameFormControl.hasError('email') && !firstNameFormControl.hasError('required')">
+                                        Please enter a username
+                                    </mat-error>
+                                    <mat-error *ngIf="firstNameFormControl.hasError('required')">
+                                        First Name is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-5">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Last Name</mat-label>
+                                    <input type="text" matInput [formControl]="lastNameFormControl"
+                                        [errorStateMatcher]="matcher">
+                                    <mat-error
+                                        *ngIf="lastNameFormControl.hasError('email') && !lastNameFormControl.hasError('required')">
+                                        Please enter a username
+                                    </mat-error>
+                                    <mat-error *ngIf="lastNameFormControl.hasError('required')">
+                                        Last Name is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div  *ngIf="userType != 'admin'" class="col-12">
+                                <mat-form-field class="example-full-width"  appearance="fill">
+                                    <mat-label>Registration Number</mat-label>
+                                    <input [formControl]="registrationNumberFromcontrol" matInput>
+                                </mat-form-field>
+                            </div>
+                            <div  *ngIf="userType == 'admin'" class="col-12">
+                                <mat-form-field class="example-full-width"  appearance="fill">
+                                    <mat-label>Admin Levels</mat-label>
+                                    <mat-select [formControl]="adminFormControl" [(ngModel)]="selectedValue"
+                                        name="food">
+                                        <mat-option *ngFor="let food of adminlevels" [value]="food.value">
+                                            {{food.viewValue}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div  *ngIf="userType == 'surgeon' ||  userType == 'trainee-surgeon'" class="col-12">
+                                <mat-form-field class="example-full-width"  appearance="fill">
+                                    <mat-label>Specialization Area</mat-label>
+                                    <mat-select [formControl]="specialityFormControl"
+                                        name="food">
+                                        <mat-option *ngFor="let food of speciallity" [value]="food.value">
+                                            {{food.viewValue}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-12">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Email</mat-label>
+                                    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                                    <mat-error
+                                        *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                                        Please enter a valid email address
+                                    </mat-error>
+                                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                                        Email is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-12">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Address</mat-label>
+                                    <textarea [formControl]="addressFormControl" matInput></textarea>
+                                    <mat-error *ngIf="addressFormControl.hasError('required')">
+                                        Address is required
+                                    </mat-error>
+                                </mat-form-field>
+        
+                            </div>
+                            <div class="col-12">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Telephone</mat-label>
+                                    <span matPrefix>+1 &nbsp;</span>
+                                    <input [formControl]="telephoneFormControl" type="tel" matInput placeholder="555-555-1234">
+                                    <mat-error *ngIf="telephoneFormControl.hasError('required')">
+                                        Telephone is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+        
+                        </div>
+                    </form>
+                    <div class="row" >
+                        <div class="col-12" >
+        
+                            <div *ngIf="userType == 'nurse'" class="col-12">
+                                <mat-checkbox [formControl]="isSister" color="primary" class="example-margin">Sister</mat-checkbox>
+        
+                            </div>
+                            <div *ngIf="userType == 'surgeon'" class="col-12 mt-3">
+                                <button (click)="registerSurgeon()" mat-flat-button color="primary">Add Surgeon</button>
+                            </div>
+                            <div *ngIf="userType == 'nurse'" class="col-12 mt-3">
+                                <button (click)="registerNurse()" mat-flat-button color="primary">Add Nurse</button>
+                            </div>
+                            <div *ngIf="userType == 'trainee-surgeon'" class="col-12 mt-3">
+                                <button (click)="registerTraineeSurgeon()" mat-flat-button color="primary">Add Trainee Surgeon</button>
+                            </div>
+                            <div *ngIf="userType == 'anesthesiologist'" class="col-12 mt-3">
+                                <button (click)="registerAnesthelogist()" mat-flat-button color="primary">Add Anesthesiologist</button>
+                            </div>
+                            <div *ngIf="userType == 'admin'" class="col-12 mt-3">
+                                <button (click)="registerAdmin()" mat-flat-button color="primary">Add Admin</button>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-
+                <div *ngIf="userType == 'surgeon' || userType == 'trainee-surgeon'" class="col-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-4">
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>Day</mat-label>
+                                        <mat-select [formControl]="dayFormControl" name="food">
+                                            <mat-option *ngFor="let food of days" [value]="food">
+                                                {{food.viewValue}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-4">
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>Session</mat-label>
+                                        <mat-select [formControl]="sessionFormControl" name="food">
+                                            <mat-option *ngFor="let food of sessions" [value]="food">
+                                                {{food.viewValue}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-4">
+                                    <a mat-flat-button (click)="addSession()" color="primary">Add Session</a>
+                                </div>
+                                <div class="col-12">
+                                    <div class="demo-button-container">
+                                        <button mat-flat-button [disabled]="!dataSourceSession.length" (click)="removeData()"
+                                            class="demo-button">
+                                            Remove Session
+                                        </button>
+                                    </div>
+        
+                                    <table class="demo-table" mat-table [dataSource]="dataSourceSession">
+                                        <ng-container matColumnDef="day">
+                                            <th mat-header-cell *matHeaderCellDef>Day</th>
+                                            <td mat-cell *matCellDef="let element">{{element.day}}</td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="session">
+                                            <th mat-header-cell *matHeaderCellDef>Session</th>
+                                            <td mat-cell *matCellDef="let element">{{element.session}}</td>
+                                        </ng-container>
+        
+        
+                                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                    </div>
+                </div>
             </div>
+        
         </div>
-    </div>
-
-</div>
+    </mat-tab>
+  </mat-tab-group>

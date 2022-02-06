@@ -67,15 +67,17 @@
                             </mat-card-content>
                         </mat-card>
                     </mat-tab>
-                    <mat-tab label="Surgery Details" >
+                    <mat-tab *ngIf="show_more_details" label="Surgery Details" >
                         <mat-card class="example-card mt-3">
                             <mat-card-title>{{ header_time }}</mat-card-title>
-                            <mat-card-content>
-                                <div style="border: 2px solid black; padding: 5px; border-radius: 4px; " >
-                                    <h1>{{ patient_name }}</h1>
-                                    {{ patient_email }}
+                            <mat-card-content class="mt-3" >
+                                <div style="border: 2px solid black; padding: 10px; border-radius: 4px; " >
+
+                                    <h2>{{ patient_name }}</h2>
+                                    <h2> {{ patient_email }} | {{ patient_telephones }} </h2>
+                                    
                                     {{ patient_notes }}
-                                    {{ patient_telephones }}
+                                    
                                 </div>
 
                                 <!-- <div *ngFor="let movie of movies">
