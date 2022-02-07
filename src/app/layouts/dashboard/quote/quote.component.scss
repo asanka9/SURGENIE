@@ -1,0 +1,47 @@
+.part-1{
+    height: 300px;
+    background-color: #009688;
+}
+
+.part-2{
+    height: 300px;
+    background-color: #292d33;
+    color: white;
+
+}
+
+.part-2 .greet{
+    margin-left: 10%;
+    padding-top: 50px;
+    padding: 70px 0;
+
+}
+
+.part-3{
+    height: 300px;
+    background-color: #292d33;
+    color: white;
+}
+
+
+
+
+
+.avatar {
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+img{
+    object-fit: cover;
+    display: block;
+    vertical-align: middle;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}

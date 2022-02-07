@@ -559,6 +559,11 @@ export class CalenderComponent implements OnInit {
     this.surgery_times = this.getUnique(Math.floor(Math.random() * (10 - 5 + 1)) + 5)
 
 
+    this.surgeon = this.surgery_times[0]['surgeon']
+    this.day = this.surgery_times[0]['time_text']
+    this.surgery = this.surgery_times[0]['surgery_name']
+
+
     this.patient_name = this.surgery_times[0]['patient_detail']['patient_name']
     this.patient_email = this.surgery_times[0]['patient_detail']['patient_email']
     this.patient_telephones = this.surgery_times[0]['patient_detail']['patient_telephone']
@@ -572,29 +577,9 @@ export class CalenderComponent implements OnInit {
   selected: Date | null | undefined;
   selectedDateFormat: string | undefined;
 
-  movies = [
-    {
-      "name": "Appendectomy Surgery",
-      "description": "Lorem ipsum dolor sit sit amet consectetur adipisicing elit. Cupiditate culpa dolore beatae amet quisquam aspernatur quaerat laudantium. Qui eaque, voluptatibus em ipsum dolor sit amet consectetur adipisicing elit. Cupiditate culpa dol amet consectetur adipisicing elit. Cupiditate culpa dolore beatae amet quisquam aspernatur quaerat laudantium. Qui eaque, voluptatibus em ipsum dolor sit amet consectetur adipisicing elit. Cupiditate culpa dolore beatae amet quisquam aspernatur quaerat laudantium. Qui eaque, voluptatibus i inventore quide"
-    },
-    {
-      "name": "Appendectomy Surgery",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate culpa dolore beatae amet quisquam aspernatur quaerat laudantium. Qui eaque, voluptatibus inventore quide"
-    },
-    {
-      "name": "Appendectomy Surgery",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate culpa dolore beatae amet quisquam aspernatur quaerat laudantium. Qui eaque, voluptatibus inventore quide"
-    },
-    {
-      "name": "Appendectomy Surgery",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate culpa dolore beatae amet quisquam aspernatur quaerat laudantium. Qui eaque, voluptatibus inventore quide"
-    }
-  ];
 
 
-  drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
-  }
+
 
 
 
@@ -617,6 +602,10 @@ export class CalenderComponent implements OnInit {
   patient_notes = ''
   patient_telephones = ''
   patient_address = ''
+  surgery = ''
+  surgeon = ''
+  time = ''
+  day = ''
 
 
   // 'patient_email':'arund@gmail.com',
@@ -627,6 +616,10 @@ export class CalenderComponent implements OnInit {
   patientDetail(index:any){
     
     index = Number(index)
+
+    this.surgeon = this.surgery_times[index]['surgeon']
+    this.day = this.surgery_times[index]['time_text']
+    this.surgery = this.surgery_times[index]['surgery_name']
 
     this.patient_name = this.surgery_times[index]['patient_detail']['patient_name']
     this.patient_email = this.surgery_times[index]['patient_detail']['patient_email']

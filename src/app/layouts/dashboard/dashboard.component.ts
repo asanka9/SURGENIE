@@ -10,10 +10,17 @@ export class DashboardComponent implements OnInit {
 
   constructor(private auth:AuthService) { }
 
-  userRole = ''
+  role = ''
+  name = ''
   ngOnInit(): void {
     this.auth.getUserType().subscribe((res)=>{
-      this.userRole = res
+      console.log("##################################");
+      
+      console.log(res);
+      
+      this.role = res['role']
+      this.name = res['name']
+
     })
   }
 

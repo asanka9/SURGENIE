@@ -10,6 +10,9 @@ import { AuthService } from 'src/app/services/auth.service';
 export class AccountComponent implements OnInit {
 
 
+  constructor(){
+    
+  }
 
   ngOnInit(): void {
 

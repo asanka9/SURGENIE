@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { MatTable } from '@angular/material/table';
+import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -115,7 +116,7 @@ export class AddUserComponent implements OnInit {
   ];
 
   matcher = new MyErrorStateMatcher();
-  constructor(private auth : AuthService) { }
+  constructor(private auth : AuthService,private toastr: ToastrService) { }
   ngOnInit(): void {
   }
 
@@ -211,19 +212,33 @@ export class AddUserComponent implements OnInit {
       "role":'surgeon'
     }
 
-    // this.professionalTypeFormControl.reset()
-    // this.firstNameFormControl.reset()
-    // this.lastNameFormControl.reset()
-    // this.emailFormControl.reset()
-    // this.telephoneFormControl.reset()
-    // this.addressFormControl.reset()
-    // this.registrationNumberFromcontrol.reset()
-    // this.specialityFormControl.reset()
-    // this.dayFormControl.reset()
-    // this.sessionFormControl.reset()
-    // this.dataSourceSession = []
-    // this.session_list = []
-    this.auth.registerUser(data);
+    this.professionalTypeFormControl.reset()
+    this.firstNameFormControl.reset()
+    this.lastNameFormControl.reset()
+    this.emailFormControl.reset()
+    this.telephoneFormControl.reset()
+    this.addressFormControl.reset()
+    this.registrationNumberFromcontrol.reset()
+    this.specialityFormControl.reset()
+    this.dayFormControl.reset()
+    this.sessionFormControl.reset()
+    this.dataSourceSession = []
+    this.session_list = []
+    this.auth.registerUser(data).subscribe((res)=>{
+      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    },(err)=>{
+      this.toastr.error('everything is broken', 'Major Error', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    }
+    
+    )
 
   }
 
@@ -241,14 +256,28 @@ export class AddUserComponent implements OnInit {
       "role":'anesthesiologist'
     }
     
-    // this.professionalTypeFormControl.reset()
-    // this.firstNameFormControl.reset()
-    // this.lastNameFormControl.reset()
-    // this.emailFormControl.reset()
-    // this.telephoneFormControl.reset()
-    // this.addressFormControl.reset()
-    // this.registrationNumberFromcontrol.reset()
-    this.auth.registerUser(data);
+    this.professionalTypeFormControl.reset()
+    this.firstNameFormControl.reset()
+    this.lastNameFormControl.reset()
+    this.emailFormControl.reset()
+    this.telephoneFormControl.reset()
+    this.addressFormControl.reset()
+    this.registrationNumberFromcontrol.reset()
+    this.auth.registerUser(data).subscribe((res)=>{
+      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    },(err)=>{
+      this.toastr.error('everything is broken', 'Major Error', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    }
+    
+    )
 
   }
 
@@ -267,15 +296,29 @@ export class AddUserComponent implements OnInit {
       "role":'nurse'
     }
     
-    // this.professionalTypeFormControl.reset()
-    // this.firstNameFormControl.reset()
-    // this.lastNameFormControl.reset()
-    // this.emailFormControl.reset()
-    // this.telephoneFormControl.reset()
-    // this.addressFormControl.reset()
-    // this.isSister.reset()
-    // this.registrationNumberFromcontrol.reset()
-    this.auth.registerUser(data);
+    this.professionalTypeFormControl.reset()
+    this.firstNameFormControl.reset()
+    this.lastNameFormControl.reset()
+    this.emailFormControl.reset()
+    this.telephoneFormControl.reset()
+    this.addressFormControl.reset()
+    this.isSister.reset()
+    this.registrationNumberFromcontrol.reset()
+    this.auth.registerUser(data).subscribe((res)=>{
+      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    },(err)=>{
+      this.toastr.error('everything is broken', 'Major Error', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    }
+    
+    )
   }
 
 
@@ -295,19 +338,33 @@ export class AddUserComponent implements OnInit {
       "role":'trainee_surgeon'
     }
     
-    // this.professionalTypeFormControl.reset()
-    // this.firstNameFormControl.reset()
-    // this.lastNameFormControl.reset()
-    // this.emailFormControl.reset()
-    // this.telephoneFormControl.reset()
-    // this.addressFormControl.reset()
-    // this.registrationNumberFromcontrol.reset()
-    // this.specialityFormControl.reset()
-    // this.dayFormControl.reset()
-    // this.sessionFormControl.reset()
-    // this.dataSourceSession = []
-    // this.session_list = []
-    this.auth.registerUser(data);
+    this.professionalTypeFormControl.reset()
+    this.firstNameFormControl.reset()
+    this.lastNameFormControl.reset()
+    this.emailFormControl.reset()
+    this.telephoneFormControl.reset()
+    this.addressFormControl.reset()
+    this.registrationNumberFromcontrol.reset()
+    this.specialityFormControl.reset()
+    this.dayFormControl.reset()
+    this.sessionFormControl.reset()
+    this.dataSourceSession = []
+    this.session_list = []
+    this.auth.registerUser(data).subscribe((res)=>{
+      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    },(err)=>{
+      this.toastr.error('everything is broken', 'Major Error', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    }
+    
+    )
   }
 
 
@@ -324,14 +381,28 @@ export class AddUserComponent implements OnInit {
       "role":this.adminFormControl.value
     }
     
-    // this.professionalTypeFormControl.reset()
-    // this.firstNameFormControl.reset()
-    // this.lastNameFormControl.reset()
-    // this.emailFormControl.reset()
-    // this.telephoneFormControl.reset()
-    // this.addressFormControl.reset()
-    // this.adminFormControl.reset()
-    this.auth.registerUser(data)
+    this.professionalTypeFormControl.reset()
+    this.firstNameFormControl.reset()
+    this.lastNameFormControl.reset()
+    this.emailFormControl.reset()
+    this.telephoneFormControl.reset()
+    this.addressFormControl.reset()
+    this.adminFormControl.reset()
+    this.auth.registerUser(data).subscribe((res)=>{
+      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    },(err)=>{
+      this.toastr.error('everything is broken', 'Major Error', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    }
+    
+    )
   }
 
 

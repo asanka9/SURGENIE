@@ -6,6 +6,7 @@ import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { map, startWith } from 'rxjs/operators';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { TeamService } from 'src/app/services/team.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-team',
@@ -39,7 +40,7 @@ export class TeamComponent implements OnInit {
   @ViewChild('fruitInput') traineeSurgentInput: ElementRef<HTMLInputElement> | undefined;
   @ViewChild('fruitInput') anesthetisticInput: ElementRef<HTMLInputElement> | undefined;
 
-  constructor(private team:TeamService) {
+  constructor(private team:TeamService,private toastr: ToastrService) {
 
 
     this.team.getTeamdetails().subscribe((res)=>{
@@ -203,10 +204,30 @@ export class TeamComponent implements OnInit {
     return telephones[Number(index)%2]
   }
 
+
+
+  
+
+
+
   saveMyTeam(){
     this.team.createTeam({'trainee_surgeon':this.traineeSurgent,'nurse':this.nurse,'anesthesiologists':this.anesthetic}).subscribe((res)=>{
       window.location.reload()
-    })
+
+      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    },(err)=>{
+      this.toastr.error('everything is broken', 'Major Error', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    }
+    
+    )
   }
 
 }

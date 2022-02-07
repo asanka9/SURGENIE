@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-quote',
@@ -6,22 +7,39 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quote.component.scss']
 })
 export class QuoteComponent implements OnInit {
-  showQuote  = false;
+  showQuote  = true;
   greet = ""
   quote = ""
 
-  constructor() {
+name = ''
+role = ''
+
+
+  constructor(private auth:AuthService) {
+
+    this.auth.getUserType().subscribe((res)=>{
+      console.log("##################################");
+      
+      
+      this.role = res['role']
+      this.name = res['name']
+
+      if (this.role == 'surgeon' || this.role == 'trainee_surgeon') {
+        this.name = 'Dr '+ this.name
+      }
+
+    })
 
     var today = new Date()
     var curHr = today.getHours()
     this.quote = "There are only two sorts of doctors: those who practice with their brains, and those who practice with their tongues."
     
     if (curHr < 12) {
-      this.greet = 'Good Morning '+"Dr Arun" 
+      this.greet = 'Good Morning'
     } else if (curHr < 18) {
-      this.greet = 'Good Afternoon '+"Dr Arun" 
+      this.greet = 'Good Afternoon'
     } else {
-      this.greet = 'Good Evening '+"Dr Arun" 
+      this.greet = 'Good Evening'
     }
 
     var day = (today).getDate().toString(); 

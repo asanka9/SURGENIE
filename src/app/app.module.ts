@@ -62,6 +62,8 @@ import { TableComponent } from './layouts/dashboard/table/table.component';
 import { ListComponent } from './layouts/dashboard/list/list.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { CommonModule } from '@angular/common';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -129,6 +131,9 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     MatRadioModule,
     MatStepperModule,
+    CommonModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable

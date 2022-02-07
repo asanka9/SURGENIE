@@ -33,16 +33,12 @@ export class AuthService {
   }
 
   registerUser(register_data:any){
-    this.http.post<any>(this.api_url + 'user/register/',register_data).subscribe(data=>{
-      //this._router.navigate(['/login'])
-    })
+    return this.http.post<any>(this.api_url + 'user/register/',register_data);
   }
 
   updateUser(register_data:any){
     var data = {"key":localStorage.getItem('token'),"user":register_data};
-    this.http.post<any>(this.api_url + 'user/update/',data).subscribe(data=>{
-      //this._router.navigate(['/login'])
-    })
+    return this.http.post<any>(this.api_url + 'user/update/',data);
   }
 
   logoutUser() {

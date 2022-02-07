@@ -11,6 +11,7 @@ import { MatTable } from '@angular/material/table';
 import { SurgeryService } from 'src/app/services/surgery.service';
 import { TeamService } from 'src/app/services/team.service';
 import { MatStepper } from '@angular/material/stepper';
+import { ToastrService } from 'ngx-toastr';
 
 interface Food {
   value: string;
@@ -123,7 +124,6 @@ export class SurgeryComponent implements OnInit {
     }
   }
 
-  
   removeAnesthatistic(fruit: string): void {
     const index = this.anesthetic.indexOf(fruit);
     if (index >= 0) {
@@ -253,7 +253,7 @@ export class SurgeryComponent implements OnInit {
     this.table.renderRows();
   }
 
-  constructor(private surgery:SurgeryService, private team : TeamService) {
+  constructor(private surgery:SurgeryService, private team : TeamService,private toastr: ToastrService) {
     this.filteredNurse = this.chipsCtrlNurse.valueChanges.pipe(
       startWith(null),
       map((fruit: string | null) => (fruit ? this._filterNurse(fruit) : this.allnurse.slice())),
@@ -342,27 +342,46 @@ export class SurgeryComponent implements OnInit {
 
     this.surgery.createSurgeryWithShedule(patient_details,surgery_details,surgery_team_details).subscribe((res)=>{
 
-        this.nurse = res['fav_nurse']
-        this.traineeSurgent = res['fav_trainee_surgeon']
-        this.anesthetic = res['fav_anesthesiologist']
+
+      this.nurse = res['fav_nurse']
+      this.traineeSurgent = res['fav_trainee_surgeon']
+      this.anesthetic = res['fav_anesthesiologist']
   
-        this.allnurse = res['nurse']
-        this.alltraineeSurgent = res['trainee_surgeon']
-        this.allAnesthetic = res['anesthesiologist']  
-        
-        this.filteredNurse = this.chipsCtrlNurse.valueChanges.pipe(
-          startWith(null),
-          map((fruit: string | null) => (fruit ? this._filterNurse(fruit) : this.allnurse.slice())),
-        );
-        this.filteredTraineeSurgent = this.chipsCtrlTraineeSurgent.valueChanges.pipe(
-          startWith(null),
-          map((fruit: string | null) => (fruit ? this._filterTaineeSurgent(fruit) : this.alltraineeSurgent.slice())),
-        );
-        this.filteredAnesthetic = this.chipsCtrlAnesthetic.valueChanges.pipe(
-          startWith(null),
-          map((fruit: string | null) => (fruit ? this._filterAnesthetistic(fruit) : this.allAnesthetic.slice())),
-        );
-    })
+      this.allnurse = res['nurse']
+      this.alltraineeSurgent = res['trainee_surgeon']
+      this.allAnesthetic = res['anesthesiologist']  
+      
+      this.filteredNurse = this.chipsCtrlNurse.valueChanges.pipe(
+        startWith(null),
+        map((fruit: string | null) => (fruit ? this._filterNurse(fruit) : this.allnurse.slice())),
+      );
+      this.filteredTraineeSurgent = this.chipsCtrlTraineeSurgent.valueChanges.pipe(
+        startWith(null),
+        map((fruit: string | null) => (fruit ? this._filterTaineeSurgent(fruit) : this.alltraineeSurgent.slice())),
+      );
+      this.filteredAnesthetic = this.chipsCtrlAnesthetic.valueChanges.pipe(
+        startWith(null),
+        map((fruit: string | null) => (fruit ? this._filterAnesthetistic(fruit) : this.allAnesthetic.slice())),
+      );
+  
+
+
+
+
+      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    },(err)=>{
+      this.toastr.error('everything is broken', 'Major Error', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    }
+    
+    )
 
     this.show_stepper_3 = true
     stepper.next()
@@ -404,10 +423,25 @@ export class SurgeryComponent implements OnInit {
       'pylogical':this.pylogicalFormControl.value,
       'pulmonary':this.pulmonaryFormControl.value
     }
+
+
     this.surgery.getPredictedTime(patient_details).subscribe((res)=>{
       this.predictedtime = res['time']
       this.predictedtimeText = res['time_text']
-    })
+      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    },(err)=>{
+      this.toastr.error('everything is broken', 'Major Error', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    }
+    
+    )
     this.show_stepper_2 = true
     stepper.next();
   }
@@ -425,8 +459,21 @@ export class SurgeryComponent implements OnInit {
     }
 
     this.team.bookTeam({'trainee_surgeon':this.traineeSurgent,'nurse':this.nurse,'anesthesiologists':this.anesthetic},surgery_details).subscribe((res)=>{
-      
-    })
+
+      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    },(err)=>{
+      this.toastr.error('everything is broken', 'Major Error', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    }
+    
+    )
   }
 
 

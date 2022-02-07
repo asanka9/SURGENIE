@@ -3,6 +3,7 @@ import { FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatTable } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -129,9 +130,10 @@ export class UpdateUserComponent implements OnInit {
   is_medical_staff = false
   role = ''
   admin_value = ''
+  speciality = ''
   user_type = ''
 
-  constructor(private auth: AuthService, private router: Router) {
+  constructor(private auth: AuthService, private router: Router,private toastr: ToastrService) {
     this.adminFormControl.setValue('admin-01')
 
     this.auth.getUserInfo().subscribe((res) => {
@@ -169,6 +171,7 @@ export class UpdateUserComponent implements OnInit {
             this.emailFormControl.setValue(profie['email'])
             this.admin_value = profie['level']
             this.user_type = profie['title']
+            this.speciality = profie['speciality']
             break;
           case 'nurse':
             this.addressFormControl.setValue(profie['address'])
@@ -179,7 +182,7 @@ export class UpdateUserComponent implements OnInit {
             this.telephoneFormControl.setValue(profie['telephone'])
             this.emailFormControl.setValue(profie['email'])
             this.admin_value = profie['level']
-            this.isSister = profie['is_sister']
+            this.isSister.setValue(profie['is_sister'])
             this.user_type = profie['title']
             break;
           case 'trainee_surgeon':
@@ -192,6 +195,8 @@ export class UpdateUserComponent implements OnInit {
             this.emailFormControl.setValue(profie['email'])
             this.admin_value = profie['level']
             this.user_type = profie['title']
+            this.speciality = profie['speciality']
+
             break;
 
           case 'anesthesiologist':
@@ -324,7 +329,22 @@ export class UpdateUserComponent implements OnInit {
     // this.sessionFormControl.reset()
     // this.dataSourceSession = []
     // this.session_list = []
-    this.auth.updateUser(data);
+    this.auth.updateUser(data).subscribe((res)=>{
+      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    },(err)=>{
+      this.toastr.error('everything is broken', 'Major Error', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    }
+    
+    )
+
 
   }
 
@@ -432,6 +452,7 @@ export class UpdateUserComponent implements OnInit {
     // this.addressFormControl.reset()
     // this.adminFormControl.reset()
     this.auth.updateUser(data)
+
   }
 
 

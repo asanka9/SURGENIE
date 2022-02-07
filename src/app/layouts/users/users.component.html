@@ -1,6 +1,6 @@
 <mat-tab-group>
 
-    <mat-tab label="Surgeon">
+    <mat-tab label="SURGEON">
         <div style="margin-bottom: 100px;"  class="container">
             <mat-form-field appearance="standard">
                 <mat-label>Add Surgeon</mat-label>
@@ -51,7 +51,7 @@
 
         </div>
     </mat-tab>
-    <mat-tab label="Trainee Surgeon">
+    <mat-tab label="TRAINEE SURGEON">
         <div style="margin-bottom: 100px;"  class="container">
             <mat-form-field appearance="standard">
                 <mat-label>Search Trainee Surgeon</mat-label>
@@ -99,7 +99,7 @@
 
         </div>
     </mat-tab>
-    <mat-tab label="Anesthesiologist">
+    <mat-tab label="ANESTHIOLOGIST">
         <div  style="margin-bottom: 100px;"  class="container">
             <mat-form-field appearance="standard">
                 <mat-label>Search Anesthesiologist</mat-label>
@@ -107,7 +107,7 @@
             </mat-form-field>
 
             <div>
-                <table mat-table [dataSource]="dataSourceSurgent" matSort>
+                <table mat-table [dataSource]="dataSourceAnesthetistic" matSort>
 
                     <!-- ID Column -->
                     <ng-container matColumnDef="id">
@@ -147,7 +147,7 @@
 
         </div>
     </mat-tab>
-    <mat-tab label="Nurse">
+    <mat-tab label="NURSE">
         <div style="margin-bottom: 100px;"  class="container">
             <mat-form-field appearance="standard">
                 <mat-label>Search Nurse</mat-label>
@@ -194,7 +194,7 @@
 
         </div>
     </mat-tab>
-    <mat-tab label="Admin">
+    <mat-tab label="ADMIN">
         <div style="margin-bottom: 100px;" class="container">
             <mat-form-field appearance="standard">
                 <mat-label>Search Admin</mat-label>

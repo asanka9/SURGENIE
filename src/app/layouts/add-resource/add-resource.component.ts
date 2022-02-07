@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import { DbService } from 'src/app/services/db.service';
@@ -70,9 +71,7 @@ export class AddResourceComponent implements OnInit {
   theartorFormControl = new FormControl('', [Validators.required]);
 
 
-  constructor(private db:DbService){}
-
-
+  constructor(private db:DbService,private toastr: ToastrService){}
 
 
   addResource(){
@@ -86,7 +85,20 @@ export class AddResourceComponent implements OnInit {
       this.amountFormControl.reset()
       this.unitFormControl.reset()
       this.theartorFormControl.reset()
-    })
+      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    },(err)=>{
+      this.toastr.error('everything is broken', 'Major Error', {
+        timeOut: 3000,
+        positionClass: 'toast-bottom-right',
+  
+      });
+    }
+    
+    )
 
   }
 }
