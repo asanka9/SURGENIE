@@ -1,5 +1,5 @@
 <mat-tab-group>
-    <mat-tab label="Add Surgery">
+    <mat-tab label="ADD SURGERY">
         <div class="container pb-5">
             <mat-stepper orientation="vertical" class="mt-3" #stepper>
                 <mat-step>
@@ -111,7 +111,7 @@
                                     </div>
 
                                     <div class="col-12">
-                                        <button (click)="getPredictedTime()" mat-flat-button color="primary">Add Patient
+                                        <button (click)="getPredictedTime(stepper)" mat-flat-button color="primary">Add Patient
                                             Details</button>
                                     </div>
                                 </div>
@@ -269,9 +269,8 @@
 
                     </div>
                 </mat-step>
-                <mat-step>
+                <mat-step *ngIf="show_stepper_2" >
                     <ng-template matStepLabel>Surgery Scheduling</ng-template>
-                    <h1 class="mt-3">Add Surgery</h1>
                     <div class="row mt-3">
                         <div class="col-6">
                             <mat-form-field class="example-full-width">
@@ -303,7 +302,7 @@
                                 <div class="row">
                                     <div style="background-color: brown;" class="col-4 mt-3"
                                         style="text-align: center;">
-                                        <span style="font-size: 20px;">25 min</span>
+                                        <span style="font-size: 20px;">{{ predictedtimeText }}</span>
                                         <p>Predicted Result</p>
                                     </div>
                                     <div class="col-4">
@@ -320,7 +319,7 @@
                                         </mat-form-field>
                                     </div>
                                     <div class="col-12">
-                                        <button (click)="createSurgery()" mat-flat-button color="primary">Add
+                                        <button (click)="createSurgery(stepper)" mat-flat-button color="primary">Add
                                             Surgery</button>
                                     </div>
                                 </div>
@@ -362,7 +361,7 @@
 
                     </div>
                 </mat-step>
-                <mat-step>
+                <mat-step *ngIf="show_stepper_3">
                     <ng-template matStepLabel>Surgery Team</ng-template>
                     <div class="container pb-5">
 
@@ -566,7 +565,7 @@
             </mat-stepper>
         </div>
     </mat-tab>
-    <mat-tab label="Surgery Details"> 
+    <mat-tab label="SURGERIES"> 
          <app-surgery-details></app-surgery-details>
     </mat-tab>
 </mat-tab-group>

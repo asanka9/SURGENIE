@@ -1,38 +1,117 @@
-<!-- <div class="container mb-5" >
-    <div class="row mt-5" >
-        <div class="col-9" >
-            <div class="row" >
-                <div class="col-12" >
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <app-quote></app-quote>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <div class="cards">
+        <div class="box">
+            <i class="fas fa-procedures"></i>
+            <div>
+                <h3>12</h3>
+                <span>Available Theatres</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-user-md"></i>
+            <div>
+                <h3>16</h3>
+                <span>Available Surgeons</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-syringe"></i>
+            <div>
+                <h3>32</h3>
+                <span>Available Anesthetics</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-user-nurse"></i>
+            <div>
+                <h3>123</h3>
+                <span>Available Nurses</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="row mt-5">
+        <div class="col-8">
+            <div class="row">
+                <div class="col-12">
                     <h1>Surgery Types</h1>
                 </div>
-                <div class="col-12" >
-                    <app-pie-chart></app-pie-chart>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6">
+                            <app-pie-chart [data]="[300, 50, 100,300]"
+                                [labels]="['Appendectomy','Breast biopsy','Carotid endarterectomy','Cataract surgery','Knee Surgery']">
+                            </app-pie-chart>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-group">
+                                <li>Appendectomy
+                                    <span class="badge">2</span>
+                                </li>
+                                <li>Breast biopsy
+                                    <span class="badge">10</span>
+                                </li>
+                                <li>Carotid endarterectomy
+                                    <span class="badge">9</span>
+                                </li>
+                                <li>Knee Surgery
+                                    <span class="badge">0</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12" >
-                    <app-line-chart></app-line-chart>
+                <div class="col-12">
+                    <app-line-chart
+                    [data]="[300, 50, 100,300]"
+                    [labels]="['Sun','Mon','Carotid endarterectomy','Cataract surgery','Knee Surgery']"
+                    
+                    ></app-line-chart>
                 </div>
 
-                <div class="col-12" >
+                <div class="col-12">
                     <h1>Average Surgery Times</h1>
                 </div>
-                <div class="col-12" >
-                    <app-bar-chart></app-bar-chart>
+                <div class="col-12">
+                    <app-bar-chart 
+                    [data]="[300, 50, 100,300]"
+                                [labels]="['Appendectomy','Breast biopsy','Carotid endarterectomy','Cataract surgery','Knee Surgery']"></app-bar-chart>
                 </div>
             </div>
 
         </div>
-        <div class="col-3" >
-            <div class="row" >
-                <div class="col-12" >
+        <div class="col-4">
+
+            <div class="row mt-5">
+                <div class="col-12">
                     <mat-card class="demo-inline-calendar-card">
-                        <mat-calendar ></mat-calendar>
-                      </mat-card>
+                        <app-list></app-list>
+                    </mat-card>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 350px;" >
+                <div class="col-12">
+                    <mat-card class="demo-inline-calendar-card">
+                        <app-list></app-list>
+                    </mat-card>
                 </div>
             </div>
         </div>
     </div>
 </div>
- -->
 
 
 
@@ -41,6 +120,8 @@
 
 
 
+
+<!-- 
 <div class="container mb-5" >
     <div class="row mt-5" >
         <div class="col-9" >
@@ -92,6 +173,4 @@
         </div>
     </div>
 </div>
-
-
-
+ -->

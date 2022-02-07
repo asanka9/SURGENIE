@@ -4,13 +4,12 @@
 <div [ngSwitch]="selectedCategory" >
 
   <mat-nav-list >
-    <a mat-list-item  (click)="navigate('')"  >  Dashboard</a>
-    <a mat-list-item  (click)="navigate('calender')"  >  Calender</a>
-    <a mat-list-item  (click)="navigate('resource')"  >Resource</a>
-    <a mat-list-item  (click)="navigate('add-resource')"  >Add Resource</a>
-    <a mat-list-item  (click)="navigate('users')"  >Users</a>
-    <a mat-list-item  (click)="navigate('add-user')"  >Add User</a>
-    <a mat-list-item  (click)="navigate('account')"  >Account</a>
+    <a mat-list-item  (click)="navigate('')"  > <mat-icon style="color: brown;"  >dashboard</mat-icon> <div style="width: 10px;" ></div> Dashboard</a>
+    <a mat-list-item  (click)="navigate('calender')"  > <mat-icon>event</mat-icon> <div style="width: 10px;" ></div> Calender</a>
+    <a mat-list-item  (click)="navigate('resource')"  ><mat-icon>local_pharmacy</mat-icon> <div style="width: 10px;" ></div>Resource</a>
+    <a mat-list-item  (click)="navigate('users')"><mat-icon>people_alt</mat-icon> <div style="width: 10px;" ></div>Users</a>
+    <a mat-list-item  (click)="navigate('add-user')"  ><mat-icon>person_add_alt</mat-icon> <div style="width: 10px;" ></div>Add User</a>
+    <a mat-list-item  (click)="navigate('account')"  ><mat-icon>account_circle</mat-icon> <div style="width: 10px;" ></div>Account</a>
   </mat-nav-list>
 
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
 
 @Component({
@@ -8,6 +8,9 @@ import { Chart, registerables } from 'chart.js';
 })
 export class LineChartComponent implements OnInit {
 
+  @Input() labels:   any;
+  @Input() data:   any;
+
   constructor() { }
 
   title = 'charts-app';
@@ -16,10 +19,10 @@ export class LineChartComponent implements OnInit {
     var myChart = new Chart("line", {
       type: 'line',
       data: {
-        labels: [65, 59, 80, 81, 56, 55, 40],
+        labels: this.labels,
         datasets: [{
           label: 'My First Dataset',
-          data: [65, 59, 80, 81, 56, 55, 40],
+          data: this.data,
           borderColor: 'rgb(75, 192, 192)',
         }]
       },
@@ -28,7 +31,16 @@ export class LineChartComponent implements OnInit {
           y: {
             beginAtZero: true
           }
+        },
+        plugins: {
+          legend: {
+              display: false,
+              labels: {
+                  color: 'rgb(255, 99, 132)'
+              }
+          
         }
+      }
       }
     });
   }

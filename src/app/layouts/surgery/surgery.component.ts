@@ -10,6 +10,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { MatTable } from '@angular/material/table';
 import { SurgeryService } from 'src/app/services/surgery.service';
 import { TeamService } from 'src/app/services/team.service';
+import { MatStepper } from '@angular/material/stepper';
 
 interface Food {
   value: string;
@@ -300,7 +301,7 @@ export class SurgeryComponent implements OnInit {
   endTimeFormControl  = new FormControl('',);
 
 
-  createSurgery(){
+  createSurgery(stepper: MatStepper){
     let patient_details = {
       'first_name':this.firstNameFormControl.value,
       'last_name':this.lastNameFormControl.value,
@@ -363,6 +364,8 @@ export class SurgeryComponent implements OnInit {
         );
     })
 
+    this.show_stepper_3 = true
+    stepper.next()
     
 
   }
@@ -375,8 +378,12 @@ export class SurgeryComponent implements OnInit {
 
 
   predictedtime = ''
+  predictedtimeText = ''
 
-  getPredictedTime(){
+  show_stepper_2 = false
+  show_stepper_3 = false
+
+  getPredictedTime(stepper: MatStepper){
     let patient_details = {
       'first_name':this.firstNameFormControl.value,
       'last_name':this.lastNameFormControl.value,
@@ -398,8 +405,11 @@ export class SurgeryComponent implements OnInit {
       'pulmonary':this.pulmonaryFormControl.value
     }
     this.surgery.getPredictedTime(patient_details).subscribe((res)=>{
-      this.predictedtime = res
+      this.predictedtime = res['time']
+      this.predictedtimeText = res['time_text']
     })
+    this.show_stepper_2 = true
+    stepper.next();
   }
 
   saveMyTeam(){

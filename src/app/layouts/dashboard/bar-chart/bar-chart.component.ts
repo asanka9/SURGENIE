@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
 
 @Component({
@@ -7,6 +7,12 @@ import { Chart, registerables } from 'chart.js';
   styleUrls: ['./bar-chart.component.scss']
 })
 export class BarChartComponent implements OnInit {
+
+
+
+  @Input() labels:   any;
+  @Input() data:   any;
+
 
   constructor() { }
 
@@ -17,10 +23,10 @@ export class BarChartComponent implements OnInit {
     var bar = new Chart("bar", {
       type: 'bar',
       data: {
-          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          labels: this.labels,
           datasets: [{
               label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
+              data: this.data,
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
@@ -45,7 +51,16 @@ export class BarChartComponent implements OnInit {
               y: {
                   beginAtZero: true
               }
+          },
+          plugins: {
+            legend: {
+                display: false,
+                labels: {
+                    color: 'rgb(255, 99, 132)'
+                }
+            
           }
+        }
       }
   });
   }

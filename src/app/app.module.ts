@@ -44,7 +44,7 @@ import { LoadingComponent } from './widget/loading/loading.component';
 import { UpdateUserComponent } from './layouts/account/update-user/update-user.component';
 import { SurgeryHistoryComponent } from './layouts/account/surgery-history/surgery-history.component';
 import { MotivationComponent } from './calender/motivation/motivation.component';
-import { QuoteComponent } from './layouts/calender/quote/quote.component';
+import { QuoteComponent } from './layouts/dashboard/quote/quote.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { AdminComponent } from './shared/side-nav/admin/admin.component';
@@ -59,6 +59,9 @@ import { BarChartComponent } from './layouts/dashboard/bar-chart/bar-chart.compo
 import { PieChartComponent } from './layouts/dashboard/pie-chart/pie-chart.component';
 import { SurgeryDetailsComponent } from './layouts/surgery/surgery-details/surgery-details.component';
 import { TableComponent } from './layouts/dashboard/table/table.component';
+import { ListComponent } from './layouts/dashboard/list/list.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -92,7 +95,8 @@ import { TableComponent } from './layouts/dashboard/table/table.component';
     BarChartComponent,
     PieChartComponent,
     SurgeryDetailsComponent,
-    TableComponent
+    TableComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
@@ -124,7 +128,13 @@ import { TableComponent } from './layouts/dashboard/table/table.component';
     MatSortModule,
     HttpClientModule,
     MatRadioModule,
-    MatStepperModule
+    MatStepperModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [
     {

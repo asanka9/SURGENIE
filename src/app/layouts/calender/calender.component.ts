@@ -27,1240 +27,507 @@ export class CalenderComponent implements OnInit {
   }
 
   list_of_surgery_date = [
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'patient_address':'adress',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    },
-    {
-      'surgery_name':'Knee Surgery',
-      'time_text':'2 P.M  -  4 P.M',
-      'surgeon':'Dr Ruchira Dias',
-      'patient_detail':{
-        'patient_email':'arund@gmail.com',
-        'patient_name':'Arun Fernendo',
-        'patient_telephone':'77 545 544 4',
-        'notes':'some notes'
-      }
-    }
-  ]
+    {"surgeon":"Dr. Lorrie Woodger","surgery_name":"Open prostatectomy","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"vstainson0@hugedomains.com","patient_name":"Vachel Stainson","patient_telephone":"133-964-3666","patient_address":"909 Bartillon Point","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Leslie Pogson","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"jripsher1@squidoo.com","patient_name":"Jennine Ripsher","patient_telephone":"205-934-8896","patient_address":"8705 Nova Drive","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Tanny Groucutt","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"kopfer2@pcworld.com","patient_name":"Katee Opfer","patient_telephone":"313-868-8314","patient_address":"8 Clyde Gallagher Trail","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Hedvige Caffin","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"vjudgkins3@go.com","patient_name":"Valery Judgkins","patient_telephone":"310-166-3723","patient_address":"73 Kingsford Park","notes":"Keep testing"}},
+    {"surgeon":"Dr. Hogan Pett","surgery_name":"Hip replacement; total and partial","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"rmazzey4@vimeo.com","patient_name":"Rosa Mazzey","patient_telephone":"118-951-0673","patient_address":"5 Vernon Point","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Karlens Bernaldo","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"cpayne5@delicious.com","patient_name":"Chrissie Payne","patient_telephone":"922-622-3497","patient_address":"6521 Hoepker Parkway","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Francois Toping","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"alowfill6@barnesandnoble.com","patient_name":"Angel Lowfill","patient_telephone":"421-189-2732","patient_address":"21569 Fremont Court","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Grazia Botwright","surgery_name":"Thyroidectomy; partial or complete","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"mdeetch7@ucoz.com","patient_name":"Meryl Deetch","patient_telephone":"359-345-6350","patient_address":"80887 Oak Valley Street","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Ignatius Struijs","surgery_name":"Hip replacement; total and partial","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"ceakly8@ft.com","patient_name":"Corrinne Eakly","patient_telephone":"855-984-4226","patient_address":"156 Gateway Road","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Iain Ledgister","surgery_name":"Spinal fusion","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"riacovino9@yandex.ru","patient_name":"Raoul Iacovino","patient_telephone":"638-749-5121","patient_address":"0593 Stephen Place","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Lelah Connow","surgery_name":"Other hernia repair","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"nrogana@chicagotribune.com","patient_name":"Nyssa Rogan","patient_telephone":"827-592-6893","patient_address":"19 Hansons Park","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Carroll Cobbled","surgery_name":"Nephrectomy; partial or complete","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"bbrittianb@ft.com","patient_name":"Barny Brittian","patient_telephone":"411-547-0925","patient_address":"67 Northview Street","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Rici Tommaseo","surgery_name":"Hip replacement; total and partial","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"cgeorgescuc@drupal.org","patient_name":"Clayson Georgescu","patient_telephone":"681-611-7356","patient_address":"6595 Claremont Pass","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Genevra Mugg","surgery_name":"Colorectal resection","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"hvescovinid@newyorker.com","patient_name":"Hyacinthia Vescovini","patient_telephone":"914-735-5063","patient_address":"688 Porter Junction","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Ingmar Lillyman","surgery_name":"Hip replacement; total and partial","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"chearde@rediff.com","patient_name":"Cherey Heard","patient_telephone":"427-686-8752","patient_address":"07661 Carberry Junction","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Donnamarie Buttner","surgery_name":"Thyroidectomy; partial or complete","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"bblandf@acquirethisname.com","patient_name":"Betta Bland","patient_telephone":"773-401-2138","patient_address":"32397 Mesta Center","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Brnaba Corzor","surgery_name":"Spinal fusion","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"dkemetg@washingtonpost.com","patient_name":"Dorolice Kemet","patient_telephone":"661-630-9347","patient_address":"2 Roth Crossing","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Beverley Brayford","surgery_name":"Nephrectomy; partial or complete","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"dmcindoeh@ameblo.jp","patient_name":"Darius McIndoe","patient_telephone":"751-749-8104","patient_address":"0462 Main Center","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Rori Capron","surgery_name":"Open prostatectomy","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"jscadingi@nba.com","patient_name":"Jess Scading","patient_telephone":"386-435-6424","patient_address":"86954 Lighthouse Bay Plaza","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Ramonda Headan","surgery_name":"Colorectal resection","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"askeyj@furl.net","patient_name":"Arlena Skey","patient_telephone":"365-516-8353","patient_address":"07 Forest Dale Center","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Issie Lomasney","surgery_name":"Nephrectomy; partial or complete","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"hcradeyk@moonfruit.com","patient_name":"Hollie Cradey","patient_telephone":"203-492-0857","patient_address":"0 Hudson Court","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Waite Smalecombe","surgery_name":"Spinal fusion","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"mapplebyl@house.gov","patient_name":"Marcos Appleby","patient_telephone":"282-642-6425","patient_address":"4449 Pawling Drive","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Margaret Kilmurray","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"dhollidgem@amazon.co.jp","patient_name":"Dunn Hollidge","patient_telephone":"325-615-9811","patient_address":"60 Schlimgen Street","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Pierre Mangan","surgery_name":"Colorectal resection","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"bworboyn@friendfeed.com","patient_name":"Birdie Worboy","patient_telephone":"285-748-6760","patient_address":"01062 Doe Crossing Parkway","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Karla Evison","surgery_name":"Spinal fusion","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"ulenardo@hhs.gov","patient_name":"Udall Lenard","patient_telephone":"596-656-9466","patient_address":"40687 Sheridan Lane","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Dionne Linge","surgery_name":"Hip replacement; total and partial","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"lswitlandp@e-recht24.de","patient_name":"Lorelei Switland","patient_telephone":"857-415-2953","patient_address":"3129 Anderson Trail","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Roze Marven","surgery_name":"Arthroplasty knee","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"shuishq@disqus.com","patient_name":"Suzanne Huish","patient_telephone":"902-279-0987","patient_address":"95 Forest Dale Drive","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Miguela Carme","surgery_name":"Colorectal resection","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"mbougheyr@diigo.com","patient_name":"Maybelle Boughey","patient_telephone":"879-911-3355","patient_address":"08 Donald Park","notes":"Keep testing"}},
+    {"surgeon":"Dr. Paula Grimmett","surgery_name":"Thyroidectomy; partial or complete","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"trouses@newsvine.com","patient_name":"Tamara Rouse","patient_telephone":"172-156-9434","patient_address":"3686 Spaight Drive","notes":"Keep testing"}},
+    {"surgeon":"Dr. Hettie Leveret","surgery_name":"Nephrectomy; partial or complete","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"rhannayt@fda.gov","patient_name":"Rad Hannay","patient_telephone":"377-968-4428","patient_address":"86 Graceland Trail","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Vina Myford","surgery_name":"Colorectal resection","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"rcumpstyu@livejournal.com","patient_name":"Rachele Cumpsty","patient_telephone":"397-584-8520","patient_address":"900 2nd Parkway","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Karlens Hopkynson","surgery_name":"Colorectal resection","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"pmeadv@seattletimes.com","patient_name":"Penny Mead","patient_telephone":"124-619-1779","patient_address":"33 Arrowood Street","notes":"Keep testing"}},
+    {"surgeon":"Dr. Gay Clemmens","surgery_name":"Thyroidectomy; partial or complete","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"jguillotw@sakura.ne.jp","patient_name":"Judah Guillot","patient_telephone":"437-395-6790","patient_address":"9298 Susan Street","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Arluene Bartlet","surgery_name":"Nephrectomy; partial or complete","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"goconnollyx@netscape.com","patient_name":"Gilberta O'Connolly","patient_telephone":"114-468-1154","patient_address":"01 Carioca Lane","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Laurie Comoletti","surgery_name":"Other hernia repair","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"tsynkey@gnu.org","patient_name":"Terrel Synke","patient_telephone":"978-735-2951","patient_address":"48 Bashford Way","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Goldia Nugent","surgery_name":"Arthroplasty knee","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"jgiamettiz@auda.org.au","patient_name":"Janos Giametti","patient_telephone":"511-342-3011","patient_address":"811 Texas Alley","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Maggee Swyer","surgery_name":"Spinal fusion","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"bcasford10@stumbleupon.com","patient_name":"Bryn Casford","patient_telephone":"185-539-3155","patient_address":"48 Express Street","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Ellwood Bainton","surgery_name":"Open prostatectomy","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"farpin11@mashable.com","patient_name":"Freida Arpin","patient_telephone":"261-211-5481","patient_address":"915 Vidon Pass","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Randolph Leban","surgery_name":"Nephrectomy; partial or complete","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"trother12@china.com.cn","patient_name":"Thibaut Rother","patient_telephone":"880-706-3423","patient_address":"1048 Laurel Avenue","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Leo Oleshunin","surgery_name":"Other hernia repair","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"chuff13@google.co.uk","patient_name":"Cassie Huff","patient_telephone":"376-994-2573","patient_address":"290 Kinsman Pass","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Joceline Prozescky","surgery_name":"Colorectal resection","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"jelnor14@cpanel.net","patient_name":"Jonathon Elnor","patient_telephone":"335-828-2801","patient_address":"76 Londonderry Circle","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Delainey Piatkow","surgery_name":"Spinal fusion","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"hrobke15@adobe.com","patient_name":"Howie Robke","patient_telephone":"403-855-5062","patient_address":"200 Ludington Crossing","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Paulie Stillgoe","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"mroycraft16@blogger.com","patient_name":"Maiga Roycraft","patient_telephone":"824-903-1804","patient_address":"896 4th Point","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Mortie Galiero","surgery_name":"Open prostatectomy","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"pmccutcheon17@macromedia.com","patient_name":"Panchito McCutcheon","patient_telephone":"271-374-6405","patient_address":"1678 Hansons Crossing","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Rebe Vsanelli","surgery_name":"Other hernia repair","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"tsetterfield18@salon.com","patient_name":"Torr Setterfield","patient_telephone":"688-341-4701","patient_address":"14 Homewood Way","notes":"Keep testing"}},
+    {"surgeon":"Dr. Katinka Steed","surgery_name":"Thyroidectomy; partial or complete","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"ggownge19@edublogs.org","patient_name":"Gwen Gownge","patient_telephone":"330-164-0184","patient_address":"2894 Butterfield Place","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Reid McQuilliam","surgery_name":"Thyroidectomy; partial or complete","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"mboddice1a@walmart.com","patient_name":"My Boddice","patient_telephone":"214-224-1761","patient_address":"68772 Kim Lane","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Isaak Donoher","surgery_name":"Open prostatectomy","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"rstruss1b@ow.ly","patient_name":"Rabbi Struss","patient_telephone":"701-297-8606","patient_address":"5 Steensland Plaza","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Rowe Glasby","surgery_name":"Spinal fusion","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"edoxsey1c@gravatar.com","patient_name":"Eustacia Doxsey","patient_telephone":"240-268-3392","patient_address":"89052 Loomis Court","notes":"Keep testing"}},
+    {"surgeon":"Dr. Wini Bredbury","surgery_name":"Thyroidectomy; partial or complete","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"ndearden1d@bing.com","patient_name":"Nolan Dearden","patient_telephone":"409-419-4576","patient_address":"540 Jana Lane","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Ky Larchiere","surgery_name":"Thyroidectomy; partial or complete","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"adegue1e@sciencedaily.com","patient_name":"Amy Degue","patient_telephone":"705-307-6209","patient_address":"7 Bobwhite Terrace","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Barbi Muttock","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"eelster1f@blog.com","patient_name":"Emmye Elster","patient_telephone":"876-882-1878","patient_address":"535 Ronald Regan Drive","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Terri-jo Dalgarnocht","surgery_name":"Spinal fusion","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"csundin1g@oracle.com","patient_name":"Clemmy Sundin","patient_telephone":"457-750-0975","patient_address":"58102 Clemons Point","notes":"Keep testing"}},
+    {"surgeon":"Dr. Enrique Wyldbore","surgery_name":"Thyroidectomy; partial or complete","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"divanishev1h@bandcamp.com","patient_name":"Devora Ivanishev","patient_telephone":"862-559-4705","patient_address":"65062 Graedel Road","notes":"Keep testing"}},
+    {"surgeon":"Dr. Land Skydall","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"aanderton1i@home.pl","patient_name":"Alexio Anderton","patient_telephone":"309-334-2659","patient_address":"2595 Grayhawk Trail","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Alec Godlee","surgery_name":"Other hernia repair","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"fgennerich1j@wunderground.com","patient_name":"Flo Gennerich","patient_telephone":"378-267-2971","patient_address":"49520 Pierstorff Plaza","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Cinnamon Benjefield","surgery_name":"Other hernia repair","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"mbulleyn1k@friendfeed.com","patient_name":"Marijn Bulleyn","patient_telephone":"528-708-6987","patient_address":"1604 Hermina Parkway","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Hagan Malham","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"csimecek1l@gizmodo.com","patient_name":"Cloris Simecek","patient_telephone":"852-971-7231","patient_address":"1882 Cordelia Alley","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Sal Caramuscia","surgery_name":"Thyroidectomy; partial or complete","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"gwrey1m@stanford.edu","patient_name":"Geralda Wrey","patient_telephone":"940-613-1398","patient_address":"61751 Lakewood Parkway","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Riordan Sinisbury","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"bdigges1n@xinhuanet.com","patient_name":"Bonni Digges","patient_telephone":"925-914-4537","patient_address":"157 Fieldstone Crossing","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Paxton Helstrip","surgery_name":"Thyroidectomy; partial or complete","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"phartrick1o@creativecommons.org","patient_name":"Penny Hartrick","patient_telephone":"134-246-9781","patient_address":"4943 Hallows Court","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Jillene Jeandet","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"rbedlington1p@google.es","patient_name":"Ronnie Bedlington","patient_telephone":"797-433-1850","patient_address":"87 American Alley","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Mada Fittall","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"abarlace1q@dmoz.org","patient_name":"Antonio Barlace","patient_telephone":"217-972-8859","patient_address":"187 Bobwhite Drive","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Olivette Stennet","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"kwrotham1r@issuu.com","patient_name":"Karia Wrotham","patient_telephone":"120-730-3288","patient_address":"050 Talisman Circle","notes":"Keep testing"}},
+    {"surgeon":"Dr. Bord Lipsett","surgery_name":"Open prostatectomy","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"owhereat1s@hugedomains.com","patient_name":"Omar Whereat","patient_telephone":"398-536-0415","patient_address":"11 David Alley","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Morgana Medhurst","surgery_name":"Colorectal resection","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"adraxford1t@ed.gov","patient_name":"Annice Draxford","patient_telephone":"734-360-7661","patient_address":"48931 Garrison Street","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Gayler Naris","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"wgallen1u@blog.com","patient_name":"Wiatt Gallen","patient_telephone":"897-419-7079","patient_address":"86688 Springs Place","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Renault Frammingham","surgery_name":"Hip replacement; total and partial","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"vbinch1v@washington.edu","patient_name":"Vasili Binch","patient_telephone":"538-834-8658","patient_address":"49257 Darwin Trail","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Christine Woodison","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"rdohmer1w@fc2.com","patient_name":"Read Dohmer","patient_telephone":"587-247-2155","patient_address":"0337 Mayfield Road","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Skell Roslen","surgery_name":"Other hernia repair","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"ttomaino1x@g.co","patient_name":"Theda Tomaino","patient_telephone":"734-725-5736","patient_address":"2 Comanche Way","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Elihu Vlasin","surgery_name":"Hip replacement; total and partial","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"llytlle1y@ftc.gov","patient_name":"Leah Lytlle","patient_telephone":"588-298-7249","patient_address":"7853 Toban Plaza","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Gilberta Wolfindale","surgery_name":"Spinal fusion","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"eburkett1z@mapy.cz","patient_name":"Ericha Burkett","patient_telephone":"124-746-5410","patient_address":"378 Esker Plaza","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Dinah Wiper","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"rlindemann20@mayoclinic.com","patient_name":"Roldan Lindemann","patient_telephone":"366-108-2396","patient_address":"6035 Montana Hill","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Ettore Solan","surgery_name":"Hip replacement; total and partial","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"rtreves21@jiathis.com","patient_name":"Rozamond Treves","patient_telephone":"332-896-8382","patient_address":"696 North Avenue","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Newton Williscroft","surgery_name":"Other hernia repair","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"dperfitt22@prnewswire.com","patient_name":"Dolores Perfitt","patient_telephone":"944-289-2383","patient_address":"356 Ramsey Plaza","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Meara Clelle","surgery_name":"Hip replacement; total and partial","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"cdarracott23@mit.edu","patient_name":"Cindee Darracott","patient_telephone":"614-607-7150","patient_address":"80 Buena Vista Plaza","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Manuel Churly","surgery_name":"Nephrectomy; partial or complete","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"sreckhouse24@jugem.jp","patient_name":"Shaine Reckhouse","patient_telephone":"507-273-1212","patient_address":"5 Shasta Plaza","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Wendye Pitone","surgery_name":"Hip replacement; total and partial","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"mmosley25@unicef.org","patient_name":"Minne Mosley","patient_telephone":"411-556-7001","patient_address":"39 Fairview Trail","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Gun Lacer","surgery_name":"Colorectal resection","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"ozini26@acquirethisname.com","patient_name":"Orlan Zini","patient_telephone":"310-196-8840","patient_address":"4842 Anderson Hill","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Brianne Doodney","surgery_name":"Other hernia repair","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"mibell27@behance.net","patient_name":"Maritsa Ibell","patient_telephone":"207-349-6237","patient_address":"52 Westend Place","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Charil Grace","surgery_name":"Colorectal resection","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"bsnipe28@ed.gov","patient_name":"Bertram Snipe","patient_telephone":"540-785-4844","patient_address":"48 Logan Way","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Nick Abrahams","surgery_name":"Hip replacement; total and partial","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"sjerrim29@japanpost.jp","patient_name":"Stan Jerrim","patient_telephone":"402-884-1543","patient_address":"4 Oriole Center","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Orion Poynser","surgery_name":"Arthroplasty knee","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"rtrusdale2a@boston.com","patient_name":"Rossie Trusdale","patient_telephone":"709-347-4772","patient_address":"94 Dahle Way","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Dell Perl","surgery_name":"Nephrectomy; partial or complete","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"csnedker2b@usda.gov","patient_name":"Cahra Snedker","patient_telephone":"740-751-3266","patient_address":"163 Crownhardt Alley","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Kerk McGinnell","surgery_name":"Other hernia repair","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"lliccardi2c@1688.com","patient_name":"Lorenzo Liccardi","patient_telephone":"182-887-7982","patient_address":"4 Del Mar Crossing","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Towny Genner","surgery_name":"Arthroplasty knee","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"aarons2d@google.com.br","patient_name":"Alyson Arons","patient_telephone":"209-641-0550","patient_address":"44388 Northland Parkway","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Deanne Wardley","surgery_name":"Thyroidectomy; partial or complete","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"rdreger2e@typepad.com","patient_name":"Rhoda Dreger","patient_telephone":"575-766-9976","patient_address":"769 Esch Place","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Vladamir Fairnington","surgery_name":"Other hernia repair","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"sgribbell2f@tuttocitta.it","patient_name":"Shelba Gribbell","patient_telephone":"898-315-9319","patient_address":"859 Lakeland Trail","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Lethia Cody","surgery_name":"Spinal fusion","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"mhansed2g@microsoft.com","patient_name":"Martainn Hansed","patient_telephone":"278-999-7331","patient_address":"702 Haas Alley","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Orly Fazakerley","surgery_name":"Arthroplasty knee","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"nfordyce2h@drupal.org","patient_name":"Nedda Fordyce","patient_telephone":"497-623-8037","patient_address":"1187 Norway Maple Point","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Jane Hablet","surgery_name":"Colorectal resection","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"hcapnor2i@prnewswire.com","patient_name":"Hynda Capnor","patient_telephone":"188-802-0461","patient_address":"7238 Norway Maple Place","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Duffie Reitenbach","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"vloder2j@apache.org","patient_name":"Vassili Loder","patient_telephone":"465-150-0063","patient_address":"98095 Shoshone Point","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Stanley Coughlin","surgery_name":"Spinal fusion","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"tguiet2k@microsoft.com","patient_name":"Toiboid Guiet","patient_telephone":"818-749-5913","patient_address":"12820 Ridge Oak Park","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Malinde Poat","surgery_name":"Thyroidectomy; partial or complete","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"igosse2l@gnu.org","patient_name":"Isobel Gosse","patient_telephone":"157-477-8891","patient_address":"53 Everett Court","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Donnie Morson","surgery_name":"Hip replacement; total and partial","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"jfelmingham2m@csmonitor.com","patient_name":"Jori Felmingham","patient_telephone":"656-533-4834","patient_address":"6 Brentwood Parkway","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Vladimir Vears","surgery_name":"Other hernia repair","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"apyvis2n@europa.eu","patient_name":"Ardine Pyvis","patient_telephone":"567-340-3654","patient_address":"34 Porter Lane","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Dill Gutherson","surgery_name":"Spinal fusion","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"rhawkslee2o@yahoo.co.jp","patient_name":"Rosaleen Hawkslee","patient_telephone":"407-421-5962","patient_address":"3998 Garrison Lane","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Chester Ferebee","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"bfindley2p@sohu.com","patient_name":"Brandice Findley","patient_telephone":"369-291-3682","patient_address":"2857 Fuller Place","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Ali Josephi","surgery_name":"Arthroplasty knee","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"pcroutear2q@mac.com","patient_name":"Peri Croutear","patient_telephone":"280-143-0735","patient_address":"5 Sutteridge Crossing","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Larisa Welberry","surgery_name":"Other hernia repair","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"lridsdale2r@dedecms.com","patient_name":"Lowe Ridsdale","patient_telephone":"789-428-9150","patient_address":"6 Autumn Leaf Park","notes":"Keep testing"}},
+    {"surgeon":"Dr. Jerrie Neaverson","surgery_name":"Other hernia repair","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"mliddiatt2s@networksolutions.com","patient_name":"Meris Liddiatt","patient_telephone":"495-666-4145","patient_address":"2 Hallows Crossing","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Melisenda Aikman","surgery_name":"Hip replacement; total and partial","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"cparke2t@hatena.ne.jp","patient_name":"Chandra Parke","patient_telephone":"121-356-0027","patient_address":"35910 Magdeline Point","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Johnathon Winks","surgery_name":"Hip replacement; total and partial","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"mframpton2u@diigo.com","patient_name":"Misty Frampton","patient_telephone":"605-750-1069","patient_address":"06 Burning Wood Alley","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Ignaz Fouch","surgery_name":"Arthroplasty knee","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"ckeaysell2v@bbc.co.uk","patient_name":"Carree Keaysell","patient_telephone":"418-820-8317","patient_address":"09679 Oriole Way","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Anet Edlin","surgery_name":"Colorectal resection","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"asilbert2w@hibu.com","patient_name":"Andrus Silbert","patient_telephone":"197-925-2972","patient_address":"8330 Wayridge Parkway","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Mic Blonfield","surgery_name":"Spinal fusion","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"elongrigg2x@china.com.cn","patient_name":"Eydie Longrigg","patient_telephone":"906-783-5967","patient_address":"6844 Veith Place","notes":"Keep testing"}},
+    {"surgeon":"Dr. Britt Lear","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"sholbury2y@privacy.gov.au","patient_name":"Sylas Holbury","patient_telephone":"615-862-9016","patient_address":"332 Northridge Point","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Hube Fundell","surgery_name":"Nephrectomy; partial or complete","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"nbuckell2z@cam.ac.uk","patient_name":"Nance Buckell","patient_telephone":"420-526-0750","patient_address":"4466 Linden Court","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Fidelia Issard","surgery_name":"Colorectal resection","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"rspringford30@webs.com","patient_name":"Reade Springford","patient_telephone":"183-295-2694","patient_address":"85 Cottonwood Road","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Hillary Pedreschi","surgery_name":"Arthroplasty knee","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"glodford31@apache.org","patient_name":"Garnet Lodford","patient_telephone":"889-328-9592","patient_address":"266 Maryland Junction","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Nancy Penhaleurack","surgery_name":"Other hernia repair","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"mrowley32@ovh.net","patient_name":"Melanie Rowley","patient_telephone":"836-190-8176","patient_address":"3 Schmedeman Park","notes":"Keep testing"}},
+    {"surgeon":"Dr. Joseph O'Duggan","surgery_name":"Spinal fusion","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"ssiemons33@ebay.com","patient_name":"Selle Siemons","patient_telephone":"105-879-7002","patient_address":"55 Autumn Leaf Center","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Kat Chin","surgery_name":"Open prostatectomy","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"brigg34@marketwatch.com","patient_name":"Buiron Rigg","patient_telephone":"871-920-8789","patient_address":"29 Farragut Trail","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Kippy Lavallie","surgery_name":"Spinal fusion","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"tmansion35@chron.com","patient_name":"Torre Mansion","patient_telephone":"404-322-2718","patient_address":"08 Northwestern Street","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Hubie Farans","surgery_name":"Hip replacement; total and partial","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"rpaslow36@timesonline.co.uk","patient_name":"Roger Paslow","patient_telephone":"510-638-9027","patient_address":"270 Lyons Road","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Felike Kinneir","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"fbrocklehurst37@gmpg.org","patient_name":"Felecia Brocklehurst","patient_telephone":"503-559-5142","patient_address":"4 Warner Court","notes":"Keep testing"}},
+    {"surgeon":"Dr. Leontine Pochet","surgery_name":"Other hernia repair","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"ewinteringham38@blog.com","patient_name":"Evangeline Winteringham","patient_telephone":"549-303-5087","patient_address":"4951 Calypso Place","notes":"Keep testing"}},
+    {"surgeon":"Dr. Salmon Greim","surgery_name":"Colorectal resection","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"tklimpt39@netscape.com","patient_name":"Tybi Klimpt","patient_telephone":"465-820-1272","patient_address":"5 Warrior Park","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Kalina Ketchen","surgery_name":"Hip replacement; total and partial","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"sgladhill3a@ask.com","patient_name":"Sampson Gladhill","patient_telephone":"965-737-7540","patient_address":"7 Bultman Road","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Kim Rankin","surgery_name":"Thyroidectomy; partial or complete","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"cgillbe3b@mlb.com","patient_name":"Claude Gillbe","patient_telephone":"300-514-3172","patient_address":"559 Clyde Gallagher Hill","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Kayne Fordyce","surgery_name":"Arthroplasty knee","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"fcotilard3c@cam.ac.uk","patient_name":"Frances Cotilard","patient_telephone":"856-380-5821","patient_address":"29 Spenser Street","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Nanny Sutherley","surgery_name":"Hip replacement; total and partial","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"bmclaggan3d@usatoday.com","patient_name":"Bryn McLaggan","patient_telephone":"360-463-7686","patient_address":"70862 Dakota Street","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Duke Olliver","surgery_name":"Hip replacement; total and partial","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"kmclafferty3e@creativecommons.org","patient_name":"Kalle McLafferty","patient_telephone":"444-179-6903","patient_address":"31539 Forster Parkway","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Hewe Pomphrett","surgery_name":"Colorectal resection","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"bbabbs3f@themeforest.net","patient_name":"Bald Babbs","patient_telephone":"470-361-2253","patient_address":"746 Lighthouse Bay Court","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Felix Obal","surgery_name":"Open prostatectomy","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"jmayhou3g@mlb.com","patient_name":"Joelie Mayhou","patient_telephone":"471-274-8067","patient_address":"69795 7th Avenue","notes":"Keep testing"}},
+    {"surgeon":"Dr. Sibylla Coppin","surgery_name":"Hip replacement; total and partial","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"afootitt3h@symantec.com","patient_name":"Allix Footitt","patient_telephone":"142-540-9504","patient_address":"94185 Northview Place","notes":"Keep testing"}},
+    {"surgeon":"Dr. Shaine Itzakson","surgery_name":"Hip replacement; total and partial","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"nkruszelnicki3i@ed.gov","patient_name":"Nicole Kruszelnicki","patient_telephone":"793-179-0912","patient_address":"0576 Victoria Point","notes":"Keep testing"}},
+    {"surgeon":"Dr. Robbin Roy","surgery_name":"Arthroplasty knee","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"oallewell3j@ustream.tv","patient_name":"Ondrea Allewell","patient_telephone":"234-534-8564","patient_address":"58906 Brickson Park Pass","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Emmerich Tremmil","surgery_name":"Thyroidectomy; partial or complete","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"aambrosi3k@mozilla.com","patient_name":"Alexandros Ambrosi","patient_telephone":"316-627-3499","patient_address":"3721 Sutteridge Junction","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Kimberly Tamburo","surgery_name":"Spinal fusion","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"iyurikov3l@cargocollective.com","patient_name":"Ibrahim Yurikov","patient_telephone":"271-489-4764","patient_address":"81 Gina Junction","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Hagan Rawlin","surgery_name":"Colorectal resection","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"tgilbertson3m@paginegialle.it","patient_name":"Timothy Gilbertson","patient_telephone":"509-897-6911","patient_address":"070 Merry Center","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Randie Eake","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"dscurrell3n@yolasite.com","patient_name":"Darwin Scurrell","patient_telephone":"505-300-4232","patient_address":"70980 International Plaza","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Suzann Romanin","surgery_name":"Colorectal resection","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"bmole3o@domainmarket.com","patient_name":"Blane Mole","patient_telephone":"156-254-6106","patient_address":"947 Summerview Parkway","notes":"Keep testing"}},
+    {"surgeon":"Dr. Gwendolen Wykey","surgery_name":"Hip replacement; total and partial","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"stimperley3p@walmart.com","patient_name":"Susette Timperley","patient_telephone":"140-949-1993","patient_address":"2 Banding Court","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Irwinn Joscelyne","surgery_name":"Arthroplasty knee","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"rpetrello3q@mlb.com","patient_name":"Rhodia Petrello","patient_telephone":"415-757-1279","patient_address":"467 Daystar Circle","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Anabal Pray","surgery_name":"Colorectal resection","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"bdellenbach3r@jimdo.com","patient_name":"Brigit Dellenbach","patient_telephone":"213-784-1118","patient_address":"1855 Waubesa Avenue","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Eula Bucktrout","surgery_name":"Other hernia repair","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"whamer3s@taobao.com","patient_name":"Waring Hamer","patient_telephone":"739-822-1336","patient_address":"37 School Street","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Berta Fransseni","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"mdemangeon3t@opera.com","patient_name":"Marty Demangeon","patient_telephone":"399-711-1226","patient_address":"2541 Oak Plaza","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Clayborn Miskelly","surgery_name":"Thyroidectomy; partial or complete","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"glemerie3u@webeden.co.uk","patient_name":"Gar Lemerie","patient_telephone":"249-775-5496","patient_address":"84 Tennessee Street","notes":"Keep testing"}},
+    {"surgeon":"Dr. Beckie Springham","surgery_name":"Other hernia repair","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"splayden3v@a8.net","patient_name":"Shane Playden","patient_telephone":"949-641-2687","patient_address":"482 Lawn Parkway","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Kym Main","surgery_name":"Hip replacement; total and partial","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"cradish3w@ifeng.com","patient_name":"Chandra Radish","patient_telephone":"257-303-4823","patient_address":"2624 Dorton Road","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Daveta Horsefield","surgery_name":"Hip replacement; total and partial","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"fketcher3x@canalblog.com","patient_name":"Frasier Ketcher","patient_telephone":"578-492-4041","patient_address":"19 Mitchell Center","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Gunter Deignan","surgery_name":"Other hernia repair","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"dbode3y@springer.com","patient_name":"Dalis Bode","patient_telephone":"512-671-0463","patient_address":"29297 Londonderry Point","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Jacobo Andell","surgery_name":"Open prostatectomy","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"sbellini3z@yellowpages.com","patient_name":"Seka Bellini","patient_telephone":"508-409-4307","patient_address":"505 Lien Plaza","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Elie Auston","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"edarcey40@phoca.cz","patient_name":"Elisha Darcey","patient_telephone":"639-672-6986","patient_address":"2512 Randy Terrace","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Garfield Challace","surgery_name":"Other hernia repair","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"ckeune41@census.gov","patient_name":"Crichton Keune","patient_telephone":"751-400-8848","patient_address":"63 Hovde Drive","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Gregg Laughlan","surgery_name":"Thyroidectomy; partial or complete","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"wjobey42@psu.edu","patient_name":"Whittaker Jobey","patient_telephone":"370-831-6883","patient_address":"9403 School Center","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Parnell Yard","surgery_name":"Spinal fusion","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"cturpey43@symantec.com","patient_name":"Colver Turpey","patient_telephone":"807-572-1739","patient_address":"49691 Sachs Drive","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Orran McIlhagga","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"jvolette44@google.com.hk","patient_name":"Janet Volette","patient_telephone":"154-587-3926","patient_address":"1921 Summerview Way","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Gabey Arnaudet","surgery_name":"Arthroplasty knee","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"tmutter45@slashdot.org","patient_name":"Temple Mutter","patient_telephone":"211-805-8421","patient_address":"8731 Parkside Parkway","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Dannel Fortnum","surgery_name":"Spinal fusion","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"rleipoldt46@bluehost.com","patient_name":"Rachelle Leipoldt","patient_telephone":"526-142-8611","patient_address":"9 Larry Parkway","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Ariadne Jeskin","surgery_name":"Spinal fusion","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"kchalliner47@macromedia.com","patient_name":"Kelley Challiner","patient_telephone":"294-619-6491","patient_address":"9452 Emmet Court","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Terrence Tern","surgery_name":"Other hernia repair","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"tcorcoran48@woothemes.com","patient_name":"Theobald Corcoran","patient_telephone":"598-573-9218","patient_address":"5913 Bobwhite Crossing","notes":"Keep testing"}},
+    {"surgeon":"Dr. Zondra Otto","surgery_name":"Colorectal resection","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"lvedenisov49@japanpost.jp","patient_name":"Lamar Vedenisov","patient_telephone":"251-595-5055","patient_address":"63210 Acker Park","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Blanca Rosten","surgery_name":"Arthroplasty knee","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"aaitken4a@instagram.com","patient_name":"Alissa Aitken","patient_telephone":"260-930-2857","patient_address":"78838 Merry Trail","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Salmon Covell","surgery_name":"Spinal fusion","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"tbirt4b@google.com","patient_name":"Terrel Birt","patient_telephone":"452-701-4382","patient_address":"819 Debs Place","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Bobbie Reinmar","surgery_name":"Colorectal resection","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"cmccambridge4c@telegraph.co.uk","patient_name":"Caleb McCambridge","patient_telephone":"406-216-9589","patient_address":"5 Tennyson Way","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Sabra Littefair","surgery_name":"Hip replacement; total and partial","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"iphillipp4d@google.fr","patient_name":"Isahella Phillipp","patient_telephone":"350-831-2767","patient_address":"35773 Huxley Road","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Kira Spilsbury","surgery_name":"Thyroidectomy; partial or complete","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"lschankel4e@fda.gov","patient_name":"Lorrie Schankel","patient_telephone":"470-119-4402","patient_address":"2 Forest Pass","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Mia Caughan","surgery_name":"Other hernia repair","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"mabbets4f@wufoo.com","patient_name":"Merrill Abbets","patient_telephone":"675-654-9167","patient_address":"88 Carey Park","notes":"Keep testing"}},
+    {"surgeon":"Dr. Estelle Mish","surgery_name":"Spinal fusion","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"hjordanson4g@zdnet.com","patient_name":"Helena Jordanson","patient_telephone":"707-581-8578","patient_address":"56635 4th Way","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Rancell Metts","surgery_name":"Nephrectomy; partial or complete","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"kbrailsford4h@amazon.co.uk","patient_name":"Kippy Brailsford","patient_telephone":"685-900-1777","patient_address":"1 Mcguire Hill","notes":"Keep testing"}},
+    {"surgeon":"Dr. Siana Lortz","surgery_name":"Hip replacement; total and partial","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"cgorger4i@is.gd","patient_name":"Claiborn Gorger","patient_telephone":"252-697-0048","patient_address":"341 Iowa Point","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Gradey Cabel","surgery_name":"Nephrectomy; partial or complete","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"ewarland4j@businesswire.com","patient_name":"Ebonee Warland","patient_telephone":"548-417-6890","patient_address":"12 Lerdahl Way","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Abbie Eakle","surgery_name":"Colorectal resection","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"bmchugh4k@mozilla.com","patient_name":"Bernhard McHugh","patient_telephone":"162-611-6472","patient_address":"5617 Texas Circle","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Nevil Szubert","surgery_name":"Arthroplasty knee","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"ypoulson4l@flavors.me","patient_name":"Yvor Poulson","patient_telephone":"407-749-7881","patient_address":"7636 Park Meadow Court","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Millie Newiss","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"dwield4m@prweb.com","patient_name":"Douglass Wield","patient_telephone":"480-434-2715","patient_address":"031 Starling Avenue","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Colman Topaz","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"dleftley4n@163.com","patient_name":"Debbi Leftley","patient_telephone":"491-152-9243","patient_address":"33071 Pepper Wood Junction","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Glennis Pietasch","surgery_name":"Open prostatectomy","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"dfellenor4o@oaic.gov.au","patient_name":"Delia Fellenor","patient_telephone":"208-929-1050","patient_address":"6991 Fulton Lane","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Trever Secretan","surgery_name":"Hip replacement; total and partial","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"bmarquese4p@ebay.co.uk","patient_name":"Brant Marquese","patient_telephone":"655-297-0278","patient_address":"35717 Warner Terrace","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Dusty Kohneke","surgery_name":"Thyroidectomy; partial or complete","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"ystandley4q@cnn.com","patient_name":"Ysabel Standley","patient_telephone":"918-372-9572","patient_address":"2 Toban Street","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Kerry Breukelman","surgery_name":"Nephrectomy; partial or complete","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"jcomford4r@mapquest.com","patient_name":"Jilleen Comford","patient_telephone":"335-865-0875","patient_address":"0677 Lake View Way","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Baxy Maddrah","surgery_name":"Thyroidectomy; partial or complete","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"oeasum4s@dot.gov","patient_name":"Olenka Easum","patient_telephone":"727-267-3595","patient_address":"96021 Esker Junction","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Meris Congreave","surgery_name":"Open prostatectomy","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"amortlock4t@cpanel.net","patient_name":"Adel Mortlock","patient_telephone":"721-793-4774","patient_address":"90062 Randy Junction","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Duky Dent","surgery_name":"Spinal fusion","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"kbretherick4u@multiply.com","patient_name":"Keelby Bretherick","patient_telephone":"893-757-5191","patient_address":"05 Bobwhite Court","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Katlin Clapson","surgery_name":"Hip replacement; total and partial","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"blivzey4v@ask.com","patient_name":"Bea Livzey","patient_telephone":"968-653-9094","patient_address":"0253 Pawling Pass","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Ninnetta Churchyard","surgery_name":"Hip replacement; total and partial","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"pdellabbate4w@yellowbook.com","patient_name":"Phyllida Dell'Abbate","patient_telephone":"317-698-3267","patient_address":"5947 Lerdahl Lane","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Hamnet Silversmidt","surgery_name":"Other hernia repair","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"vricart4x@jigsy.com","patient_name":"Valaria Ricart","patient_telephone":"501-600-0004","patient_address":"294 Autumn Leaf Trail","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Dorian Tomet","surgery_name":"Other hernia repair","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"wmcgall4y@aboutads.info","patient_name":"Wynn McGall","patient_telephone":"811-893-5877","patient_address":"9 Ryan Center","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Selby Reimers","surgery_name":"Spinal fusion","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"creiach4z@usa.gov","patient_name":"Claudetta Reiach","patient_telephone":"489-288-3159","patient_address":"39 Vera Terrace","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Bowie Kausche","surgery_name":"Arthroplasty knee","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"idwelly50@jimdo.com","patient_name":"Isac Dwelly","patient_telephone":"587-113-2058","patient_address":"6355 Ridge Oak Place","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Lesly Gladdolph","surgery_name":"Arthroplasty knee","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"xheinel51@squidoo.com","patient_name":"Xymenes Heinel","patient_telephone":"541-772-2871","patient_address":"2 Orin Terrace","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Giraud Debenham","surgery_name":"Spinal fusion","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"dtucsell52@360.cn","patient_name":"Devina Tucsell","patient_telephone":"319-437-5160","patient_address":"26 Aberg Lane","notes":"Keep testing"}},
+    {"surgeon":"Dr. Aldin Northgraves","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"ecuree53@rakuten.co.jp","patient_name":"Elora Curee","patient_telephone":"501-532-3290","patient_address":"01434 Arkansas Lane","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Karole Pentony","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"cmanoelli54@photobucket.com","patient_name":"Christabel Manoelli","patient_telephone":"395-337-7066","patient_address":"025 Hayes Trail","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Cosette Gatenby","surgery_name":"Colorectal resection","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"alackey55@yahoo.com","patient_name":"Adah Lackey","patient_telephone":"202-989-0630","patient_address":"31009 Sloan Street","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Lyman Hallows","surgery_name":"Hip replacement; total and partial","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"eeixenberger56@state.tx.us","patient_name":"Esma Eixenberger","patient_telephone":"782-256-5439","patient_address":"24836 Coolidge Point","notes":"Keep testing"}},
+    {"surgeon":"Dr. Basile Langcastle","surgery_name":"Hip replacement; total and partial","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"hclaybourn57@java.com","patient_name":"Hollie Claybourn","patient_telephone":"622-879-2924","patient_address":"4679 Stone Corner Drive","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Guendolen Reitenbach","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"khastewell58@forbes.com","patient_name":"Kriste Hastewell","patient_telephone":"352-130-0659","patient_address":"62271 Dayton Trail","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Charmain Zorzi","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"bdisdel59@washingtonpost.com","patient_name":"Berry Disdel","patient_telephone":"971-545-0612","patient_address":"7 Fairfield Trail","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Miles Lamprey","surgery_name":"Arthroplasty knee","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"gwestcott5a@engadget.com","patient_name":"Giovanni Westcott","patient_telephone":"310-947-2840","patient_address":"206 Valley Edge Lane","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Reeta Pawlowicz","surgery_name":"Arthroplasty knee","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"fmabbot5b@zdnet.com","patient_name":"Filide Mabbot","patient_telephone":"131-504-2529","patient_address":"2 Vernon Road","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Corena Sommerlie","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"kmcteer5c@desdev.cn","patient_name":"Kendricks McTeer","patient_telephone":"779-429-7711","patient_address":"431 Northridge Road","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Devora Darbon","surgery_name":"Colorectal resection","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"tbarrim5d@blogs.com","patient_name":"Traver Barrim","patient_telephone":"958-216-0332","patient_address":"7 Westport Junction","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Salaidh Bussel","surgery_name":"Arthroplasty knee","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"lbadam5e@skyrock.com","patient_name":"Link Badam","patient_telephone":"693-329-2668","patient_address":"0 Blackbird Plaza","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Ellery Frowde","surgery_name":"Other hernia repair","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"alodevick5f@amazon.de","patient_name":"Arlen Lodevick","patient_telephone":"690-725-5624","patient_address":"37701 Pleasure Center","notes":"Keep testing"}},
+    {"surgeon":"Dr. Elsi Gresch","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"dfrankling5g@blogspot.com","patient_name":"Deana Frankling","patient_telephone":"527-278-7419","patient_address":"84 Magdeline Point","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Nari Fantham","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"udilston5h@umn.edu","patient_name":"Ursola Dilston","patient_telephone":"146-964-1781","patient_address":"09 Pennsylvania Parkway","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Ford Peedell","surgery_name":"Colorectal resection","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"eedeson5i@google.com.au","patient_name":"Emelda Edeson","patient_telephone":"528-117-3148","patient_address":"67 Mayfield Point","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Evvy Miroy","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"vgarnham5j@cisco.com","patient_name":"Vin Garnham","patient_telephone":"383-810-3263","patient_address":"4 Messerschmidt Trail","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Belle Woolmore","surgery_name":"Open prostatectomy","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"dlant5k@sphinn.com","patient_name":"Daune Lant","patient_telephone":"448-632-6134","patient_address":"5536 Beilfuss Park","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Georgeanna Gawthrop","surgery_name":"Spinal fusion","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"abiggerdike5l@nationalgeographic.com","patient_name":"Amelita Biggerdike","patient_telephone":"512-388-7482","patient_address":"05896 Michigan Hill","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Gigi Krol","surgery_name":"Thyroidectomy; partial or complete","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"lcragell5m@slashdot.org","patient_name":"Lucia Cragell","patient_telephone":"999-407-8435","patient_address":"96407 Blaine Circle","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Iorgo Kershow","surgery_name":"Spinal fusion","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"rmathely5n@live.com","patient_name":"Ruprecht Mathely","patient_telephone":"775-761-0651","patient_address":"14 Hansons Point","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Damaris Le Grice","surgery_name":"Nephrectomy; partial or complete","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"ltubbles5o@symantec.com","patient_name":"Launce Tubbles","patient_telephone":"207-797-1473","patient_address":"9658 Del Sol Court","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Desmund Gregorowicz","surgery_name":"Arthroplasty knee","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"jmogridge5p@163.com","patient_name":"Janet Mogridge","patient_telephone":"324-718-3573","patient_address":"82 Moland Court","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Rudd Dottridge","surgery_name":"Open prostatectomy","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"kwaddingham5q@wsj.com","patient_name":"Kellyann Waddingham","patient_telephone":"992-763-3523","patient_address":"38265 Crest Line Pass","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Colan Aldcorn","surgery_name":"Other hernia repair","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"mmccoy5r@chron.com","patient_name":"Missy McCoy","patient_telephone":"708-805-7510","patient_address":"2 Katie Plaza","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Annabell Vickar","surgery_name":"Open prostatectomy","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"jofford5s@naver.com","patient_name":"Jacquenette Offord","patient_telephone":"164-712-4315","patient_address":"95 Maryland Road","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Ailina Beininck","surgery_name":"Arthroplasty knee","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"jveltmann5t@google.co.uk","patient_name":"Jarib Veltmann","patient_telephone":"155-481-4648","patient_address":"96354 Glendale Pass","notes":"Keep testing"}},
+    {"surgeon":"Dr. Robert Gernier","surgery_name":"Colorectal resection","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"fdeere5u@guardian.co.uk","patient_name":"Filberto Deere","patient_telephone":"519-650-0200","patient_address":"5567 Reinke Alley","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Bertie Rafferty","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"kbreewood5v@taobao.com","patient_name":"Krishna Breewood","patient_telephone":"401-128-8777","patient_address":"49393 3rd Park","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Livia Astie","surgery_name":"Spinal fusion","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"awoodhead5w@ftc.gov","patient_name":"Allix Woodhead","patient_telephone":"402-625-5191","patient_address":"7984 Ohio Center","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Gracia Bettis","surgery_name":"Spinal fusion","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"srupert5x@blog.com","patient_name":"Sherman Rupert","patient_telephone":"160-131-4120","patient_address":"31 Almo Street","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Giacinta Trowill","surgery_name":"Thyroidectomy; partial or complete","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"sbuckland5y@opera.com","patient_name":"Stormi Buckland","patient_telephone":"960-356-5458","patient_address":"25 Swallow Way","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Janetta Oldrey","surgery_name":"Hip replacement; total and partial","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"zmansour5z@theglobeandmail.com","patient_name":"Zebedee Mansour","patient_telephone":"604-856-8481","patient_address":"267 Pleasure Way","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Raimund Dalligan","surgery_name":"Nephrectomy; partial or complete","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"vfifield60@nature.com","patient_name":"Vite Fifield","patient_telephone":"523-599-4065","patient_address":"5547 Vidon Avenue","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Gunilla Heakey","surgery_name":"Hip replacement; total and partial","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"ffirks61@tinypic.com","patient_name":"Faustina Firks","patient_telephone":"357-882-6330","patient_address":"46 American Ash Drive","notes":"Keep testing"}},
+    {"surgeon":"Dr. Korrie Djokic","surgery_name":"Other hernia repair","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"tleibold62@flickr.com","patient_name":"Taffy Leibold","patient_telephone":"549-643-9020","patient_address":"47 Dovetail Road","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Myrvyn Delahunt","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"csemerad63@zimbio.com","patient_name":"Camille Semerad","patient_telephone":"191-742-4412","patient_address":"42 Jenifer Parkway","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Brook Boother","surgery_name":"Arthroplasty knee","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"dhousley64@cnbc.com","patient_name":"Donalt Housley","patient_telephone":"780-791-9534","patient_address":"900 Everett Lane","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Easter Lindstedt","surgery_name":"Other hernia repair","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"aswepson65@nba.com","patient_name":"Alvinia Swepson","patient_telephone":"788-151-0118","patient_address":"2263 Gulseth Plaza","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Deidre Casetta","surgery_name":"Nephrectomy; partial or complete","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"trushbrook66@facebook.com","patient_name":"Trever Rushbrook","patient_telephone":"930-823-1761","patient_address":"21534 Cascade Avenue","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Bobbie Dinse","surgery_name":"Colorectal resection","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"kbrooke67@last.fm","patient_name":"Kean Brooke","patient_telephone":"620-117-0496","patient_address":"41193 Carberry Junction","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Elinore Handlin","surgery_name":"Hip replacement; total and partial","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"bhaslegrave68@pagesperso-orange.fr","patient_name":"Blondelle Haslegrave","patient_telephone":"881-406-6752","patient_address":"73 Blue Bill Park Park","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Sutherland Sokale","surgery_name":"Arthroplasty knee","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"hballston69@ucsd.edu","patient_name":"Hendrika Ballston","patient_telephone":"533-900-2441","patient_address":"37383 Tennyson Hill","notes":"Keep testing"}},
+    {"surgeon":"Dr. Tabbie Ludvigsen","surgery_name":"Open prostatectomy","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"hcecil6a@gnu.org","patient_name":"Hedwiga Cecil","patient_telephone":"336-594-4427","patient_address":"05839 Blue Bill Park Alley","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Kirsteni Boxill","surgery_name":"Thyroidectomy; partial or complete","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"mmattingley6b@rakuten.co.jp","patient_name":"Mathilda Mattingley","patient_telephone":"742-964-2128","patient_address":"5766 Rowland Place","notes":"Keep testing"}},
+    {"surgeon":"Dr. Maurise Sherebrook","surgery_name":"Thyroidectomy; partial or complete","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"aslack6c@wsj.com","patient_name":"Adella Slack","patient_telephone":"955-293-3273","patient_address":"8 Namekagon Park","notes":"Keep testing"}},
+    {"surgeon":"Dr. Jemmie Petofi","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"cburgin6d@wp.com","patient_name":"Christy Burgin","patient_telephone":"842-253-9652","patient_address":"8 Barnett Court","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Maribel Kitteridge","surgery_name":"Hip replacement; total and partial","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"fbaird6e@gizmodo.com","patient_name":"Flossy Baird","patient_telephone":"540-305-1766","patient_address":"7672 Karstens Court","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Bella Schruyers","surgery_name":"Colorectal resection","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"jgabbot6f@sfgate.com","patient_name":"Jamison Gabbot","patient_telephone":"670-512-2520","patient_address":"4 Lerdahl Junction","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Fee Meus","surgery_name":"Other hernia repair","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"rstanyon6g@ucla.edu","patient_name":"Rosita Stanyon","patient_telephone":"617-815-7254","patient_address":"918 Jana Road","notes":"Keep testing"}},
+    {"surgeon":"Dr. Dario Mayston","surgery_name":"Other hernia repair","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"lcluff6h@harvard.edu","patient_name":"Lilian Cluff","patient_telephone":"209-876-7071","patient_address":"360 Crest Line Place","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Jammal Oddie","surgery_name":"Spinal fusion","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"cmegany6i@com.com","patient_name":"Clair Megany","patient_telephone":"946-150-3670","patient_address":"35 Morning Parkway","notes":"Keep testing"}},
+    {"surgeon":"Dr. Jone Frangleton","surgery_name":"Other hernia repair","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"echene6j@earthlink.net","patient_name":"Eugenius Chene","patient_telephone":"224-117-9491","patient_address":"16010 Sheridan Avenue","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Myrah Perrot","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"asowte6k@eepurl.com","patient_name":"Austin Sowte","patient_telephone":"575-779-8596","patient_address":"22369 Kings Hill","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Kaleena Groll","surgery_name":"Other hernia repair","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"jashall6l@msn.com","patient_name":"Judi Ashall","patient_telephone":"750-963-0224","patient_address":"8 Schmedeman Park","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Geordie Beekman","surgery_name":"Arthroplasty knee","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"cmccombe6m@ted.com","patient_name":"Claudie McCombe","patient_telephone":"811-919-2779","patient_address":"88 Village Plaza","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Larissa Bewsy","surgery_name":"Open prostatectomy","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"agogerty6n@cornell.edu","patient_name":"Aurore Gogerty","patient_telephone":"516-548-4564","patient_address":"56 Roth Circle","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Piotr Selway","surgery_name":"Open prostatectomy","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"bhastelow6o@wp.com","patient_name":"Banky Hastelow","patient_telephone":"448-331-2022","patient_address":"36355 Heath Center","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Sutherlan Petofi","surgery_name":"Colorectal resection","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"cbottoms6p@wordpress.com","patient_name":"Craggie Bottoms","patient_telephone":"519-901-4922","patient_address":"8 Crownhardt Circle","notes":"Keep testing"}},
+    {"surgeon":"Dr. Shermie Fulkes","surgery_name":"Arthroplasty knee","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"tbortolussi6q@lycos.com","patient_name":"Tarrance Bortolussi","patient_telephone":"133-241-1746","patient_address":"1421 Del Mar Trail","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Reginald Sturror","surgery_name":"Arthroplasty knee","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"mmansour6r@epa.gov","patient_name":"Missie Mansour","patient_telephone":"898-858-9060","patient_address":"82 Merrick Park","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Stephanus Grocott","surgery_name":"Nephrectomy; partial or complete","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"ikennard6s@mac.com","patient_name":"Imojean Kennard","patient_telephone":"141-718-7963","patient_address":"3607 Bashford Avenue","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Gale Zebedee","surgery_name":"Open prostatectomy","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"asturrock6t@weather.com","patient_name":"Artie Sturrock","patient_telephone":"252-693-6482","patient_address":"619 Bonner Junction","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Carmelle Cutchie","surgery_name":"Spinal fusion","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"wheminsley6u@histats.com","patient_name":"Wit Heminsley","patient_telephone":"236-945-8726","patient_address":"2154 Derek Lane","notes":"Keep testing"}},
+    {"surgeon":"Dr. Abeu Plumb","surgery_name":"Nephrectomy; partial or complete","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"dduthie6v@chronoengine.com","patient_name":"Dix Duthie","patient_telephone":"877-939-0693","patient_address":"52 Westridge Road","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Idelle Cluelow","surgery_name":"Arthroplasty knee","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"kphant6w@msu.edu","patient_name":"Kali Phant","patient_telephone":"562-142-8274","patient_address":"54 Hansons Drive","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Ky Mixhel","surgery_name":"Arthroplasty knee","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"sashtonhurst6x@forbes.com","patient_name":"Sly Ashtonhurst","patient_telephone":"304-498-9620","patient_address":"1 Algoma Avenue","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Immanuel Hankins","surgery_name":"Nephrectomy; partial or complete","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"cpugh6y@who.int","patient_name":"Conny Pugh","patient_telephone":"282-145-3671","patient_address":"97 Hanson Junction","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Kriste Clopton","surgery_name":"Other hernia repair","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"lmelchior6z@techcrunch.com","patient_name":"Linzy Melchior","patient_telephone":"123-979-0202","patient_address":"0 6th Alley","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Friederike Gulberg","surgery_name":"Spinal fusion","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"drubery70@time.com","patient_name":"Dani Rubery","patient_telephone":"669-529-4157","patient_address":"87 Sachs Parkway","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Nomi Udale","surgery_name":"Colorectal resection","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"mliddiard71@forbes.com","patient_name":"Marga Liddiard","patient_telephone":"988-900-7031","patient_address":"206 Texas Plaza","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Estrella Vasey","surgery_name":"Other hernia repair","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"gdrake72@disqus.com","patient_name":"Gerhard Drake","patient_telephone":"743-181-2954","patient_address":"32 Ohio Lane","notes":"Keep testing"}},
+    {"surgeon":"Dr. Pinchas Beynon","surgery_name":"Hip replacement; total and partial","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"fchastanet73@blinklist.com","patient_name":"Frances Chastanet","patient_telephone":"752-738-0146","patient_address":"381 Schlimgen Junction","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Raphael Goford","surgery_name":"Nephrectomy; partial or complete","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"amarvell74@twitter.com","patient_name":"Anabelle Marvell","patient_telephone":"932-935-8769","patient_address":"53878 Mitchell Crossing","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Elroy Roberds","surgery_name":"Open prostatectomy","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"lfido75@csmonitor.com","patient_name":"L;urette Fido","patient_telephone":"306-557-9101","patient_address":"60 Sunfield Pass","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Torey Mussalli","surgery_name":"Arthroplasty knee","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"mhaseldine76@wisc.edu","patient_name":"Maria Haseldine","patient_telephone":"989-165-5643","patient_address":"258 Riverside Lane","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Mercedes Enriques","surgery_name":"Hip replacement; total and partial","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"hvogele77@mashable.com","patient_name":"Hy Vogele","patient_telephone":"742-775-7217","patient_address":"1 Carioca Place","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Elihu Tapp","surgery_name":"Nephrectomy; partial or complete","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"mcoyle78@amazon.co.jp","patient_name":"Mordy Coyle","patient_telephone":"246-585-8163","patient_address":"23 Pine View Trail","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Binni Wescott","surgery_name":"Spinal fusion","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"dhavile79@behance.net","patient_name":"Dory Havile","patient_telephone":"215-965-1730","patient_address":"738 Claremont Pass","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Sissy Ducrow","surgery_name":"Spinal fusion","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"dnarup7a@businessinsider.com","patient_name":"Doris Narup","patient_telephone":"741-646-9450","patient_address":"0 Memorial Lane","notes":"Keep testing"}},
+    {"surgeon":"Dr. Edgard Raynton","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"rtaffarello7b@photobucket.com","patient_name":"Ruby Taffarello","patient_telephone":"718-193-9098","patient_address":"271 Cottonwood Trail","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Albert Ubsdell","surgery_name":"Nephrectomy; partial or complete","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"ibone7c@quantcast.com","patient_name":"Isabel Bone","patient_telephone":"373-513-7986","patient_address":"2 Daystar Crossing","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Janetta Allmann","surgery_name":"Nephrectomy; partial or complete","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"zcass7d@ucoz.com","patient_name":"Zea Cass","patient_telephone":"338-746-4625","patient_address":"23 Goodland Street","notes":"Keep testing"}},
+    {"surgeon":"Dr. Erica Summerhayes","surgery_name":"Spinal fusion","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"ocake7e@simplemachines.org","patient_name":"Odie Cake","patient_telephone":"782-739-2402","patient_address":"86502 Melby Parkway","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Jae Hofner","surgery_name":"Arthroplasty knee","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"anewlan7f@twitter.com","patient_name":"Alena Newlan","patient_telephone":"803-972-4487","patient_address":"03548 International Drive","notes":"Keep testing"}},
+    {"surgeon":"Dr. Dela Diggons","surgery_name":"Other hernia repair","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"fadrain7g@guardian.co.uk","patient_name":"Flint Adrain","patient_telephone":"333-105-0672","patient_address":"8 Division Plaza","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Lambert Fishly","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"dviccars7h@dailymail.co.uk","patient_name":"Dani Viccars","patient_telephone":"865-187-7233","patient_address":"6445 Sutherland Hill","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Suellen Connal","surgery_name":"Colorectal resection","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"abasketter7i@aol.com","patient_name":"Adelind Basketter","patient_telephone":"444-571-3751","patient_address":"7 Golf Parkway","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Rebeka Filpi","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"mchampain7j@artisteer.com","patient_name":"Meridel Champain","patient_telephone":"886-281-6982","patient_address":"9 Ridge Oak Street","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Araldo Perocci","surgery_name":"Other hernia repair","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"bblackbrough7k@washingtonpost.com","patient_name":"Berget Blackbrough","patient_telephone":"448-643-2120","patient_address":"35709 American Ash Way","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Cross Atmore","surgery_name":"Hip replacement; total and partial","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"pbriers7l@yellowpages.com","patient_name":"Phillipp Briers","patient_telephone":"387-423-1787","patient_address":"791 Mallard Hill","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Raven Vellender","surgery_name":"Spinal fusion","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"hmulrooney7m@pagesperso-orange.fr","patient_name":"Hayyim Mulrooney","patient_telephone":"806-205-3691","patient_address":"646 Garrison Hill","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Erna Skittrell","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"abruyet7n@comcast.net","patient_name":"Audry Bruyet","patient_telephone":"218-691-5616","patient_address":"0575 Burrows Hill","notes":"Keep testing"}},
+    {"surgeon":"Dr. Catlee Whatson","surgery_name":"Colorectal resection","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"nblakeley7o@posterous.com","patient_name":"Nevile Blakeley","patient_telephone":"391-128-8207","patient_address":"68 La Follette Trail","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Sullivan Riccione","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"akick7p@upenn.edu","patient_name":"Ade Kick","patient_telephone":"137-720-0990","patient_address":"6566 Northfield Hill","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Faina Monnelly","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"plesper7q@intel.com","patient_name":"Puff Lesper","patient_telephone":"420-823-1255","patient_address":"04 Armistice Point","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Evelyn Mathie","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"ooffen7r@indiegogo.com","patient_name":"Oliviero Offen","patient_telephone":"845-429-9485","patient_address":"5867 American Ash Avenue","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Andromache Iannelli","surgery_name":"Open prostatectomy","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"kdinse7s@eventbrite.com","patient_name":"Kendre Dinse","patient_telephone":"796-476-5046","patient_address":"9 Tennyson Crossing","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Sargent Bruty","surgery_name":"Arthroplasty knee","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"jhayball7t@skype.com","patient_name":"Janella Hayball","patient_telephone":"431-382-0446","patient_address":"208 Briar Crest Trail","notes":"Keep testing"}},
+    {"surgeon":"Dr. Zebedee Craxford","surgery_name":"Colorectal resection","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"ddundredge7u@infoseek.co.jp","patient_name":"Darby Dundredge","patient_telephone":"401-839-3802","patient_address":"2 Melby Place","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Yurik Brigden","surgery_name":"Open prostatectomy","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"sbarlow7v@netlog.com","patient_name":"Shurlocke Barlow","patient_telephone":"736-850-2290","patient_address":"8 Roth Terrace","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Halsey Battram","surgery_name":"Hip replacement; total and partial","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"jcroxley7w@php.net","patient_name":"Jayme Croxley","patient_telephone":"110-154-9027","patient_address":"90 Pawling Circle","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Gay Arch","surgery_name":"Hip replacement; total and partial","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"acatcheside7x@pcworld.com","patient_name":"Adelaida Catcheside","patient_telephone":"597-456-0198","patient_address":"75 Buena Vista Parkway","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Hanson Apperley","surgery_name":"Nephrectomy; partial or complete","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"mwellum7y@google.com.br","patient_name":"Maye Wellum","patient_telephone":"388-716-6275","patient_address":"93353 Basil Lane","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Finlay Sains","surgery_name":"Other hernia repair","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"ejancar7z@netscape.com","patient_name":"Eudora Jancar","patient_telephone":"201-800-6082","patient_address":"44 Pond Avenue","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Port Wickey","surgery_name":"Spinal fusion","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"ntremolieres80@mit.edu","patient_name":"Noreen Tremolieres","patient_telephone":"338-443-8176","patient_address":"51491 Pearson Hill","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Lana Du Hamel","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"bepperson81@cloudflare.com","patient_name":"Barbey Epperson","patient_telephone":"583-766-2836","patient_address":"0203 Northport Center","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Monika McFarlan","surgery_name":"Hip replacement; total and partial","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"gyerlett82@deliciousdays.com","patient_name":"Genovera Yerlett","patient_telephone":"580-478-1610","patient_address":"781 Maple Wood Street","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Morgen Readshall","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"wmatheson83@storify.com","patient_name":"Wallie Matheson","patient_telephone":"901-571-9270","patient_address":"100 Ohio Circle","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Bondy Wildey","surgery_name":"Thyroidectomy; partial or complete","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"samsden84@cmu.edu","patient_name":"Sarena Amsden","patient_telephone":"668-752-5066","patient_address":"89532 Lyons Hill","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Gus Tunmore","surgery_name":"Thyroidectomy; partial or complete","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"nchalloner85@barnesandnoble.com","patient_name":"Nanci Challoner","patient_telephone":"217-201-6527","patient_address":"49807 Toban Point","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Josy Faussett","surgery_name":"Open prostatectomy","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"iabrahamsohn86@bbc.co.uk","patient_name":"Iain Abrahamsohn","patient_telephone":"746-539-3193","patient_address":"58 Amoth Plaza","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Sibyl Basler","surgery_name":"Colorectal resection","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"bmatlock87@furl.net","patient_name":"Berni Matlock","patient_telephone":"877-495-5047","patient_address":"2 Bashford Drive","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Aguistin Troyes","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"ccanby88@soundcloud.com","patient_name":"Charita Canby","patient_telephone":"437-260-8245","patient_address":"6001 Redwing Hill","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Sashenka Peile","surgery_name":"Hip replacement; total and partial","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"xarthy89@cnet.com","patient_name":"Xenos Arthy","patient_telephone":"502-883-0036","patient_address":"1 Chive Avenue","notes":"Keep testing"}},
+    {"surgeon":"Dr. Bonita Sisselot","surgery_name":"Nephrectomy; partial or complete","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"istolz8a@hp.com","patient_name":"Isabelle Stolz","patient_telephone":"115-863-3929","patient_address":"7543 Northview Place","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Chilton Twiggins","surgery_name":"Nephrectomy; partial or complete","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"icharopen8b@mashable.com","patient_name":"Idell Charopen","patient_telephone":"894-701-2593","patient_address":"0568 Huxley Drive","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Eydie Bendare","surgery_name":"Other hernia repair","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"dblackater8c@booking.com","patient_name":"Derron Blackater","patient_telephone":"288-163-8627","patient_address":"68 Stang Center","notes":"Keep testing"}},
+    {"surgeon":"Dr. Engracia Livesley","surgery_name":"Thyroidectomy; partial or complete","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"tbengle8d@twitpic.com","patient_name":"Tris Bengle","patient_telephone":"473-399-9999","patient_address":"3 Burrows Hill","notes":"Keep testing"}},
+    {"surgeon":"Dr. Orelee Mingay","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"afilmer8e@free.fr","patient_name":"Anette Filmer","patient_telephone":"684-493-8373","patient_address":"97 Ryan Terrace","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Joela Skace","surgery_name":"Spinal fusion","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"povey8f@shutterfly.com","patient_name":"Page Ovey","patient_telephone":"829-549-5161","patient_address":"301 Loftsgordon Road","notes":"Keep testing"}},
+    {"surgeon":"Dr. Gayleen Verbruggen","surgery_name":"Arthroplasty knee","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"makaster8g@phpbb.com","patient_name":"Monro Akaster","patient_telephone":"840-809-8505","patient_address":"67671 Alpine Lane","notes":"Keep testing"}},
+    {"surgeon":"Dr. Gabi Sperwell","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"cspencook8h@t-online.de","patient_name":"Cherri Spencook","patient_telephone":"367-372-3483","patient_address":"31486 Shoshone Parkway","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Flossy Ebbs","surgery_name":"Other hernia repair","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"agrimwade8i@fastcompany.com","patient_name":"Ardis Grimwade","patient_telephone":"897-410-5455","patient_address":"0 American Park","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Chrisse Spiby","surgery_name":"Hip replacement; total and partial","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"tvurley8j@yahoo.com","patient_name":"Teresita Vurley","patient_telephone":"743-957-5058","patient_address":"13 Dottie Alley","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Britt Morfield","surgery_name":"Spinal fusion","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"gclaringbold8k@ibm.com","patient_name":"Germana Claringbold","patient_telephone":"547-763-1583","patient_address":"14 Pepper Wood Alley","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Alvinia Kingzett","surgery_name":"Colorectal resection","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"tparken8l@ebay.com","patient_name":"Thadeus Parken","patient_telephone":"415-456-0788","patient_address":"908 Helena Place","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Davey Tuting","surgery_name":"Arthroplasty knee","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"jhaitlie8m@mashable.com","patient_name":"Julienne Haitlie","patient_telephone":"940-167-3575","patient_address":"71343 Troy Crossing","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Marissa Anker","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"apietron8n@webeden.co.uk","patient_name":"Abram Pietron","patient_telephone":"817-224-0026","patient_address":"0 Luster Point","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Mendel Pariss","surgery_name":"Other hernia repair","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"galsina8o@nps.gov","patient_name":"Gerda Alsina","patient_telephone":"703-935-0791","patient_address":"868 Green Avenue","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Amerigo Dewitt","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"kcorroyer8p@networkadvertising.org","patient_name":"Killy Corroyer","patient_telephone":"950-113-1286","patient_address":"5848 Haas Drive","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Marena Gillanders","surgery_name":"Arthroplasty knee","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"ochander8q@va.gov","patient_name":"Olva Chander","patient_telephone":"566-678-6489","patient_address":"49 Thompson Circle","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Emelyne Masserel","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"dliquorish8r@e-recht24.de","patient_name":"Dari Liquorish","patient_telephone":"856-165-6323","patient_address":"5 Meadow Ridge Terrace","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Shane Ellissen","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"dpuddin8s@parallels.com","patient_name":"Dorri Puddin","patient_telephone":"731-673-7057","patient_address":"47 Bartillon Center","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Barbi Aleksic","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"bwarlock8t@latimes.com","patient_name":"Blanca Warlock","patient_telephone":"228-652-2024","patient_address":"7 Atwood Alley","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Pablo Lauchlan","surgery_name":"Open prostatectomy","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"cwarton8u@shutterfly.com","patient_name":"Cordy Warton","patient_telephone":"746-747-9288","patient_address":"46 Maple Wood Terrace","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Mano Matt","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"tkirckman8v@hc360.com","patient_name":"Tine Kirckman","patient_telephone":"605-392-7606","patient_address":"69 Upham Court","notes":"Keep testing"}},
+    {"surgeon":"Dr. Feodor Pude","surgery_name":"Colorectal resection","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"dmatteoni8w@google.com.hk","patient_name":"Davidde Matteoni","patient_telephone":"859-613-9258","patient_address":"73 Sloan Circle","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Carr Sandilands","surgery_name":"Other hernia repair","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"webbins8x@wiley.com","patient_name":"Willie Ebbins","patient_telephone":"337-619-2092","patient_address":"425 Goodland Way","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Frannie Baxster","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"dzimek8y@purevolume.com","patient_name":"Darby Zimek","patient_telephone":"561-671-2908","patient_address":"56 Derek Plaza","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Dolores Wheelan","surgery_name":"Arthroplasty knee","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"hhardison8z@mail.ru","patient_name":"Heinrik Hardison","patient_telephone":"350-731-1451","patient_address":"66 New Castle Circle","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Minne Doniso","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"giacomi90@nydailynews.com","patient_name":"Grazia Iacomi","patient_telephone":"861-357-3328","patient_address":"309 Farragut Park","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Paten Pechold","surgery_name":"Arthroplasty knee","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"lmuat91@dion.ne.jp","patient_name":"Lanna Muat","patient_telephone":"449-595-9201","patient_address":"85795 North Alley","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Ursula Korb","surgery_name":"Hip replacement; total and partial","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"knani92@i2i.jp","patient_name":"Kinny Nani","patient_telephone":"123-870-6824","patient_address":"78761 Utah Road","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Leicester Humpatch","surgery_name":"Open prostatectomy","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"dleach93@bloglovin.com","patient_name":"Dulcinea Leach","patient_telephone":"164-492-1802","patient_address":"64196 Helena Alley","notes":"Keep testing"}},
+    {"surgeon":"Dr. Erl Hallgarth","surgery_name":"Thyroidectomy; partial or complete","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"acoy94@google.nl","patient_name":"Arnie Coy","patient_telephone":"990-526-5261","patient_address":"0171 Jana Court","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Jedd Karlmann","surgery_name":"Nephrectomy; partial or complete","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"ebaugham95@reuters.com","patient_name":"Ellery Baugham","patient_telephone":"883-311-6768","patient_address":"252 Anderson Parkway","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Cariotta Brewett","surgery_name":"Open prostatectomy","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"mbartolomeu96@umn.edu","patient_name":"Matteo Bartolomeu","patient_telephone":"224-875-5598","patient_address":"9817 Bowman Road","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Minne Haste","surgery_name":"Nephrectomy; partial or complete","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"cmcquaide97@nydailynews.com","patient_name":"Cameron McQuaide","patient_telephone":"950-840-1723","patient_address":"85 Kensington Avenue","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Ty Nichols","surgery_name":"Arthroplasty knee","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"htuma98@vimeo.com","patient_name":"Hinze Tuma","patient_telephone":"153-438-1785","patient_address":"9064 Dennis Place","notes":"Keep testing"}},
+    {"surgeon":"Dr. Neron Liddon","surgery_name":"Colorectal resection","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"akydde99@ocn.ne.jp","patient_name":"Arlee Kydde","patient_telephone":"994-581-2410","patient_address":"8 Monica Court","notes":"Keep testing"}},
+    {"surgeon":"Dr. Alessandro Popelay","surgery_name":"Hip replacement; total and partial","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"edurnan9a@sina.com.cn","patient_name":"Emanuele Durnan","patient_telephone":"330-552-4069","patient_address":"3532 Schiller Pass","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Roseanne Shwenn","surgery_name":"Arthroplasty knee","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"lmcglone9b@creativecommons.org","patient_name":"Lannie McGlone","patient_telephone":"284-879-7530","patient_address":"04457 Sullivan Park","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Michele Palleske","surgery_name":"Other hernia repair","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"rkillick9c@gizmodo.com","patient_name":"Robinson Killick","patient_telephone":"709-308-3414","patient_address":"2 Mendota Hill","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Tanya Earp","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"akither9d@so-net.ne.jp","patient_name":"Alanna Kither","patient_telephone":"691-801-4221","patient_address":"1898 North Plaza","notes":"Keep testing"}},
+    {"surgeon":"Dr. Carlee Barrabeale","surgery_name":"Spinal fusion","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"vmatt9e@nytimes.com","patient_name":"Verne Matt","patient_telephone":"371-600-6805","patient_address":"81474 Londonderry Trail","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Faber Wyllcock","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"mtwelvetree9f@jimdo.com","patient_name":"Marcelle Twelvetree","patient_telephone":"118-155-9584","patient_address":"2698 Messerschmidt Road","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Gene Astle","surgery_name":"Spinal fusion","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"tschruyers9g@lulu.com","patient_name":"Ted Schruyers","patient_telephone":"701-348-4983","patient_address":"15419 Waxwing Plaza","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Elden Adcocks","surgery_name":"Open prostatectomy","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"acalveley9h@cmu.edu","patient_name":"Alleen Calveley","patient_telephone":"699-551-2809","patient_address":"0014 Judy Circle","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Harmony Seccombe","surgery_name":"Spinal fusion","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"edoucette9i@issuu.com","patient_name":"Elianora Doucette","patient_telephone":"186-904-2132","patient_address":"359 Service Point","notes":"Keep testing"}},
+    {"surgeon":"Dr. Valentin McInnery","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"lhuckfield9j@mysql.com","patient_name":"Lib Huckfield","patient_telephone":"560-816-1445","patient_address":"754 Manufacturers Point","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Adelheid Swash","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"dfinlow9k@china.com.cn","patient_name":"Dal Finlow","patient_telephone":"238-690-7484","patient_address":"821 Novick Pass","notes":"Keep testing"}},
+    {"surgeon":"Dr. Bear Yakunchikov","surgery_name":"Hip replacement; total and partial","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"cdugmore9l@hp.com","patient_name":"Clement Dugmore","patient_telephone":"289-356-4810","patient_address":"8617 Porter Circle","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Floyd D'eathe","surgery_name":"Thyroidectomy; partial or complete","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"dbachmann9m@netscape.com","patient_name":"Damaris Bachmann","patient_telephone":"482-315-4729","patient_address":"658 Boyd Street","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Gus Cregg","surgery_name":"Arthroplasty knee","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"tlesurf9n@tamu.edu","patient_name":"Tanny Lesurf","patient_telephone":"100-550-8111","patient_address":"6 Golf View Crossing","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Eunice Tarbath","surgery_name":"Arthroplasty knee","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"bgoldfinch9o@elegantthemes.com","patient_name":"Becky Goldfinch","patient_telephone":"841-612-3212","patient_address":"57 Nancy Drive","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Caterina Josuweit","surgery_name":"Colorectal resection","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"tyounglove9p@mozilla.com","patient_name":"Teriann Younglove","patient_telephone":"969-933-1670","patient_address":"63699 Monument Hill","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Francois Cristofor","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"lcrady9q@reuters.com","patient_name":"Lorilee Crady","patient_telephone":"306-930-3190","patient_address":"3797 Mccormick Crossing","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Goldie Caruth","surgery_name":"Other hernia repair","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"cwinckworth9r@blogspot.com","patient_name":"Cammy Winckworth","patient_telephone":"791-632-4890","patient_address":"988 Golf Course Place","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Jayme Bewshea","surgery_name":"Thyroidectomy; partial or complete","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"rchesterton9s@mail.ru","patient_name":"Ragnar Chesterton","patient_telephone":"729-833-4240","patient_address":"81485 Chive Place","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Daisy Doughty","surgery_name":"Open prostatectomy","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"sdymond9t@businessweek.com","patient_name":"Susy Dymond","patient_telephone":"520-494-7149","patient_address":"417 Northwestern Parkway","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Melisa Ardling","surgery_name":"Thyroidectomy; partial or complete","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"cvallance9u@ovh.net","patient_name":"Carling Vallance","patient_telephone":"627-146-7601","patient_address":"7736 Northridge Park","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Eugenio Hazell","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"rscrooby9v@marketwatch.com","patient_name":"Rhonda Scrooby","patient_telephone":"232-842-1836","patient_address":"12706 Morning Point","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Nyssa Sposito","surgery_name":"Spinal fusion","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"evassay9w@bloomberg.com","patient_name":"Elfrieda Vassay","patient_telephone":"489-400-2653","patient_address":"268 Doe Crossing Hill","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Bonni Darkin","surgery_name":"Spinal fusion","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"gborley9x@house.gov","patient_name":"Gerry Borley","patient_telephone":"703-210-2144","patient_address":"70972 Sutherland Crossing","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Issie Ahrendsen","surgery_name":"Spinal fusion","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"jthurlbeck9y@narod.ru","patient_name":"Jeremias Thurlbeck","patient_telephone":"325-562-0696","patient_address":"39941 Hintze Pass","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Karola Duchart","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"hwillarton9z@google.de","patient_name":"Harp Willarton","patient_telephone":"513-791-8797","patient_address":"423 Porter Pass","notes":"Keep testing"}},
+    {"surgeon":"Dr. Karyl Abrahm","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"ebutertona0@dailymail.co.uk","patient_name":"Enos Buterton","patient_telephone":"549-542-7836","patient_address":"51456 Clarendon Lane","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Ashien Whitsun","surgery_name":"Other hernia repair","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"vpendleberrya1@google.co.jp","patient_name":"Verene Pendleberry","patient_telephone":"857-906-1243","patient_address":"3 Longview Place","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Marcel O Mullen","surgery_name":"Thyroidectomy; partial or complete","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"vduggeta2@sohu.com","patient_name":"Vincenz Dugget","patient_telephone":"143-224-6993","patient_address":"332 Anzinger Center","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Lizabeth Skillen","surgery_name":"Spinal fusion","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"crubinowitcha3@ftc.gov","patient_name":"Care Rubinowitch","patient_telephone":"623-794-7081","patient_address":"89561 New Castle Alley","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Frederick Navarre","surgery_name":"Colorectal resection","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"chaywooda4@mediafire.com","patient_name":"Charley Haywood","patient_telephone":"545-330-0540","patient_address":"7 Homewood Street","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Maude Skyram","surgery_name":"Nephrectomy; partial or complete","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"vsherrya5@ebay.com","patient_name":"Vivien Sherry","patient_telephone":"625-839-0146","patient_address":"49 Wayridge Lane","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Glynnis Gedling","surgery_name":"Thyroidectomy; partial or complete","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"bdugana6@dailymail.co.uk","patient_name":"Billy Dugan","patient_telephone":"631-840-4218","patient_address":"471 Thompson Plaza","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Pat McMeeking","surgery_name":"Other hernia repair","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"qlaybournea7@gov.uk","patient_name":"Quintin Laybourne","patient_telephone":"733-866-9236","patient_address":"05 Garrison Drive","notes":"Keep testing"}},
+    {"surgeon":"Dr. Jonas Fasse","surgery_name":"Spinal fusion","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"stubbya8@gmpg.org","patient_name":"Sigismundo Tubby","patient_telephone":"687-320-1996","patient_address":"883 Cambridge Trail","notes":"Keep testing"}},
+    {"surgeon":"Dr. Sharline Billam","surgery_name":"Hip replacement; total and partial","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"ajeremaesa9@ifeng.com","patient_name":"Ado Jeremaes","patient_telephone":"749-857-1676","patient_address":"781 Forster Center","notes":"Keep testing"}},
+    {"surgeon":"Dr. Ciro Skarr","surgery_name":"Thyroidectomy; partial or complete","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"gpidleraa@abc.net.au","patient_name":"Gorden Pidler","patient_telephone":"629-416-3351","patient_address":"1939 Michigan Lane","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Heidie McLorinan","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"mamiableab@house.gov","patient_name":"Mary Amiable","patient_telephone":"664-617-4517","patient_address":"13 Dayton Circle","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Isahella Kummerlowe","surgery_name":"Open prostatectomy","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"svaneschiac@infoseek.co.jp","patient_name":"Stan Vaneschi","patient_telephone":"785-778-2451","patient_address":"6 Ruskin Circle","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Weidar Neasam","surgery_name":"Colorectal resection","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"atrattonad@sfgate.com","patient_name":"Augusto Tratton","patient_telephone":"531-926-0745","patient_address":"04 Lakeland Road","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Brandyn Busson","surgery_name":"Colorectal resection","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"ihartleae@indiegogo.com","patient_name":"Irina Hartle","patient_telephone":"485-343-0629","patient_address":"86572 Lakewood Court","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Glenn Dolan","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"adraaismaaf@whitehouse.gov","patient_name":"Aaren Draaisma","patient_telephone":"926-812-0233","patient_address":"7041 Autumn Leaf Terrace","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Johannes Jerzycowski","surgery_name":"Thyroidectomy; partial or complete","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"ofairlemag@eventbrite.com","patient_name":"Oralee Fairlem","patient_telephone":"479-113-6276","patient_address":"820 Milwaukee Park","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Niel Pollington","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"vgreensteadah@google.ca","patient_name":"Vania Greenstead","patient_telephone":"861-949-2496","patient_address":"05 Lyons Circle","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Brandyn Birchall","surgery_name":"Thyroidectomy; partial or complete","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"druddickai@taobao.com","patient_name":"Dominique Ruddick","patient_telephone":"705-342-4653","patient_address":"77908 Melody Drive","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Quintina Hugnin","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"jfitzsymonaj@sina.com.cn","patient_name":"Jody Fitzsymon","patient_telephone":"624-196-3511","patient_address":"18840 Kinsman Way","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Hedda Benthall","surgery_name":"Other hernia repair","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"hdelouchak@vimeo.com","patient_name":"Hedi Delouch","patient_telephone":"317-973-1979","patient_address":"896 Village Green Terrace","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Aluin Walklett","surgery_name":"Colorectal resection","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"killistonal@rambler.ru","patient_name":"Katerina Illiston","patient_telephone":"372-476-4856","patient_address":"6 Anhalt Lane","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Hi Quigley","surgery_name":"Hip replacement; total and partial","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"descoffreyam@cocolog-nifty.com","patient_name":"Dodi Escoffrey","patient_telephone":"520-828-6249","patient_address":"70691 Bashford Parkway","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Lothaire Wavish","surgery_name":"Other hernia repair","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"avalentinean@sohu.com","patient_name":"Audry Valentine","patient_telephone":"218-342-4921","patient_address":"7385 Clarendon Crossing","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Kelcey Beacom","surgery_name":"Hip replacement; total and partial","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"tchippindallao@theatlantic.com","patient_name":"Theressa Chippindall","patient_telephone":"212-973-1026","patient_address":"227 Forest Run Junction","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Karoly Figurski","surgery_name":"Colorectal resection","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"mkirrensap@marketwatch.com","patient_name":"Maryellen Kirrens","patient_telephone":"163-541-3243","patient_address":"52 Luster Crossing","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Alain McQuaide","surgery_name":"Colorectal resection","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"gkestleaq@geocities.jp","patient_name":"Gilberta Kestle","patient_telephone":"627-465-5729","patient_address":"6972 Bobwhite Crossing","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Hyacinthie Baddiley","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"nkleinstubar@dailymotion.com","patient_name":"Noami Kleinstub","patient_telephone":"739-541-9858","patient_address":"703 Grover Junction","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Cristy Nisot","surgery_name":"Nephrectomy; partial or complete","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"apriestlandas@symantec.com","patient_name":"Adair Priestland","patient_telephone":"104-359-9525","patient_address":"521 8th Parkway","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Sax Androli","surgery_name":"Nephrectomy; partial or complete","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"ntumasianat@domainmarket.com","patient_name":"Nicolas Tumasian","patient_telephone":"515-640-2689","patient_address":"6 Buhler Trail","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Mickie Maurice","surgery_name":"Other hernia repair","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"jkhalidau@yahoo.com","patient_name":"Justis Khalid","patient_telephone":"511-372-2528","patient_address":"13970 Florence Pass","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Trescha Veazey","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"amcmorranav@vistaprint.com","patient_name":"Adolphus McMorran","patient_telephone":"158-666-1011","patient_address":"2199 Sunfield Point","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Francene Dockwray","surgery_name":"Other hernia repair","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"hsynanaw@bbb.org","patient_name":"Honor Synan","patient_telephone":"643-108-9201","patient_address":"4659 Hoard Alley","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Allan Baison","surgery_name":"Thyroidectomy; partial or complete","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"astrathearnax@businesswire.com","patient_name":"Amalee Strathearn","patient_telephone":"436-528-9481","patient_address":"06467 Westend Plaza","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Bron Woodyear","surgery_name":"Hip replacement; total and partial","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"roxburghay@amazon.co.uk","patient_name":"Ransom Oxburgh","patient_telephone":"162-362-1403","patient_address":"1 Vera Alley","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Chen Laurenty","surgery_name":"Other hernia repair","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"wkhominaz@theglobeandmail.com","patient_name":"Wenonah Khomin","patient_telephone":"252-629-9724","patient_address":"9605 Elka Trail","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Leigh Mc Faul","surgery_name":"Nephrectomy; partial or complete","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"skilmurrayb0@unblog.fr","patient_name":"Shina Kilmurray","patient_telephone":"979-391-3560","patient_address":"856 Basil Pass","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Ingaborg Wrightham","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"glidgardb1@mapquest.com","patient_name":"Genna Lidgard","patient_telephone":"381-684-5467","patient_address":"01 Toban Avenue","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Hunter Bower","surgery_name":"Nephrectomy; partial or complete","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"akneeboneb2@businesswire.com","patient_name":"Alden Kneebone","patient_telephone":"856-924-7842","patient_address":"0 Fulton Alley","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Tobey Isgar","surgery_name":"Hip replacement; total and partial","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"fmcarthurb3@gravatar.com","patient_name":"Farly McArthur","patient_telephone":"981-191-6394","patient_address":"7161 Longview Terrace","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Lesli Noli","surgery_name":"Thyroidectomy; partial or complete","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"pchiechiob4@mtv.com","patient_name":"Prentiss Chiechio","patient_telephone":"838-457-3599","patient_address":"9 Prairieview Avenue","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Samson Patton","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"cbeverageb5@google.ca","patient_name":"Clyve Beverage","patient_telephone":"787-319-4244","patient_address":"7 Westridge Trail","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Adrianne Antonucci","surgery_name":"Nephrectomy; partial or complete","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"gwainwrightb6@cdbaby.com","patient_name":"Godart Wainwright","patient_telephone":"726-441-5812","patient_address":"667 Roth Point","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Diena Ewence","surgery_name":"Thyroidectomy; partial or complete","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"pjoyb7@youku.com","patient_name":"Pauly Joy","patient_telephone":"967-876-0474","patient_address":"23907 Anzinger Pass","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Bartie Coyle","surgery_name":"Arthroplasty knee","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"atrundellb8@rakuten.co.jp","patient_name":"Abbey Trundell","patient_telephone":"646-371-4283","patient_address":"894 Crowley Point","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Ettore Szach","surgery_name":"Other hernia repair","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"cblackslandb9@gov.uk","patient_name":"Cornelle Blacksland","patient_telephone":"605-590-1734","patient_address":"2477 Hauk Alley","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Rosemarie Driussi","surgery_name":"Spinal fusion","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"tsumptionba@yellowpages.com","patient_name":"Travers Sumption","patient_telephone":"509-176-1851","patient_address":"31 Jay Point","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Armin Smidmoor","surgery_name":"Hip replacement; total and partial","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"wmethingambb@gov.uk","patient_name":"Winthrop Methingam","patient_telephone":"541-303-9817","patient_address":"2 Golf View Drive","notes":"Keep testing"}},
+    {"surgeon":"Dr. Maurise Jepson","surgery_name":"Nephrectomy; partial or complete","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"lbenettolobc@multiply.com","patient_name":"Laurens Benettolo","patient_telephone":"347-954-2752","patient_address":"62 Hanson Hill","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Ada McInnerny","surgery_name":"Nephrectomy; partial or complete","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"scockliebd@cbc.ca","patient_name":"Stacee Cocklie","patient_telephone":"508-174-2397","patient_address":"54 Sunbrook Center","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Verne De Brett","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"mcarnewbe@vistaprint.com","patient_name":"Marigold Carnew","patient_telephone":"735-424-5159","patient_address":"120 Sundown Terrace","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Albert McVity","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"jpixtonbf@vk.com","patient_name":"Jay Pixton","patient_telephone":"888-875-4258","patient_address":"97 Emmet Lane","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Roda Lauks","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"remptagebg@thetimes.co.uk","patient_name":"Raff Emptage","patient_telephone":"922-757-0167","patient_address":"698 Waxwing Crossing","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Denny Spenceley","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"ciowarchbh@accuweather.com","patient_name":"Casandra Iowarch","patient_telephone":"374-282-0027","patient_address":"7 Claremont Parkway","notes":"Keep testing"}},
+    {"surgeon":"Dr. Brunhilde Groundwator","surgery_name":"Open prostatectomy","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"vrennardbi@tuttocitta.it","patient_name":"Vera Rennard","patient_telephone":"655-320-6467","patient_address":"2 Milwaukee Hill","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Christoffer Cordle","surgery_name":"Thyroidectomy; partial or complete","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"kerrichellibj@t-online.de","patient_name":"Kala Errichelli","patient_telephone":"585-196-5475","patient_address":"41113 Bowman Circle","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Rosanne Boribal","surgery_name":"Colorectal resection","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"gknutsenbk@mysql.com","patient_name":"Guthrey Knutsen","patient_telephone":"837-848-4635","patient_address":"080 Arkansas Drive","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Alon Kleinsinger","surgery_name":"Nephrectomy; partial or complete","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"cmulreanbl@illinois.edu","patient_name":"Carlie Mulrean","patient_telephone":"286-240-9180","patient_address":"0 Crescent Oaks Way","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Arabella Pearcy","surgery_name":"Spinal fusion","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"mantukbm@mail.ru","patient_name":"Mathilda Antuk","patient_telephone":"756-895-0573","patient_address":"4 Melvin Way","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Cissiee Muddle","surgery_name":"Spinal fusion","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"povellbn@buzzfeed.com","patient_name":"Piggy Ovell","patient_telephone":"912-337-8574","patient_address":"52 Fuller Lane","notes":"Keep testing"}},
+    {"surgeon":"Dr. Alphonse Dakhov","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"kavobo@ezinearticles.com","patient_name":"Kaitlin Avo","patient_telephone":"257-996-5120","patient_address":"74 Rutledge Trail","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Rossie Braunlein","surgery_name":"Spinal fusion","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"glyddonbp@blogspot.com","patient_name":"Grannie Lyddon","patient_telephone":"831-511-4726","patient_address":"90283 Cardinal Crossing","notes":"Keep testing"}},
+    {"surgeon":"Dr. Emelita Cosgrave","surgery_name":"Open prostatectomy","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"ttilburybq@squarespace.com","patient_name":"Truda Tilbury","patient_telephone":"728-537-3320","patient_address":"1 Randy Drive","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Mella Gantley","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"nsheriffbr@comsenz.com","patient_name":"Noreen Sheriff","patient_telephone":"651-627-0999","patient_address":"75 Burrows Alley","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Gery Parsonson","surgery_name":"Hip replacement; total and partial","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"tstrutherbs@wp.com","patient_name":"Timofei Struther","patient_telephone":"437-506-1358","patient_address":"58 Laurel Junction","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Michel Heyfield","surgery_name":"Hip replacement; total and partial","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"ibockenbt@google.com.hk","patient_name":"Ilene Bocken","patient_telephone":"309-368-0089","patient_address":"2 Emmet Place","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Corly Korneluk","surgery_name":"Nephrectomy; partial or complete","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"sliveseybu@usatoday.com","patient_name":"Shay Livesey","patient_telephone":"732-268-9966","patient_address":"5 Dayton Parkway","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Welbie Buckoke","surgery_name":"Hip replacement; total and partial","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"nbirniebv@sciencedirect.com","patient_name":"Neal Birnie","patient_telephone":"329-867-3525","patient_address":"86955 Ridgeview Crossing","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Willetta McHugh","surgery_name":"Spinal fusion","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"afeybw@youku.com","patient_name":"Alikee Fey","patient_telephone":"496-887-1436","patient_address":"6 Dovetail Crossing","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Malchy Klimashevich","surgery_name":"Nephrectomy; partial or complete","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"ebennettobx@fotki.com","patient_name":"Elayne Bennetto","patient_telephone":"834-936-7853","patient_address":"50683 Eagle Crest Plaza","notes":"Keep testing"}},
+    {"surgeon":"Dr. Aksel Tigwell","surgery_name":"Open prostatectomy","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"dleyesby@pcworld.com","patient_name":"Danny Leyes","patient_telephone":"545-669-3821","patient_address":"2613 Mcguire Court","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Mora Cookley","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"cbaughanbz@usa.gov","patient_name":"Corrie Baughan","patient_telephone":"146-782-1466","patient_address":"396 Oak Valley Parkway","notes":"Keep testing"}},
+    {"surgeon":"Dr. Mirella Grenkov","surgery_name":"Spinal fusion","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"dmiebesc0@arstechnica.com","patient_name":"Danie Miebes","patient_telephone":"119-827-8454","patient_address":"1617 Glacier Hill Pass","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Tedd McGovern","surgery_name":"Nephrectomy; partial or complete","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"bbostockc1@tripadvisor.com","patient_name":"Bone Bostock","patient_telephone":"344-412-9715","patient_address":"31 Kipling Point","notes":"Keep testing"}},
+    {"surgeon":"Dr. Ninnette Watson","surgery_name":"Arthroplasty knee","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"hcopestickc2@friendfeed.com","patient_name":"Herbie Copestick","patient_telephone":"327-545-8360","patient_address":"838 Norway Maple Court","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Shawn Rapper","surgery_name":"Thyroidectomy; partial or complete","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"eantoszczykc3@sphinn.com","patient_name":"Emmalynn Antoszczyk","patient_telephone":"933-218-5684","patient_address":"5294 Rieder Crossing","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Griffin Dominiak","surgery_name":"Other hernia repair","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"emogganc4@booking.com","patient_name":"Emery Moggan","patient_telephone":"415-353-0850","patient_address":"58943 Melby Street","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Farra Growden","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"mmissendenc5@rediff.com","patient_name":"Marcella Missenden","patient_telephone":"368-206-4637","patient_address":"128 Acker Way","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Maryjo Zincke","surgery_name":"Open prostatectomy","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"dbramwellc6@princeton.edu","patient_name":"Darrelle Bramwell","patient_telephone":"305-605-2492","patient_address":"6 Goodland Way","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Melodie Gouldie","surgery_name":"Open prostatectomy","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"dmacmorlandc7@dailymail.co.uk","patient_name":"Dominic MacMorland","patient_telephone":"137-888-7254","patient_address":"48 Manitowish Plaza","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Mikaela Bamfield","surgery_name":"Hip replacement; total and partial","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"adoyleyc8@engadget.com","patient_name":"Ainslie Doyley","patient_telephone":"514-221-1164","patient_address":"2225 Mallard Pass","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Mahala Mabbe","surgery_name":"Colorectal resection","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"wallenbyc9@omniture.com","patient_name":"Wilhelm Allenby","patient_telephone":"219-757-4933","patient_address":"3224 Springs Circle","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Jenilee Bitterton","surgery_name":"Thyroidectomy; partial or complete","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"dwindaybankca@state.gov","patient_name":"Dolli Windaybank","patient_telephone":"407-144-0199","patient_address":"0 Superior Circle","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Elva Wingatt","surgery_name":"Spinal fusion","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"lcorwoodcb@google.fr","patient_name":"Lawrence Corwood","patient_telephone":"133-977-2793","patient_address":"367 Eliot Drive","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Claiborn Rikkard","surgery_name":"Nephrectomy; partial or complete","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"kocc@ed.gov","patient_name":"Kale O' Cloney","patient_telephone":"447-617-2901","patient_address":"36 Mcbride Hill","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Cornie Ebbers","surgery_name":"Hip replacement; total and partial","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"vfittercd@amazon.co.jp","patient_name":"Van Fitter","patient_telephone":"982-750-3398","patient_address":"89 Oak Crossing","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Maximo Sampson","surgery_name":"Open prostatectomy","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"ecardenosace@indiatimes.com","patient_name":"Emilee Cardenosa","patient_telephone":"711-473-5377","patient_address":"2226 Hovde Circle","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Genevra Bohl","surgery_name":"Arthroplasty knee","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"jmccriecf@bluehost.com","patient_name":"Johnna McCrie","patient_telephone":"881-516-1524","patient_address":"7 Acker Road","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Nanni Trapp","surgery_name":"Thyroidectomy; partial or complete","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"tmanbycg@apache.org","patient_name":"Thurstan Manby","patient_telephone":"301-370-8722","patient_address":"829 Northland Center","notes":"Keep testing"}},
+    {"surgeon":"Dr. Estevan McNickle","surgery_name":"Nephrectomy; partial or complete","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"kenriquezch@uol.com.br","patient_name":"Kelli Enriquez","patient_telephone":"173-486-9138","patient_address":"23 Raven Circle","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Frieda Leacy","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"ffancettci@ebay.co.uk","patient_name":"Filippo Fancett","patient_telephone":"647-515-5034","patient_address":"64726 Ramsey Lane","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Elna Silman","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"9.30 A.M. - 5.45 P.M.","patient_detail":{"patient_email":"btamplincj@t.co","patient_name":"Berta Tamplin","patient_telephone":"739-429-1369","patient_address":"23 Northland Hill","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Thorny Osant","surgery_name":"Colorectal resection","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"mlimprechtck@princeton.edu","patient_name":"Mersey Limprecht","patient_telephone":"499-346-8221","patient_address":"498 Menomonie Drive","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Avivah Sopp","surgery_name":"Open prostatectomy","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"dschmuhlcl@reverbnation.com","patient_name":"Doe Schmuhl","patient_telephone":"134-331-9212","patient_address":"74837 Canary Drive","notes":"Keep testing"}},
+    {"surgeon":"Dr. Aldrich Snuggs","surgery_name":"Nephrectomy; partial or complete","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"wbardcm@marriott.com","patient_name":"Wendie Bard","patient_telephone":"768-752-7781","patient_address":"149 Dapin Street","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Kay Forryan","surgery_name":"Other hernia repair","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"acosterdcn@artisteer.com","patient_name":"Amy Costerd","patient_telephone":"995-956-8449","patient_address":"48084 Ridgeway Center","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Jeanne Belamy","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"rherreranco@ustream.tv","patient_name":"Rea Herreran","patient_telephone":"659-797-2974","patient_address":"053 Bobwhite Terrace","notes":"Keep testing"}},
+    {"surgeon":"Dr. Rhiamon Woolford","surgery_name":"Thyroidectomy; partial or complete","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"sormondcp@ycombinator.com","patient_name":"Sibelle Ormond","patient_telephone":"976-627-5409","patient_address":"67 Ryan Center","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Monika Barkas","surgery_name":"Colorectal resection","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"rgooblecq@weebly.com","patient_name":"Rollins Gooble","patient_telephone":"673-508-9226","patient_address":"57372 Grayhawk Street","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Harlen Lamprey","surgery_name":"Thyroidectomy; partial or complete","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"ggossopcr@google.ca","patient_name":"Gianna Gossop","patient_telephone":"592-721-4029","patient_address":"1767 Schurz Road","notes":"Keep testing"}},
+    {"surgeon":"Dr. Nicolas Jaukovic","surgery_name":"Hip replacement; total and partial","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"awallentincs@state.gov","patient_name":"Arnoldo Wallentin","patient_telephone":"374-801-7741","patient_address":"1761 Fairfield Way","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Pinchas MacGillacolm","surgery_name":"Spinal fusion","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"wdybellct@kickstarter.com","patient_name":"Waldon Dybell","patient_telephone":"255-988-7258","patient_address":"0 2nd Trail","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Anthia Issacoff","surgery_name":"Nephrectomy; partial or complete","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"lhawardcu@oaic.gov.au","patient_name":"Lombard Haward","patient_telephone":"304-518-2089","patient_address":"85 Mallard Point","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Ki Suston","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"kdicv@timesonline.co.uk","patient_name":"Kippy Di Francesco","patient_telephone":"745-541-6854","patient_address":"684 Lakeland Street","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Filia Worsfield","surgery_name":"Colorectal resection","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"ahambridgecw@hatena.ne.jp","patient_name":"Aimee Hambridge","patient_telephone":"534-528-8180","patient_address":"92623 Mandrake Plaza","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Devondra Aylin","surgery_name":"Hip replacement; total and partial","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"speoplescx@istockphoto.com","patient_name":"Sebastiano Peoples","patient_telephone":"623-842-9943","patient_address":"8207 Maple Wood Pass","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Emlyn Pratchett","surgery_name":"Other hernia repair","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"vdullardcy@photobucket.com","patient_name":"Victoria Dullard","patient_telephone":"734-614-3704","patient_address":"018 Rutledge Hill","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Joby Guillet","surgery_name":"Open prostatectomy","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"adelieucz@pagesperso-orange.fr","patient_name":"Arnold Delieu","patient_telephone":"486-815-9158","patient_address":"962 Lindbergh Park","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Winne Mackie","surgery_name":"Hip replacement; total and partial","time_text":"8 A.M. - 10 P.M.","patient_detail":{"patient_email":"xburressd0@sohu.com","patient_name":"Xena Burress","patient_telephone":"366-922-6141","patient_address":"186 Memorial Street","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Cora Caunter","surgery_name":"Colorectal resection","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"ajurewiczd1@guardian.co.uk","patient_name":"Abbey Jurewicz","patient_telephone":"701-990-1964","patient_address":"485 Sullivan Point","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Clementine Weldon","surgery_name":"Nephrectomy; partial or complete","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"rpettied2@stanford.edu","patient_name":"Ripley Pettie","patient_telephone":"772-711-5583","patient_address":"98 Jenifer Lane","notes":"Keep testing"}},
+    {"surgeon":"Dr. Benjamen Pratley","surgery_name":"Open prostatectomy","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"gcuddd3@dagondesign.com","patient_name":"Godwin Cudd","patient_telephone":"608-363-1660","patient_address":"760 Gateway Parkway","notes":"Keep testing"}},
+    {"surgeon":"Dr. Jelene Vigrass","surgery_name":"Nephrectomy; partial or complete","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"rcornillid4@ezinearticles.com","patient_name":"Rolando Cornilli","patient_telephone":"385-396-7442","patient_address":"4 Forest Dale Lane","notes":"Fit for the surgery. Continue as planned"}},
+    {"surgeon":"Dr. Carilyn Fist","surgery_name":"Hip replacement; total and partial","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"sbrackleyd5@digg.com","patient_name":"Skipp Brackley","patient_telephone":"115-378-6636","patient_address":"59083 Arapahoe Court","notes":"Keep testing"}},
+    {"surgeon":"Dr. Mora Kunzler","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"hduelld6@nbcnews.com","patient_name":"Hyatt Duell","patient_telephone":"611-328-4700","patient_address":"4424 Barnett Parkway","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Judas Antoni","surgery_name":"Other hernia repair","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"fprestied7@hibu.com","patient_name":"Franciska Prestie","patient_telephone":"406-310-5499","patient_address":"8411 Dennis Crossing","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Farrel Woollhead","surgery_name":"Spinal fusion","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"ptomickid8@dmoz.org","patient_name":"Phillida Tomicki","patient_telephone":"480-330-0945","patient_address":"85 Golf View Center","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Cissiee Ruscoe","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"8 A.M. - 1 P.M.","patient_detail":{"patient_email":"toldredd9@livejournal.com","patient_name":"Tab Oldred","patient_telephone":"348-232-4796","patient_address":"782 Mcbride Pass","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Nancy Hendrikse","surgery_name":"Other hernia repair","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"ewoodsonda@earthlink.net","patient_name":"Edd Woodson","patient_telephone":"443-822-8638","patient_address":"42041 Dahle Place","notes":"Keep testing"}},
+    {"surgeon":"Dr. Axe Kramer","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"ghuytondb@ed.gov","patient_name":"Gladys Huyton","patient_telephone":"242-309-3795","patient_address":"506 Donald Parkway","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Florance Keeting","surgery_name":"Spinal fusion","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"hpounderdc@vinaora.com","patient_name":"Harlan Pounder","patient_telephone":"517-843-0097","patient_address":"48 Dovetail Junction","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Corly Chrismas","surgery_name":"Hip replacement; total and partial","time_text":"9 A.M. - 12 P.M.","patient_detail":{"patient_email":"rsargintdd@cyberchimps.com","patient_name":"Rubie Sargint","patient_telephone":"474-153-4759","patient_address":"6628 Dixon Drive","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Isabella Leebetter","surgery_name":"Thyroidectomy; partial or complete","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"amulligande@cocolog-nifty.com","patient_name":"Ambur Mulligan","patient_telephone":"203-814-7420","patient_address":"9670 Nancy Drive","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Marget Duffer","surgery_name":"Hip replacement; total and partial","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"fkohnemanndf@phpbb.com","patient_name":"Fanya Kohnemann","patient_telephone":"742-713-7399","patient_address":"0695 Tennyson Lane","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Guthrie Crocken","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"bthomblesondg@wp.com","patient_name":"Baillie Thombleson","patient_telephone":"901-781-9727","patient_address":"4 Delladonna Avenue","notes":"Keep testing"}},
+    {"surgeon":"Dr. Stoddard Brunger","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"10 A.M. - 11 P.M.","patient_detail":{"patient_email":"aslotdh@mapy.cz","patient_name":"Addia Slot","patient_telephone":"963-547-4279","patient_address":"6614 Crescent Oaks Drive","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Erinn Mougel","surgery_name":"Arthroplasty knee","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"lmattessendi@rambler.ru","patient_name":"Lesley Mattessen","patient_telephone":"640-905-2059","patient_address":"816 Bay Plaza","notes":"Keep testing"}},
+    {"surgeon":"Dr. Pearline Duffit","surgery_name":"Other hernia repair","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"gmolinesdj@infoseek.co.jp","patient_name":"Gabbey Molines","patient_telephone":"856-115-5042","patient_address":"96166 Washington Street","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Alis De Filippo","surgery_name":"Nephrectomy; partial or complete","time_text":"6 P.M. - 8.30 P.M.","patient_detail":{"patient_email":"cstooddk@smh.com.au","patient_name":"Chalmers Stood","patient_telephone":"885-318-7437","patient_address":"1853 Linden Lane","notes":"Condition is improving"}},
+    {"surgeon":"Dr. Nathanael Duffie","surgery_name":"Arthroplasty knee","time_text":"11.30 A.M. - 2.30 P.M.","patient_detail":{"patient_email":"bpresseydl@google.co.jp","patient_name":"Brion Pressey","patient_telephone":"254-940-5685","patient_address":"39 South Point","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Nedda Tudor","surgery_name":"Other hernia repair","time_text":"3 P.M. - 7 P.M.","patient_detail":{"patient_email":"mhutleydm@oracle.com","patient_name":"Maiga Hutley","patient_telephone":"807-291-1517","patient_address":"10472 Maple Wood Hill","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Fletcher Haines","surgery_name":"Hip replacement; total and partial","time_text":"5 P.M - 8 P.M.","patient_detail":{"patient_email":"iyockneydn@adobe.com","patient_name":"Inna Yockney","patient_telephone":"925-200-5711","patient_address":"21 Crescent Oaks Drive","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Fayina Pietruszewicz","surgery_name":"Laminectomy; excision intervertebral disc","time_text":"9.45 A.M. - 12 P.M.","patient_detail":{"patient_email":"bmossopdo@aol.com","patient_name":"Biddy Mossop","patient_telephone":"111-652-7500","patient_address":"81 Sachs Lane","notes":"Condition deteriorating. Further care needed"}},
+    {"surgeon":"Dr. Missie Storer","surgery_name":"Arthroplasty knee","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"eallamdp@wunderground.com","patient_name":"Elga Allam","patient_telephone":"501-564-2599","patient_address":"247 Express Terrace","notes":"Keep testing"}},
+    {"surgeon":"Dr. Dottie Siddens","surgery_name":"Other hernia repair","time_text":"8 A.M. - 12 P.M.","patient_detail":{"patient_email":"bbrungerdq@latimes.com","patient_name":"Bridie Brunger","patient_telephone":"154-707-8431","patient_address":"576 Brickson Park Road","notes":"Further medical attention needed. Do not discharge"}},
+    {"surgeon":"Dr. Bartel Cottam","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"7 P.M. - 8.45 P.M.","patient_detail":{"patient_email":"mcushellydr@tripod.com","patient_name":"Maybelle Cushelly","patient_telephone":"876-848-8048","patient_address":"89690 Sage Way","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Ingeborg Tidbold","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"2 P.M. - 4 P.M.","patient_detail":{"patient_email":"tkirkmands@goodreads.com","patient_name":"Thoma Kirkman","patient_telephone":"433-121-0871","patient_address":"25 Petterle Court","notes":"Requires further testing"}},
+    {"surgeon":"Dr. Wood Cushe","surgery_name":"Hip replacement; total and partial","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"rdenisdt@godaddy.com","patient_name":"Roslyn Denis","patient_telephone":"956-952-2814","patient_address":"23167 Manufacturers Place","notes":"Keep testing"}},
+    {"surgeon":"Dr. Bev Flay","surgery_name":"Hysterectomy; abdominal and vaginal","time_text":"4 P.M. - 6.30 P.M.","patient_detail":{"patient_email":"amitroshinovdu@qq.com","patient_name":"Andriana Mitroshinov","patient_telephone":"308-771-7233","patient_address":"924 Manitowish Court","notes":"Few weeks of hospital supervision recommended"}},
+    {"surgeon":"Dr. Pandora Vincent","surgery_name":"Arthroplasty knee","time_text":"10 A.M. - 4 P.M.","patient_detail":{"patient_email":"erosentholerdv@t-online.de","patient_name":"Estele Rosentholer","patient_telephone":"539-981-7238","patient_address":"38 Weeping Birch Terrace","notes":"Keep testing"}}
+    ]
 
 
   surgeries_count = 0
@@ -1285,16 +552,17 @@ export class CalenderComponent implements OnInit {
     var today = new Date();
 
     this.auth.getUserType().subscribe((res)=>{
-      this.userRole = res
+      this.userRole = res['role']
     })
 
     this.selectedDateFormat = this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString()
-    this.surgery_times = this.getUnique(3)
+    this.surgery_times = this.getUnique(Math.floor(Math.random() * (10 - 5 + 1)) + 5)
 
 
     this.patient_name = this.surgery_times[0]['patient_detail']['patient_name']
     this.patient_email = this.surgery_times[0]['patient_detail']['patient_email']
     this.patient_telephones = this.surgery_times[0]['patient_detail']['patient_telephone']
+    this.patient_notes = this.surgery_times[0]['patient_detail']['notes']
 
 
   
@@ -1340,7 +608,7 @@ export class CalenderComponent implements OnInit {
   updateCalcsDate(event: any) {
     if (this.selected?.getDate()) {
       this.selectedDateFormat = this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString();
-      this.surgery_times = this.getUnique(3)      
+      this.surgery_times = this.getUnique(Math.floor(Math.random() * (10 - 5 + 1)) + 5)      
     }
   }
 
@@ -1348,6 +616,7 @@ export class CalenderComponent implements OnInit {
   patient_email = ''
   patient_notes = ''
   patient_telephones = ''
+  patient_address = ''
 
 
   // 'patient_email':'arund@gmail.com',
@@ -1362,6 +631,7 @@ export class CalenderComponent implements OnInit {
     this.patient_name = this.surgery_times[index]['patient_detail']['patient_name']
     this.patient_email = this.surgery_times[index]['patient_detail']['patient_email']
     this.patient_telephones = this.surgery_times[index]['patient_detail']['patient_telephone']
+    this.patient_address = this.surgery_times[index]['patient_detail']['patient_address']
 
 
     // this.patient_email = this.surgery_times[index]['patien_detail']['patient_email']
@@ -1399,7 +669,7 @@ export class CalenderComponent implements OnInit {
           })());
 
           // get booked information
-          this.surgery_times = this.getUnique(3)
+          this.surgery_times = this.getUnique(Math.floor(Math.random() * (10 - 5 + 1)) + 5)
   
         }
       }

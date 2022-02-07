@@ -177,6 +177,7 @@ export class AppComponent {
 
   logOut(){
     this.loggedIn = false
+    
     this.auth.logoutUser()
   }
 

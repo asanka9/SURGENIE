@@ -5,12 +5,7 @@
     </button>
     <img (click)="brandRoute()" class="brand-img-top" src="/assets/webNew.png" >
     <span class="example-spacer"></span>
-    <button *ngIf="loggedIn" mat-icon-button aria-label="Example icon button with a home icon">
-      <mat-icon  >account_circle</mat-icon>
-    </button>
-    <button *ngIf="loggedIn" mat-icon-button aria-label="Example icon button with a home icon">
-      <mat-icon  >event</mat-icon>
-    </button>
+
     <button *ngIf="loggedIn" mat-icon-button aria-label="Example icon button with a home icon">
       <mat-icon *ngIf="!is_dark" (click)='change_theme()'>bedtime</mat-icon>
       <mat-icon *ngIf="is_dark" (click)='change_theme()'>brightness_5</mat-icon>
@@ -20,12 +15,12 @@
     </button>
   </mat-toolbar>
 
-  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-    <mat-sidenav [ngSwitch]="selectedUni" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+  <mat-sidenav-container  class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0"  >
+    <mat-sidenav  [ngSwitch]="selectedUni" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <app-admin *ngIf="is_admin_staff" ></app-admin>
       <app-surgeon *ngIf="role == 'surgeon'" ></app-surgeon>
-      <app-medical-staff *ngIf="role == 'anesthesiologist' || role == 'nurse' " ></app-medical-staff>
+      <app-medical-staff *ngIf="role == 'anesthesiologist' || role == 'nurse' || role=='trainee_surgeon' " ></app-medical-staff>
 
     </mat-sidenav>
     

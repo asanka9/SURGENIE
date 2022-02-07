@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
 
 @Component({
@@ -8,6 +8,12 @@ import { Chart, registerables } from 'chart.js';
 })
 export class PieChartComponent implements OnInit {
 
+
+  @Input() labels:   any;
+  @Input() data:   any;
+
+
+
   constructor() { }
   title = 'charts-app';
   ngOnInit() {
@@ -15,18 +21,16 @@ export class PieChartComponent implements OnInit {
     var myChart = new Chart("myChart", {
       type: 'doughnut',
       data: {
-        labels: [
-          'Red',
-          'Blue',
-          'Yellow'
-        ],
+        labels: this.labels,
         datasets: [{
           label: 'My First Dataset',
-          data: [300, 50, 100],
+          data: this.data,
           backgroundColor: [
             'rgb(255, 99, 132)',
             'rgb(54, 162, 235)',
-            'rgb(255, 205, 86)'
+            'rgb(255, 205, 86)',
+            'rgb(255, 255, 86)'
+
           ],
         }]
       },
@@ -35,7 +39,16 @@ export class PieChartComponent implements OnInit {
           y: {
             beginAtZero: true
           }
+        },
+        plugins: {
+          legend: {
+              display: false,
+              labels: {
+                  color: 'rgb(255, 99, 132)'
+              }
+          
         }
+      }
       }
     });
   }
