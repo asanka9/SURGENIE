@@ -44,19 +44,19 @@
 
     </div>
     <div class="row mt-5">
-        <div class="col-8">
+        <div class="col-md-8">
             <div class="row">
                 <div class="col-12">
                     <h1>Surgery Types</h1>
                 </div>
                 <div class="col-12">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <app-pie-chart [data]="[300, 50, 100,300]"
                                 [labels]="['Appendectomy','Breast biopsy','Carotid endarterectomy','Cataract surgery','Knee Surgery']">
                             </app-pie-chart>
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <ul class="list-group">
                                 <li>Appendectomy
                                     <span class="badge">2</span>
@@ -76,8 +76,8 @@
                 </div>
                 <div class="col-12">
                     <app-line-chart
-                    [data]="[300, 50, 100,300]"
-                    [labels]="['Sun','Mon','Carotid endarterectomy','Cataract surgery','Knee Surgery']"
+                    [data]="[30,45,65,32,45,33,44,22,33,43,54,34]"
+                    [labels]="['Feb 01','Feb 02','Feb 03','Feb 04','Feb 05','Feb 06','Feb 07','Feb 08','Feb 09','Feb 10','Feb 11','Feb 12']"
                     
                     ></app-line-chart>
                 </div>
@@ -87,8 +87,8 @@
                 </div>
                 <div class="col-12">
                     <app-bar-chart 
-                    [data]="[300, 50, 100,300]"
-                                [labels]="['Appendectomy','Breast biopsy','Carotid endarterectomy','Cataract surgery','Knee Surgery']"></app-bar-chart>
+                    [data]="[300, 50, 100,300,200,300, 50, 100,300,200]"
+                                [labels]="['Appendectomy','Breast biopsy','Carotid endarterectomy','Cataract surgery','Knee Surgery','Appendectomy','Breast biopsy','Carotid endarterectomy','Cataract surgery','Knee Surgery']"></app-bar-chart>
                 </div>
             </div>
 

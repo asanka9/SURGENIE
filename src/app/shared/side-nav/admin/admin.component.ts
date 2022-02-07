@@ -22,18 +22,21 @@ export class AdminComponent implements OnInit {
   @Input() selectedUni: any;
   selectedCategory = '';
 
+  width = 1500
+  mobile = false
 
 
 
   constructor( private router: Router, private location:Location) {
-
+    this.width = window.innerWidth
+    if (this.width<600) {
+      this.mobile = true
+    }
     var path = this.location.path();
     path = path.substring(1,path.length);
     path = path.substring(path.indexOf('/'),path.length);
     path = path.substring(1, path.length);
 
-
-    console.log(path);
     var slashPos = path.indexOf('/');
     if(slashPos>0){
       this.selectedCategory = path.substring(0,slashPos);

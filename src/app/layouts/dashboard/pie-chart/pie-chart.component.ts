@@ -26,10 +26,16 @@ export class PieChartComponent implements OnInit {
           label: 'My First Dataset',
           data: this.data,
           backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
-            'rgb(255, 205, 86)',
-            'rgb(255, 255, 86)'
+            '#99e2b4',
+            '#88d4ab',
+            '#78c6a3',
+            '#67b99a',
+            '#56ab91',
+            '#469d89',
+            '#358f80',
+            '#248277',
+            '#14746f',
+            '#036666'
 
           ],
         }]
