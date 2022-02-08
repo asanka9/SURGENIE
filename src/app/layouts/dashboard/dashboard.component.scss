@@ -87,15 +87,61 @@
 
 
 
-
 @media only screen and (max-width: 1200px){
   /*Tablets [601px -> 1200px]*/
 }
 @media only screen and (max-width: 600px){
 /*Big smartphones [426px -> 600px]*/
+
+.box{
+  width: 100%;
+}
+
+app-list{
+  display: none;
+}
+
+.sidebar{
+  display: none;
+}
+
+.list-group {
+  width: 100%;
+}
+
+mat-calender{
+  display: none;
+}
+mat-card{
+  display: none;
+}  
+
 }
 @media only screen and (max-width: 425px){
 /*Small smartphones [325px -> 425px]*/
+  .box{
+    width: 100%;
+  }
+
+  app-list{
+    display: none;
+  }
+
+  .sidebar{
+    display: none;
+  }
+
+  .list-group {
+    width: 100%;
+  }
+
+
+  mat-calender{
+    display: none;
+  }
+  mat-card{
+    display: none;
+  }  
+
+
 }
-
-

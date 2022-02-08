@@ -45,3 +45,45 @@ img{
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
+
+
+
+.head{
+    margin-top: 50px; margin-bottom: 50px;
+}
+
+
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+  }
+  @media only screen and (max-width: 600px){
+  /*Big smartphones [426px -> 600px]*/
+  .head{
+    margin-top: 0px; margin-bottom: 0px;
+}
+
+  }
+  @media only screen and (max-width: 425px){
+  /*Small smartphones [325px -> 425px]*/
+  .head{
+    margin-top: 0px; margin-bottom: 0px;
+}
+.part-1{
+    height: 350px;
+}
+
+.part-2 .greet{
+    margin-left: 0%;
+    padding-top: 50px;
+    padding: 70px 0;
+
+}
+
+.part-2{
+    height: 200px;
+}
+
+.part-3{
+    height: 200px;
+}
+  }
