@@ -10,9 +10,9 @@
       <mat-icon *ngIf="!is_dark" (click)='change_theme()'>bedtime</mat-icon>
       <mat-icon *ngIf="is_dark" (click)='change_theme()'>brightness_5</mat-icon>
     </button>
-    <button *ngIf="loggedIn" (click)='logOut()' mat-icon-button aria-label="Example icon button with a home icon">
+    <!-- <button *ngIf="loggedIn" (click)='logOut()' mat-icon-button aria-label="Example icon button with a home icon">
       <mat-icon  >logout</mat-icon>
-    </button>
+    </button> -->
   </mat-toolbar>
 
   <mat-sidenav-container  class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0"  >
