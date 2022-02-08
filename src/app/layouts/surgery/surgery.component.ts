@@ -197,7 +197,9 @@ export class SurgeryComponent implements OnInit {
   myControl = new FormControl();
   resourceControl = new FormControl();
 
-  options: string[] = ['One1', 'Two1', 'Three1'];
+  options: string[] = ['Knee', 'Nephrectomy; partial or complete', 'Open prostatectomy', 'Spinal fusion',
+  'Colorectal resection', 'Hysterectomy; abdominal and vaginal', 'Laminectomy; excision intervertebral disc',
+  'Hip replacement; total and partial', 'Thyroidectomy; partial or complete', 'Other hernia repair']
   resources: string[] = ['Resource', 'Resource', 'Resource'];
 
   filteredOptions: Observable<string[]> | undefined;
@@ -368,13 +370,13 @@ export class SurgeryComponent implements OnInit {
 
 
 
-      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+      this.toastr.success('Surgery Added Successfully', '', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
       });
     },(err)=>{
-      this.toastr.error('everything is broken', 'Major Error', {
+      this.toastr.error('Something Went Wrong', 'Try Again', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
@@ -428,13 +430,13 @@ export class SurgeryComponent implements OnInit {
     this.surgery.getPredictedTime(patient_details).subscribe((res)=>{
       this.predictedtime = res['time']
       this.predictedtimeText = res['time_text']
-      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+      this.toastr.success('Surgery Details Added Successfully', '', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
       });
     },(err)=>{
-      this.toastr.error('everything is broken', 'Major Error', {
+      this.toastr.error('Something Went Wrong', 'Try Again', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
@@ -460,13 +462,13 @@ export class SurgeryComponent implements OnInit {
 
     this.team.bookTeam({'trainee_surgeon':this.traineeSurgent,'nurse':this.nurse,'anesthesiologists':this.anesthetic},surgery_details).subscribe((res)=>{
 
-      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+      this.toastr.success('Team Saved Successfully', '', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
       });
     },(err)=>{
-      this.toastr.error('everything is broken', 'Major Error', {
+      this.toastr.error('Something Went Wrong', 'Try Again', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   

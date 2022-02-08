@@ -214,13 +214,13 @@ export class TeamComponent implements OnInit {
     this.team.createTeam({'trainee_surgeon':this.traineeSurgent,'nurse':this.nurse,'anesthesiologists':this.anesthetic}).subscribe((res)=>{
       window.location.reload()
 
-      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+      this.toastr.success( 'Your Team Saved Successfully','Saved Successfully', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
       });
     },(err)=>{
-      this.toastr.error('everything is broken', 'Major Error', {
+      this.toastr.error('Try again', 'Something Went Wrong', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   

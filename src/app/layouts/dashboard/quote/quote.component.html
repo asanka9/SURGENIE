@@ -1,6 +1,11 @@
 <div *ngIf="showQuote" class="row" style="margin-top: 50px; margin-bottom: 50px;" >
   <div class="col-md-4 part-1" >
-    <img class="avatar" width="100%" src="https://media.istockphoto.com/photos/portrait-of-male-doctor-in-white-coat-and-stethoscope-standing-in-picture-id1327024466?b=1&k=20&m=1327024466&s=170667a&w=0&h=vcw4Exhv4pkR8fMVLNXhNESaKq1HbYwJ1iElLlQBxI0=" >
+    <img *ngIf="role == 'admin'" class="avatar" width="100%" src="assets/dashboard/a1.jpg" >
+    <img *ngIf="role == 'surgeon'" class="avatar" width="100%" src="assets/dashboard/s1.jpg" >
+    <img *ngIf="role == 'nurse'" class="avatar" width="100%" src="assets/dashboard/n1.jpg" >
+    <img *ngIf="role == 'trainee_surgeon'" class="avatar" width="100%" src="assets/dashboard/t1.jpg" >
+    <img *ngIf="role == 'anesthesiologist'" class="avatar" width="100%" src="assets/dashboard/a1.jpg" >
+
   </div>
   <div class="col-md-4 part-2" >
     <div class="greet" >
@@ -14,8 +19,20 @@
   </div>
   <div class="col-md-4 part-3" >
     <div style="padding-top: 70px;font-size: 1.2rem; padding-right: 40px;line-height: 28px; " >
-      <p>
+      <p *ngIf="role == 'admin'">
+        The world is now awash in data, and we can see our performance in a lot of clearer ways
+      </p>
+      <p *ngIf="role == 'surgeon'">
+        Superheroes don’t wear capes, they wear scrubs and save us in our hard times. So grateful for your service!
+      </p>
+      <p *ngIf="role == 'nurse'">
+        Constant attention by a good nurse maybe just as important as a major operation by a surgeon
+      </p>
+      <p *ngIf="role == 'trainee_surgeon'">
         There are only two sorts of doctors: those who practice with their brains, and those who practice with their tongues.
+      </p>
+      <p *ngIf="role == 'anesthesiologist'">
+        The people who are on the front lines every day in hospitals, are the good of the world
       </p>
     </div>
   </div>

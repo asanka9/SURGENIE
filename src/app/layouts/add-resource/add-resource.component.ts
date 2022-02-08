@@ -13,7 +13,10 @@ import { DbService } from 'src/app/services/db.service';
 })
 export class AddResourceComponent implements OnInit {
   myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
+  options: string[] = [
+    'Dissecting forceps', 'Hinged forceps', 'Clamp', 'Probe', 'Handheld retractor', 'Self-retaining retractor', 'Scissor', 'Scalpel', 'Diathermy', 'Dilator'
+  ];
+
   units: string[] = ['1', '2', '3'];
   theortors: string[] = ['icu 1', 'icu 2', 'icu 3'];
 
@@ -43,9 +46,13 @@ export class AddResourceComponent implements OnInit {
   ];
 
   icus: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'},
+    {value: 'all', viewValue: 'All'},
+    {value: 'theater-1', viewValue: 'Theater 01'},
+    {value: 'theater-2', viewValue: 'Theater 02'},
+    {value: 'theater-3', viewValue: 'Theater 03'},
+    {value: 'theater-4', viewValue: 'Theater 04'},
+    {value: 'theater-5', viewValue: 'Theater 05'},
+
   ];
 
   unitsResource: Food[] = [
@@ -85,13 +92,13 @@ export class AddResourceComponent implements OnInit {
       this.amountFormControl.reset()
       this.unitFormControl.reset()
       this.theartorFormControl.reset()
-      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+      this.toastr.success('Added Successfully', 'Resource Added successfully', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
       });
     },(err)=>{
-      this.toastr.error('everything is broken', 'Major Error', {
+      this.toastr.error('Something Went Wrong', 'Try Again', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   

@@ -73,6 +73,7 @@ export class AddUserComponent implements OnInit {
   preofessionals: Food[] = [
     {value: 'Dr', viewValue: 'Dr'},
     {value: 'Mr', viewValue: 'Mr'},
+    {value: 'Mrs', viewValue: 'Mrs'},
     {value: 'Ms', viewValue: 'Ms'},
 
 
@@ -90,21 +91,27 @@ export class AddUserComponent implements OnInit {
   ];
 
   sessions: Food[] = [
+    {value: '8-11', viewValue: '8 a.m - 11 a.m'},
+    {value: '13-15', viewValue: '1 p.m - 5 p.m'},
+    {value: '16-20', viewValue: '4 p.m - 8 p.m'},
+    {value: '8-20', viewValue: '8 a.m - 8 p.m'},
     {value: '8-10', viewValue: '8 a.m - 10 a.m'},
-    {value: '8-12', viewValue: '8 a.m - 12 a.m'},
-
 
   ];
 
+
+
+
   speciallity: Food[] = [
-    {value: 'speciallity-01', viewValue: 'Speciallity'},
-    {value: 'speciallity-01', viewValue: 'Speciallity'},
-    {value: 'speciallity-01', viewValue: 'Speciallity'},
-    {value: 'speciallity-01', viewValue: 'Speciallity'},
-    {value: 'speciallity-01', viewValue: 'Speciallity'},
-    {value: 'speciallity-01', viewValue: 'Speciallity'},
-    {value: 'speciallity-01', viewValue: 'Speciallity'},
-    {value: 'speciallity-01', viewValue: 'Speciallity'}
+    {value: 'General surgery', viewValue: 'General surgery'},
+    {value: 'Gastrointestinal surgery', viewValue: 'Gastrointestinal surgery'},
+    {value: 'Paediatric surgery', viewValue: 'Paediatric surgery'},
+    {value: 'Orthopaedic surgery', viewValue: 'Orthopaedic surgery'},
+    {value: 'Cardiologic surgery', viewValue: 'Cardiologic surgery'},
+    {value: 'Gynecologic surgery', viewValue: 'Gynecologic surgery'},
+    {value: 'ENT surgery', viewValue: 'ENT surgery'},
+    {value: 'Thoracic surgery', viewValue: 'Thoracic surgery'}
+
   ];
 
   adminlevels: Food[] = [
@@ -225,13 +232,13 @@ export class AddUserComponent implements OnInit {
     this.dataSourceSession = []
     this.session_list = []
     this.auth.registerUser(data).subscribe((res)=>{
-      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+      this.toastr.success( 'Surgeon added successfully','Added Successfully', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
       });
     },(err)=>{
-      this.toastr.error('everything is broken', 'Major Error', {
+      this.toastr.error('Something went wrong', 'Try Again', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
@@ -264,13 +271,13 @@ export class AddUserComponent implements OnInit {
     this.addressFormControl.reset()
     this.registrationNumberFromcontrol.reset()
     this.auth.registerUser(data).subscribe((res)=>{
-      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+      this.toastr.success('Anesthelogist added successfully','Added Successfully', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
       });
     },(err)=>{
-      this.toastr.error('everything is broken', 'Major Error', {
+      this.toastr.error('Something went wrong', 'Try Again', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
@@ -305,13 +312,13 @@ export class AddUserComponent implements OnInit {
     this.isSister.reset()
     this.registrationNumberFromcontrol.reset()
     this.auth.registerUser(data).subscribe((res)=>{
-      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+      this.toastr.success('Nurse added successfully','Added Successfully',  {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
       });
     },(err)=>{
-      this.toastr.error('everything is broken', 'Major Error', {
+      this.toastr.error('Something went wrong', 'Try Again',  {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
@@ -351,13 +358,13 @@ export class AddUserComponent implements OnInit {
     this.dataSourceSession = []
     this.session_list = []
     this.auth.registerUser(data).subscribe((res)=>{
-      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+      this.toastr.success('Trainee Surgeon added successfully','Added Successfully', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
       });
     },(err)=>{
-      this.toastr.error('everything is broken', 'Major Error', {
+      this.toastr.error('Something went wrong', 'Try Again',  {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
@@ -389,13 +396,13 @@ export class AddUserComponent implements OnInit {
     this.addressFormControl.reset()
     this.adminFormControl.reset()
     this.auth.registerUser(data).subscribe((res)=>{
-      this.toastr.success('Update Successfully', 'Your profile update successfully', {
+      this.toastr.success('Admin added successfully','Added Successfully', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   
       });
     },(err)=>{
-      this.toastr.error('everything is broken', 'Major Error', {
+      this.toastr.error('Something went wrong', 'Try Again', {
         timeOut: 3000,
         positionClass: 'toast-bottom-right',
   

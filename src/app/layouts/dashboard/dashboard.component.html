@@ -1,13 +1,14 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <app-quote  ></app-quote>
+            <app-quote></app-quote>
         </div>
     </div>
 </div>
 
+<!--Admin-->
 
-<div class="container">
+<div *ngIf="role == 'admin'" class="container">
 
     <div class="cards">
         <div class="box">
@@ -52,43 +53,68 @@
                 <div class="col-12">
                     <div class="row">
                         <div class="col-md-6">
-                            <app-pie-chart [data]="[300, 50, 100,300]"
-                                [labels]="['Appendectomy','Breast biopsy','Carotid endarterectomy','Cataract surgery','Knee Surgery']">
+                            <app-pie-chart [data]="[232, 343, 300,156,212, 112, 199,78,100,110]"
+                                [labels]="['Arthroplasty knee', 'Nephrectomy', 'Open prostatectomy', 'Spinal fusion',
+                                'Colorectal resection', 'Hysterectomy; abdominal and vaginal', 'Laminectomy; excision intervertebral disc',
+                                'Hip replacement; total and partial', 'Thyroidectomy; partial or complete', 'Other hernia repair']">
                             </app-pie-chart>
                         </div>
                         <div class="col-md-6">
                             <ul class="list-group">
-                                <li>Appendectomy
-                                    <span class="badge">2</span>
+                                <li>Arthroplasty knee
+                                    <span class="badge">232</span>
                                 </li>
-                                <li>Breast biopsy
-                                    <span class="badge">10</span>
+                                <li>Nephrectomy
+                                    <span class="badge">343</span>
                                 </li>
-                                <li>Carotid endarterectomy
-                                    <span class="badge">9</span>
+                                <li>Open prostatectomy
+                                    <span class="badge">300</span>
                                 </li>
-                                <li>Knee Surgery
-                                    <span class="badge">0</span>
+                                <li>Spinal fusion
+                                    <span class="badge">156</span>
+                                </li>
+                                <li>Colorectal resection
+                                    <span class="badge">212</span>
+                                </li>
+                                <li>Hysterectomy; abdominal and vaginal
+                                    <span class="badge">122</span>
+                                </li>
+                                <li>
+                                    Laminectomy; excision intervertebral disc
+                                    <span class="badge">199</span>
+                                </li>
+                                <li>
+                                    Hip replacement; total and partial
+                                    <span class="badge">78</span>
+                                </li>
+                                <li>
+                                    Thyroidectomy; partial or complete
+                                    <span class="badge">100</span>
+                                </li>
+                                <li>
+                                    Other hernia repair
+                                    <span class="badge">110</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
+                <h1>Number of Surgeries</h1>
+
                 <div class="col-12">
-                    <app-line-chart
-                    [data]="[30,45,65,32,45,33,44,22,33,43,54,34]"
-                    [labels]="['Feb 01','Feb 02','Feb 03','Feb 04','Feb 05','Feb 06','Feb 07','Feb 08','Feb 09','Feb 10','Feb 11','Feb 12']"
-                    
-                    ></app-line-chart>
+                    <app-line-chart [data]="[30,45,65,60,38,50,52,55,53,63,44,50]"
+                        [labels]="['Feb 01','Feb 02','Feb 03','Feb 04','Feb 05','Feb 06','Feb 07','Feb 08','Feb 09','Feb 10','Feb 11','Feb 12']">
+                    </app-line-chart>
                 </div>
 
                 <div class="col-12">
                     <h1>Average Surgery Times</h1>
                 </div>
                 <div class="col-12">
-                    <app-bar-chart 
-                    [data]="[300, 50, 100,300,200,300, 50, 100,300,200]"
-                                [labels]="['Appendectomy','Breast biopsy','Carotid endarterectomy','Cataract surgery','Knee Surgery','Appendectomy','Breast biopsy','Carotid endarterectomy','Cataract surgery','Knee Surgery']"></app-bar-chart>
+                    <app-bar-chart [data]="[300, 50, 100,300,200,300, 50, 100,300,200]"
+                        [labels]="['Arthroplasty knee', 'Nephrectomy', 'Open prostatectomy', 'Spinal fusion',
+                                'Colorectal resection', 'Hysterectomy; abdominal and vaginal', 'Laminectomy; excision intervertebral disc',
+                                'Hip replacement; total and partial', 'Thyroidectomy; partial or complete', 'Other hernia repair']"></app-bar-chart>
                 </div>
             </div>
 
@@ -97,80 +123,57 @@
 
             <div class="row mt-5">
                 <div class="col-12">
+                    <app-list [head]="'Upcoming Surgeries'" [list]="'[1,2,3,4,56,7,8,9,0]'"></app-list>
+                </div>
+                <div class="col-12" style="margin-top: 50px;">
                     <mat-card class="demo-inline-calendar-card">
-                        <app-list></app-list>
+                        <mat-calendar (click)="calender()"></mat-calendar>
                     </mat-card>
                 </div>
             </div>
-            <div class="row" style="margin-top: 350px;" >
-                <div class="col-12">
-                    <mat-card class="demo-inline-calendar-card">
-                        <app-list></app-list>
-                    </mat-card>
-                </div>
-            </div>
+
         </div>
     </div>
 </div>
 
 
+<div *ngIf="role != 'admin'" class="container">
 
+    <div class="row mt-5">
+        <div class="col-md-8">
+            <div class="row">
 
+                <h1>Number of Surgeries</h1>
 
-
-
-
-
-<!-- 
-<div class="container mb-5" >
-    <div class="row mt-5" >
-        <div class="col-9" >
-            <div class="row" >
-                <div class="col-12" >
-                    <h1>Surgery Types</h1>
-                </div>
-                <div class="col-12" >
-                    <app-line-chart></app-line-chart>
-
+                <div class="col-12">
+                    <app-line-chart [data]="[30,45,65,60,38,50,52,55,53,63,44,50]"
+                        [labels]="['Feb 01','Feb 02','Feb 03','Feb 04','Feb 05','Feb 06','Feb 07','Feb 08','Feb 09','Feb 10','Feb 11','Feb 12']">
+                    </app-line-chart>
                 </div>
 
-
-                <div class="col-12" >
+                <div class="col-12">
                     <h1>Average Surgery Times</h1>
                 </div>
-                <div class="col-12" >
+                <div class="col-12">
+                    <app-bar-chart [data]="[300, 50, 100,300,200,300, 50, 100,300,200]"
+                        [labels]="['Arthroplasty knee', 'Nephrectomy', 'Open prostatectomy', 'Spinal fusion',
+                                'Colorectal resection', 'Hysterectomy; abdominal and vaginal', 'Laminectomy; excision intervertebral disc',
+                                'Hip replacement; total and partial', 'Thyroidectomy; partial or complete', 'Other hernia repair']"></app-bar-chart>
                 </div>
             </div>
 
         </div>
-        <div class="col-3" >
-            <div class="row" >
-                <div class="col-12" >
-                    <mat-card class="demo-inline-calendar-card">
-                        <mat-calendar ></mat-calendar>
-                      </mat-card>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row" >
-        <div class="col-6" >
-            <div class="row" >
-                <div class="col-9" >
-                    <app-pie-chart></app-pie-chart>
+        <div class="col-4">
 
-                </div>
+            <div class="col-12">
+                <app-list [head]="'Upcoming Surgeries'" [list]="'[1,2,3,4,56,7,8,9,0]'"></app-list>
             </div>
-        </div>
-        <div class="col-6" >
-            <app-bar-chart></app-bar-chart>
+            <div class="col-12" style="margin-top: 50px;">
+                <mat-card class="demo-inline-calendar-card">
+                    <mat-calendar (click)="calender()"></mat-calendar>
+                </mat-card>
+            </div>
 
-        </div>
-    </div>
-    <div class="row" >
-        <div class="col-12" >
-            <app-table></app-table>
         </div>
     </div>
 </div>
- -->

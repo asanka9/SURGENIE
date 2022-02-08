@@ -9,8 +9,8 @@
     <a mat-list-item  (click)="navigate('calender')"  > <mat-icon>event</mat-icon> <div style="width: 10px;" ></div> Calender</a>
     <a mat-list-item  (click)="navigate('my-team')"  > <mat-icon  >groups</mat-icon> <div style="width: 10px;" ></div>My Team</a>
     <a mat-list-item  (click)="navigate('surgeries')"> <mat-icon  >medical_services</mat-icon> <div style="width: 10px;" ></div>Surgeries</a>
-
     <a mat-list-item  (click)="navigate('account')"  ><mat-icon>account_circle</mat-icon> <div style="width: 10px;" ></div>Account</a>
+    <a mat-list-item  (click)="logout()"  ><mat-icon>logout</mat-icon> <div style="width: 10px;" ></div>Log Out</a>
 
   </mat-nav-list>
   <mat-nav-list *ngIf="mobile" >
@@ -19,6 +19,7 @@
     <a mat-list-item  (click)="navigate('calender')"  > <mat-icon>event</mat-icon> <div style="width: 10px;" ></div> Calender</a>
     <a mat-list-item  (click)="navigate('my-team')"  > <mat-icon  >groups</mat-icon> <div style="width: 10px;" ></div>My Team</a>
     <a mat-list-item  (click)="navigate('account')"  ><mat-icon>account_circle</mat-icon> <div style="width: 10px;" ></div>Account</a>
+    <a mat-list-item  (click)="logout()"  ><mat-icon>logout</mat-icon> <div style="width: 10px;" ></div>Log Out</a>
 
   </mat-nav-list>
 

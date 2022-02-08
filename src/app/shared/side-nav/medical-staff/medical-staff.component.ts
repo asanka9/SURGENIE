@@ -9,6 +9,7 @@ import {
 
 import { Route, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-medical-staff',
@@ -26,7 +27,7 @@ export class MedicalStaffComponent implements OnInit {
 
 
 
-  constructor( private router: Router, private location:Location) {
+  constructor( private router: Router, private location:Location,private auth:AuthService) {
 
     var path = this.location.path();
     path = path.substring(1,path.length);
@@ -57,4 +58,14 @@ export class MedicalStaffComponent implements OnInit {
         window.location.reload();
       });
   }
+
+
+
+  logout(){
+    this.auth.logoutUser();
+  }
+
+
+
+
 }

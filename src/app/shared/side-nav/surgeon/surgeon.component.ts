@@ -9,6 +9,7 @@ import {
 
 import { Route, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-surgeon',
@@ -26,7 +27,7 @@ export class SurgeonComponent implements OnInit {
   mobile = false
 
 
-  constructor( private router: Router, private location:Location) {
+  constructor( private router: Router, private location:Location,private auth:AuthService) {
     this.width = window.innerWidth
     if (this.width<600) {
       this.mobile = true
@@ -60,4 +61,11 @@ export class SurgeonComponent implements OnInit {
         window.location.reload();
       });
   }
+
+  
+  logout(){
+    this.auth.logoutUser();
+  }
+
+
 }
