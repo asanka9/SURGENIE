@@ -385,8 +385,13 @@ export class SurgeryComponent implements OnInit {
     
     )
 
+
     this.show_stepper_3 = true
     stepper.next()
+    setTimeout(() => {
+      this.show_stepper_3_loading = false
+    },
+      5000);
     
 
   }
@@ -403,6 +408,9 @@ export class SurgeryComponent implements OnInit {
 
   show_stepper_2 = false
   show_stepper_3 = false
+
+  show_stepper_2_loading = true
+  show_stepper_3_loading = true
 
   getPredictedTime(stepper: MatStepper){
     let patient_details = {
@@ -444,8 +452,15 @@ export class SurgeryComponent implements OnInit {
     }
     
     )
+    
+
+
     this.show_stepper_2 = true
     stepper.next();
+    setTimeout(() => {
+      this.show_stepper_2_loading = false
+    },
+      5000);
   }
 
   saveMyTeam(){
@@ -467,6 +482,7 @@ export class SurgeryComponent implements OnInit {
         positionClass: 'toast-bottom-right',
   
       });
+      window.location.reload()
     },(err)=>{
       this.toastr.error('Something Went Wrong', 'Try Again', {
         timeOut: 3000,
@@ -476,6 +492,10 @@ export class SurgeryComponent implements OnInit {
     }
     
     )
+
+    // this.show_stepper_2_loading = true
+    // this.show_stepper_3_loading = true
+    
   }
 
 

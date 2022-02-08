@@ -196,7 +196,7 @@ export class TeamComponent implements OnInit {
 
   getEmailAddress(name:any){
     let names = name.split(' ')
-    return names[1]+names[2]+'@gmail.com'
+    return names[1].toLowerCase()+names[2].toLowerCase()+'@gmail.com'
   }
 
   getTelephone(index:any){

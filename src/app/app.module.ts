@@ -64,6 +64,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -132,6 +134,8 @@ import { ToastrModule } from 'ngx-toastr';
     MatRadioModule,
     MatStepperModule,
     CommonModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
     ServiceWorkerModule.register('ngsw-worker.js', {

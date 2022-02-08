@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-clock-loading',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClockLoadingComponent implements OnInit {
 
+  @Input() data:any;
   constructor() { }
 
   ngOnInit(): void {
+
+
+    // setTimeout(() => {
+    //   alert("hiiiii")
+    // },
+    //   5000);
   }
 
 }

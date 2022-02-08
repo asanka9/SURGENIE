@@ -60,8 +60,6 @@ const users = [
 ]
 
 
-
-
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -174,7 +172,6 @@ export class UsersComponent implements AfterViewInit {
     }
   }
 
-
   applyFilterAnesthetistic(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSourceAnesthetistic.filter = filterValue.trim().toLowerCase();
@@ -182,6 +179,7 @@ export class UsersComponent implements AfterViewInit {
       this.dataSourceAnesthetistic.paginator.firstPage();
     }
   }
+
   createNewUser(id: number): UserData {
     const name =
       NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
@@ -208,9 +206,6 @@ export class UsersComponent implements AfterViewInit {
       };
   }
 
-  // Get data Nurse
-
-
   // Get data Anesthetistic
   getAnesthetistic(id: number): UserData {
     const name =
@@ -223,7 +218,6 @@ export class UsersComponent implements AfterViewInit {
         telephone: '07666666666',
       };
   }
-
 
   // Get data TraineeSurgent
   getTraineeSurgent(id: number): UserData {
@@ -238,7 +232,6 @@ export class UsersComponent implements AfterViewInit {
         telephone: '07666666666',
       };
   }
-
 
 
 }
