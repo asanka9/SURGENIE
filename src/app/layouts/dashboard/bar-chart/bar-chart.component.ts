@@ -25,7 +25,7 @@ export class BarChartComponent implements OnInit {
       data: {
           labels: this.labels,
           datasets: [{
-              label: '# of Votes',
+              label: 'Minutes',
               data: this.data,
               backgroundColor: [
                 '#99e2b4',

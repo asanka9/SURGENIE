@@ -21,7 +21,7 @@ export class LineChartComponent implements OnInit {
       data: {
         labels: this.labels,
         datasets: [{
-          label: 'My First Dataset',
+          label: '',
           data: this.data,
           borderColor: 'rgb(75, 192, 192)',
         }]
