@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class DbService {
 
-  api_url = "https://surgenie.herokuapp.com/";
+  api_url = "http://127.0.0.1:8000/";
   constructor(private http : HttpClient, private _router : Router) { }
 
   addResource(resource:any){

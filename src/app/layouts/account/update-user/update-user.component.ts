@@ -40,11 +40,10 @@ export interface SessionElement {
 }
 
 const ELEMENT_DATA: SessionElement[] = [
-  { day: 'Mon', session: '10 a.m - 12 a.m' },
-  { day: 'Mon', session: '10 a.m - 12 a.m' },
-  { day: 'Mon', session: '10 a.m - 12 a.m' },
-  { day: 'Mon', session: '10 a.m - 12 a.m' },
-  { day: 'Mon', session: '10 a.m - 12 a.m' }
+  { day: 'Monday', session: '1 a.m - 5 a.m' },
+  { day: 'Tuesday', session: '4 p.m - 8 p.m' },
+  { day: 'Wednesday', session: '8 a.m - 8 p.m' },
+  { day: 'Saturday', session: '8 a.m - 8 p.m' }
 
 ];
 

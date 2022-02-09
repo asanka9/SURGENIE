@@ -15,7 +15,7 @@ const httpOptions = {
 })
 export class AuthService {
 
-  api_url = "https://surgenie.herokuapp.com/";
+  api_url = "http://127.0.0.1:8000/";
   constructor(private http : HttpClient, private _router : Router) { }
 
   login(username : string, password : string){
