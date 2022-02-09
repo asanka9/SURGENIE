@@ -650,7 +650,7 @@ export class CalenderComponent implements OnInit {
             return v;
           })(),this.selected);
 
-          this.surgery_times = this.getUnique(3)
+          this.surgery_times = this.getUnique(Math.floor(Math.random() * (15 - 10 + 1)) + 10)
  
         } else {
           this.selectedDateFormat = this.getMonth(this.selected?.getMonth()) +" "+ this.selected?.getDate().toString() +" - "+this.getMonth(today?.getMonth()) +" "+ today?.getDate().toString();
@@ -662,7 +662,7 @@ export class CalenderComponent implements OnInit {
           })());
 
           // get booked information
-          this.surgery_times = this.getUnique(Math.floor(Math.random() * (10 - 5 + 1)) + 5)
+          this.surgery_times = this.getUnique(Math.floor(Math.random() * (15 - 10 + 1)) + 10)
   
         }
       }

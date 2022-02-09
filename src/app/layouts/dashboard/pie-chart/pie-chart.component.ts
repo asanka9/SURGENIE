@@ -19,7 +19,7 @@ export class PieChartComponent implements OnInit {
   ngOnInit() {
     Chart.register(...registerables);
     var myChart = new Chart("myChart", {
-      type: 'doughnut',
+      type: 'pie',
       data: {
         labels: this.labels,
         datasets: [{
@@ -53,7 +53,7 @@ export class PieChartComponent implements OnInit {
                   color: 'rgb(255, 99, 132)'
               }
           
-        }
+        },
       }
       }
     });

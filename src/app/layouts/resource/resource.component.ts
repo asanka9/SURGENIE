@@ -70,8 +70,7 @@ export class ResourceComponent implements AfterViewInit  {
   addressFormControl = new FormControl('', [Validators.required]);
   matcher = new MyErrorStateMatcher();
 
-  @ViewChild(MatPaginator) paginator: MatPaginator | any;
-  @ViewChild(MatSort) sort: MatSort| any;
+
 
   constructor(private db:DbService) {
     // Create 100 users
@@ -80,14 +79,17 @@ export class ResourceComponent implements AfterViewInit  {
 
     this.db.viewResource().subscribe((res)=>{
       this.dataSource = new MatTableDataSource(res);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     })
 
 
   }
 
+  @ViewChild(MatPaginator) paginator: MatPaginator | any;
+  @ViewChild(MatSort) sort: MatSort| any;
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+
   }
 
   applyFilter(event: Event) {

@@ -128,11 +128,7 @@
                 <div class="col-12">
                     <app-list [head]="'Upcoming Surgeries'" [list]="'[1,2,3,4,56,7,8,9,0]'"></app-list>
                 </div>
-                <div class="col-12" style="margin-top: 50px;">
-                    <mat-card class="demo-inline-calendar-card">
-                        <mat-calendar (click)="calender()"></mat-calendar>
-                    </mat-card>
-                </div>
+
             </div>
 
         </div>
@@ -144,8 +140,6 @@
 
     <div class="row mt-5">
         <div class="col-md-8">
-
-
 
 
             <div class="row">
@@ -202,30 +196,6 @@
             </div>
 
 
-
-
-
-
-            <div class="row">
-
-                <h1>Number of Surgeries</h1>
-
-                <div class="col-12 pb-5">
-                    <app-line-chart [data]="[30,45,65,60,38,50,52,55,53,63,44,50]"
-                        [labels]="['Feb 01','Feb 02','Feb 03','Feb 04','Feb 05','Feb 06','Feb 07','Feb 08','Feb 09','Feb 10','Feb 11','Feb 12']">
-                    </app-line-chart>
-                </div>
-
-                <div  class="col-12 mt-5">
-                    <h1  >Average Surgery Times</h1>
-                </div>
-                <div class="col-12">
-                    <app-bar-chart  [data]="[300, 50, 100,300,200,300, 50, 100,300,200]"
-                        [labels]="['Arthroplasty knee', 'Nephrectomy', 'Open prostatectomy', 'Spinal fusion',
-                                'Colorectal resection', 'Hysterectomy; abdominal and vaginal', 'Laminectomy; excision intervertebral disc',
-                                'Hip replacement; total and partial', 'Thyroidectomy; partial or complete', 'Other hernia repair']"></app-bar-chart>
-                </div>
-            </div>
 
         </div>
         <div class="col-md-4 sidebar">

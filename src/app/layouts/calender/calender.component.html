@@ -1,5 +1,5 @@
 <mat-tab-group>
-    <mat-tab label="CALENDER">
+    <mat-tab label="CALENDAR">
 
 
         <div >
@@ -75,7 +75,7 @@
                                     <mat-card-content class="mt-3">
                                         <div >
                                             <p> Surgery : {{surgery}}</p>
-                                            <p> Surgeon Name : {{surgeon}}</p>
+                                            <p *ngIf="userRole != 'surgeon'" > Surgeon Name : {{surgeon}}</p>
                                             <p> Time : {{day}}</p>
                                             <p> Patient Name : {{patient_name}}</p>
                                             <p> Patient Email :  {{ patient_email }} </p>

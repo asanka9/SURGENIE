@@ -18,7 +18,7 @@ const routes: Routes = [
     component:DashboardComponent
   },
   {
-    path:'calender',
+    path:'calendar',
     component:CalenderComponent
   },
   {

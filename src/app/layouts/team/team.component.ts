@@ -200,8 +200,9 @@ export class TeamComponent implements OnInit {
   }
 
   getTelephone(index:any){
-    let telephones = ['77 323 343 6','76 454 343 4']
-    return telephones[Number(index)%2]
+    let telephones = ['77 323 343 6','591-728-2149','113-304-8724','162-119-3250','407-482-2068','588-238-0096','704-814-5630','230-273-7931','587-510-4029','282-977-9561','76 454 343 4','591-728-2149','563-691-9862','916-585-5216','806-931-1765','390-950-1686']
+    
+    return telephones[Math.floor(Math.random() * telephones.length)];
   }
 
 

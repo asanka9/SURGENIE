@@ -79,48 +79,43 @@ export class UsersComponent implements AfterViewInit {
     // Get Surgent
     this.db.viewSurgeon().subscribe((res)=>{
       this.dataSourceSurgent = new MatTableDataSource(res);
+      this.dataSourceSurgent.paginator = this.paginator;
+      this.dataSourceSurgent.sort = this.sort;
     })
     
 
     // Get traineeSurgent
     this.db.viewTraineeSurgeon().subscribe((res)=>{
       this.dataSourceTraineeSurgent = new MatTableDataSource(res);
+      this.dataSourceTraineeSurgent.paginator = this.paginator;
+      this.dataSourceTraineeSurgent.sort = this.sort;
     })
 
 
     // Get Nurses
     this.db.viewNurse().subscribe((res)=>{
       this.dataSourceNurse = new MatTableDataSource(res);
+      this.dataSourceNurse.paginator = this.paginator;
+      this.dataSourceNurse.sort = this.sort;
     })
 
     // Get anesthetistic
     this.db.viewAnesthelogist().subscribe((res)=>{
       this.dataSourceAnesthetistic = new MatTableDataSource(res);
+      this.dataSourceAnesthetistic.paginator = this.paginator;
+      this.dataSourceAnesthetistic.sort = this.sort;
     })
 
         // Get anesthetistic
     this.db.viewadmin().subscribe((res)=>{
       this.dataSourceAdmin = new MatTableDataSource(res);
+      this.dataSourceAdmin.paginator = this.paginator;
+      this.dataSourceAdmin.sort = this.sort;
     })
     
   }
 
-  ngAfterViewInit() {
-    this.dataSourceSurgent.paginator = this.paginator;
-    this.dataSourceSurgent.sort = this.sort;
-
-    this.dataSourceTraineeSurgent.paginator = this.paginator;
-    this.dataSourceTraineeSurgent.sort = this.sort;
-
-    this.dataSourceNurse.paginator = this.paginator;
-    this.dataSourceNurse.sort = this.sort;
-
-    this.dataSourceAnesthetistic.paginator = this.paginator;
-    this.dataSourceAnesthetistic.sort = this.sort;
-
-    this.dataSourceAdmin.paginator = this.paginator;
-    this.dataSourceAdmin.sort = this.sort;
-  }
+  ngAfterViewInit() {}
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();

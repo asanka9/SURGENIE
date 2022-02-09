@@ -12,7 +12,6 @@ import { DbService } from 'src/app/services/db.service';
   styleUrls: ['./add-resource.component.scss']
 })
 export class AddResourceComponent implements OnInit {
-  myControl = new FormControl();
   options: string[] = [
     'Dissecting forceps', 'Hinged forceps', 'Clamp', 'Probe', 'Handheld retractor', 'Self-retaining retractor', 'Scissor', 'Scalpel', 'Diathermy', 'Dilator'
   ];
@@ -24,7 +23,7 @@ export class AddResourceComponent implements OnInit {
   value = "";
 
   ngOnInit() {
-    this.filteredOptions = this.myControl.valueChanges.pipe(
+    this.filteredOptions = this.resourceNameFormControl.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value)),
     );

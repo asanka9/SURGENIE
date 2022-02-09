@@ -5,10 +5,10 @@
 
   <mat-nav-list  *ngIf="!mobile" >
     <a mat-list-item  (click)="navigate('')"  > <mat-icon  >dashboard</mat-icon> <div style="width: 10px;" ></div> Dashboard</a>
-    <a mat-list-item  (click)="navigate('calender')"  > <mat-icon>event</mat-icon> <div style="width: 10px;" ></div> Calender</a>
-    <a mat-list-item  (click)="navigate('resource')"  ><mat-icon>local_pharmacy</mat-icon> <div style="width: 10px;" ></div>Resource</a>
-    <a mat-list-item class="mobile" (click)="navigate('users')"><mat-icon>people_alt</mat-icon> <div style="width: 10px;" ></div>Users</a>
+    <a mat-list-item  (click)="navigate('calendar')"  > <mat-icon>event</mat-icon> <div style="width: 10px;" ></div> Calendar</a>
     <a mat-list-item  (click)="navigate('add-user')"  ><mat-icon>person_add_alt</mat-icon> <div style="width: 10px;" ></div>Add User</a>
+    <a mat-list-item class="mobile" (click)="navigate('users')"><mat-icon>people_alt</mat-icon> <div style="width: 10px;" ></div>Users</a>
+    <a mat-list-item  (click)="navigate('resource')"  ><mat-icon>local_pharmacy</mat-icon> <div style="width: 10px;" ></div>Resource</a>
     <a mat-list-item  (click)="navigate('account')"  ><mat-icon>account_circle</mat-icon> <div style="width: 10px;" ></div>Account</a>
     <a mat-list-item  (click)="logout()"  ><mat-icon>logout</mat-icon> <div style="width: 10px;" ></div>Log Out</a>
 
@@ -18,7 +18,7 @@
 
   <mat-nav-list  *ngIf="mobile" >
     <a mat-list-item  (click)="navigate('')"  > <mat-icon  >dashboard</mat-icon> <div style="width: 10px;" ></div> Dashboard</a>
-    <a mat-list-item  (click)="navigate('calender')"  > <mat-icon>event</mat-icon> <div style="width: 10px;" ></div> Calender</a>
+    <a mat-list-item  (click)="navigate('calendar')"  > <mat-icon>event</mat-icon> <div style="width: 10px;" ></div> Calendar</a>
     <a mat-list-item class="mobile" (click)="navigate('users')"><mat-icon>people_alt</mat-icon> <div style="width: 10px;" ></div>Users</a>
     <a mat-list-item  (click)="navigate('account')"  ><mat-icon>account_circle</mat-icon> <div style="width: 10px;" ></div>Account</a>
     <a mat-list-item  (click)="logout()"  ><mat-icon>logout</mat-icon> <div style="width: 10px;" ></div>Log Out</a>

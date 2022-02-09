@@ -36,14 +36,20 @@
                 <th mat-header-cell *matHeaderCellDef> STATUS </th>
                 <td mat-cell *matCellDef="let element"  >
                     <div *ngIf="!element.Completed" >
-                        <mat-icon style="color: green;" >
+  <mat-icon style="color: green;" >
                             incomplete_circle
-                        </mat-icon>
+                        </mat-icon> 
+                        <p style="color: green;" >
+                            progress
+                        </p>
                     </div>
                     <div *ngIf="element.Completed" >
                         <mat-icon style="color: green;"  >
                             check_circle
-                        </mat-icon>
+                        </mat-icon> 
+                        <p style="color: green;" >
+                            completed
+                        </p>
                     </div>
                 </td>
                 
