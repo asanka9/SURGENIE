@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class SurgeryService {
 
-  api_url = "http://127.0.0.1:8000/";
+  api_url = "https://surgenie.herokuapp.com/";
   constructor(private http : HttpClient, private _router : Router) { }
 
 

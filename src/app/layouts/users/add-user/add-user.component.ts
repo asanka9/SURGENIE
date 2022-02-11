@@ -298,7 +298,7 @@ export class AddUserComponent implements OnInit {
       "address":this.addressFormControl.value,
       "registration_number":this.registrationNumberFromcontrol.value,
       "is_medical_staff":true,
-      "is_sister":this.isSister.value,
+      "is_sister":true,
       "is_admin_staff":false,
       "role":'nurse'
     }
